@@ -7,6 +7,10 @@
 
 
 # 2) App Design (how will it work); 
+
+CourseFlow increases student engagement through an open forum. Students can post either as themselves, or as an anonymous user, and answer questions the same. Being able to post anonymously is an important part of CourseFlow, as some users might be too shy to post openly, and being able to engage the class without their name being attached to their posts and comments will encourage posting. Users recieve points for posting, which encourages asking and answering questions, and encourages discussion amongst the group. An automoderator function keeps innapropriate content from being posted, and teachers and administrators can pierce the veil of anonymity to see who posted a comment, as well. Teachers or administrators can host office hours online through CourseFlow, where students recieve help in priority determined by their points: users with more points get more priority, but cannot hog all of the time.
+
+
 # 3) Users (who it is designed for);
       
 The inspiration of our application is to help college students collaborate more efficiently and have more meaningful meetings with their professor.
@@ -19,3 +23,5 @@ Once students are more familar with each other, this can vastly improve then lea
 
 
 # 4) Impact (how it is going to help society);
+
+CourseFlow will increase connectivity and collaboration between students. This will help students achieve higher grades, while also developing important communication skills. Increased collaboration increases the bonds between a community of students, which will lead to increased engagement.
