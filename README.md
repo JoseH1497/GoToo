@@ -3,7 +3,7 @@
 
 
 # 1) App Description: 
-
+The goal of our application is to create virtual communities among students that have the same classes and to provide them with several forms of communications which they can use to collaborate and help one another. Our application follows the doctrine that collaboration is the best way to solidify knowledge. With that said, it is easy to see that both people who are using our application to share their knowledge and people who are using it to seek knowledge can benefit equally by using our product. More specifically our application will provide each class with a forum where students will be free to post any thoughts, problems and concerns related to a class' subject. However, the strength of our product comes from the ability for students to see who else is at the moment using the application. Students can then request to collaborate with one another either by revealing their identity or choosing to stay anonymous. In addition, our product will provide students with the ability to upload their class notes if they feel like they would be beneficial to other fellow classmates.
 
 
 # 2) App Design:
