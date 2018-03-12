@@ -1,11 +1,11 @@
--- CREATE THE DATABASE
+# CREATE THE DATABASE
 $sqlite backend_info.db
 
 
--- CREATE TABLES
+# CREATE TABLES
 
 
--- USER TABLE
+# USER TABLE
 CREATE TABLE Users (
   ID_NUMBER INT NOT NULL, -- Personal ID Number, will be unique
   NAME CHAR(50) NOT NULL, -- Name of User
@@ -14,7 +14,7 @@ CREATE TABLE Users (
   USER_STATUS BOOLEAN NOT NULL -- Status if the user is online
 );
 
--- GROUP TABLE
+# GROUP TABLE
 CREATE TABLE Group (
   GROUP_ID INT NOT NULL, -- Group ID Number, will be unique
   GROUP_NAME CHAR(100) NOT NULL, -- Group Name, limit of 100 characters
@@ -22,7 +22,7 @@ CREATE TABLE Group (
   MEMBER_COUNT INT NOT NULL -- Number of members in the group, must be positive
 );
 
--- POSTS TABLE
+# POSTS TABLE
 CREATE TABLE Posts (
   POSTER_ID INT NOT NULL, -- Personal ID of the poster
   POST_ID INT NOT NULL, -- ID number of the post (Unique within group)
@@ -32,7 +32,7 @@ CREATE TABLE Posts (
   CONTENT CHAR(255) NOT NULL -- Content of the Post
 );
 
--- COMMENTS TABLE
+# COMMENTS TABLE
 CREATE TABLE Comments (
   POSTER_ID INT NOT NULL, -- Personal ID of the commenter
   POST_ID INT NOT NULL, -- ID number of the post which is commented on (Unique within group)
@@ -43,7 +43,7 @@ CREATE TABLE Comments (
   CONTENT CHAR(255) NOT NULL -- Content of the Comment
 );
 
--- TABLE OF GROUPS AND USERS
+# TABLE OF GROUPS AND USERS
 CREATE TABLE Group_Users (
   ID_NUMBER INT NOT NULL, -- Unique User ID
   GROUP_ID INT NOT NULL, -- Unique Group ID
@@ -52,7 +52,7 @@ CREATE TABLE Group_Users (
   USER_POINTS INT NOT NULL -- How many points this user has in this group
 );
 
--- TABLE OF PENDING INVITES
+# TABLE OF PENDING INVITES
 CREATE TABLE Invited_Users (
   GROUP_ID INT NOT NULL, -- Unique Group ID
   INVITER_ID INT NOT NULL, -- ID of user issuing invite
@@ -60,7 +60,7 @@ CREATE TABLE Invited_Users (
   EMAIL CHAR(255) -- Optional Email to send key to
 );
 
--- TABLE OF READ POSTS
+# TABLE OF READ POSTS
 CREATE TABLE Read_Posts (
   ID_NUMBER INT NOT NULL, -- ID number of the user
   GROUP_ID INT NOT NULL, -- Group where post is
@@ -68,3 +68,5 @@ CREATE TABLE Read_Posts (
   READ BOOLEAN NOT NULL -- Whether the post has been seen by the user
 );
 
+# EXIT SQLITE
+quit;
