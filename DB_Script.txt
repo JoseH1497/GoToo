@@ -1,0 +1,205 @@
+-- CREATE THE DATABASE
+$sqlite backend_info.db
+
+
+-- CREATE TABLES
+
+
+-- USER TABLE
+CREATE TABLE Users (
+  ID_NUMBER INT NOT NULL, -- Personal ID Number, will be unique
+  NAME CHAR(50) NOT NULL, -- Name of User
+  EMAIL CHAR(255) NOT NULL, -- User Email
+  PASSWORD_HASH CHAR(255) NOT NULL, -- Hash of User Password
+  USER_STATUS BOOLEAN NOT NULL -- Status if the user is online
+);
+
+-- GROUP TABLE
+CREATE TABLE Group (
+  GROUP_ID INT NOT NULL, -- Group ID Number, will be unique
+  GROUP_NAME CHAR(100) NOT NULL, -- Group Name, limit of 100 characters
+  ADMIN_ID INT NOT NULL, -- Personal ID Number of the administrator
+  MEMBER_COUNT INT NOT NULL -- Number of members in the group, must be positive
+);
+
+-- POSTS TABLE
+CREATE TABLE Posts (
+  POSTER_ID INT NOT NULL, -- Personal ID of the poster
+  POST_ID INT NOT NULL, -- ID number of the post (Unique within group)
+  GROUP_ID INT NOT NULL, -- Group ID Number
+  FLAG INT NOT NULL, -- How many times the post has been flagged
+  POSTED DATETIME NOT NULL, -- Date and time when the post was made
+  CONTENT CHAR(255) NOT NULL -- Content of the Post
+);
+
+-- COMMENTS TABLE
+CREATE TABLE Comments (
+  POSTER_ID INT NOT NULL, -- Personal ID of the commenter
+  POST_ID INT NOT NULL, -- ID number of the post which is commented on (Unique within group)
+  COMMENT_ID NOT NULL, -- Unique ID number of the comment
+  GROUP_ID INT NOT NULL, -- Group ID Number
+  FLAG INT NOT NULL, -- How many times the comment has been flagged
+  POSTED DATETIME NOT NULL, -- Date and time when the comment was made
+  CONTENT CHAR(255) NOT NULL -- Content of the Comment
+);
+
+-- TABLE OF GROUPS AND USERS
+CREATE TABLE Group_Users (
+  ID_NUMBER INT NOT NULL, -- Unique User ID
+  GROUP_ID INT NOT NULL, -- Unique Group ID
+  USER_ADMIN BOOLEAN NOT NULL, -- If the user is an adminstrator
+  USER_MODERATOR BOOLEAN NOT NULL, -- If the user is a moderator
+  USER_POINTS INT NOT NULL -- How many points this user has in this group
+);
+
+-- TABLE OF PENDING INVITES
+CREATE TABLE Invited_Users (
+  GROUP_ID INT NOT NULL, -- Unique Group ID
+  INVITER_ID INT NOT NULL, -- ID of user issuing invite
+  ACCESS_KEY CHAR(255) NOT NULL -- Key to join the group, with entry being removed after key is used
+  EMAIL CHAR(255) -- Optional Email to send key to
+);
+
+-- TABLE OF READ POSTS
+CREATE TABLE Read_Posts (
+  ID_NUMBER INT NOT NULL, -- ID number of the user
+  GROUP_ID INT NOT NULL, -- Group where post is
+  POST_ID INT NOT NULL, -- Post in question
+  READ BOOLEAN NOT NULL -- Whether the post has been seen by the user
+);
+
+
+-- INSERT TABLE ENTRIES
+
+
+-- MAKE A NEW USER
+INSERT INTO Users VALUES (ID, NAME, EMAIL, PASSWORD, TRUE);
+
+-- MAKE A NEW GROUP
+INSERT INTO Groups VALUES(ID, NAME, ADMIN_ID, 1);
+
+-- MAKE A NEW POST
+INSERT INTO Posts VALUES (POSTER_ID, POST_ID, GROUP_ID, 0, CURRENT_DATE, CONTENT);
+
+-- MAKE A NEW COMMENT
+INSERT INTO Comments VALUES (POSTER_ID, POST_ID, COMMENT_ID, GROUP_ID, 0, CURRENT_DATE, CONTENT);
+
+-- ADD A USER TO A GROUP
+INSERT INTO Group_Users VALUES (USER_ID, GROUP_ID, FALSE, FALSE, 0);
+
+-- MAKE AN INVITE
+INSERT INTO Invited_Users VALUES (GROUP_ID, ACCESS KEY);
+
+-- ADD WHETHER POST HAS BEEN READ
+INSERT INTO Read_Posts VALUES (ID_NUMBER, GROUP_ID, POST_ID, FALSE);
+
+
+-- SELECT TABLE ENTRIES
+
+
+-- SELECT USER
+SELECT * FROM Users WHERE ID_NUMBER = id;
+
+-- SELECT GROUP
+SELECT * FROM Groups WHERE GROUP_ID = gr;
+
+-- SELECT ACTIVE GROUP MEMBERS
+SELECT NAMES FROM Users, Group_Users WHERE GROUP_ID = gr AND Group_Users.ID_NUMBER = Users.ID_NUMBER AND USER_STATUS = TRUE;
+
+-- SELECT POST
+SELECT * FROM Posts WHERE GROUP_ID = gr AND POST_ID = pid;
+
+-- SELECT ALL POSTS
+SELECT * FROM Posts WHERE GROUP_ID = gr ORDER BY Posted;
+
+-- SELECT POST COMMENTS
+SELECT * FROM Comments WHERE GROUP_ID = gr AND POST_ID = pid ORDER BY Posted;
+
+-- COUNT OF PENDING INVITES
+SELECT COUNT(*) FROM Invited_Users WHERE GROUP_ID = gr;
+
+-- SELECT UNREAD POSTS
+SELECT * FROM POSTS WHERE ID_NUMBER = id AND READ = FALSE;
+
+-- SELECT READ POSTS
+SELECT * FROM POSTS WHERE ID_NUMBER = id AND READ = TRUE;
+
+
+-- EDIT TABLE ENTRIES
+
+
+-- CHANGE USER NAME
+UPDATE Users SET NAME = new_name WHERE ID_NUMBER = id AND PASSWORD_HASH = pw;
+
+-- CHANGE EMAIL
+UPDATE Users SET EMAIL = new_email WHERE ID_NUMBER = id AND PASSWORD_HASH = pw;
+
+-- CHANGE PASSWORD
+UPDATE Users SET PASSWORD_HASH = new_password WHERE ID_NUMBER = id AND PASSWORD_HASH = pw;
+
+-- CHANGE USER STATUS
+UPDATE Users SET USER_STATUS = new_status WHERE ID_NUMBER = id AND PASSWORD_HASH = pw;
+
+-- CHANGE GROUP NAME
+UPDATE Groups SET GROUP_NAME = new_name WHERE GROUP_ID = gr;
+
+-- CHANGE GROUP MEMBER COUNT
+UPDATE Groups SET MEMBER_COUNT = new_count WHERE GROUP_ID = gr;
+
+-- CHANGE ADMINISTRATOR
+UPDATE Groups SET ADMIN_ID = new_id WHERE GROUP_ID = gr;
+
+-- FLAG POST
+UPDATE Posts SET FLAG = FLAG + 1 WHERE GROUP_ID = gr AND POST_ID = pid;
+
+-- UNFLAG POST
+UPDATE Posts SET FLAG = 0 WHERE GROUP_ID = gr AND POST_ID = pid;
+
+-- EDIT POST
+UPDATE Posts SET CONTENT = new_content WHERE GROUP_ID = gr AND POST_ID = pid;
+
+-- FLAG COMMENT
+UPDATE Posts SET FLAG = FLAG + 1 WHERE GROUP_ID = gr AND POST_ID = pid AND COMMENT_ID = cid;
+
+-- UNFLAG COMMENT
+UPDATE Posts SET FLAG = 0 WHERE GROUP_ID = gr AND POST_ID = pid AND COMMENT_ID = cid;
+
+-- EDIT COMMENT
+UPDATE COMMENTS SET CONTENT = new_content WHERE GROUP_ID = gr AND POST_ID = pid AND COMMENT_ID = cid;
+
+-- MAKE ADMINISTRATOR
+UPDATE Group_Users SET USER_ADMIN = TRUE WHERE GROUP_ID = gr AND ID_NUMBER = id;
+
+-- REMOVE ADMINISTRATOR
+UPDATE Group_Users SET USER_ADMIN = FALSE WHERE GROUP_ID = gr AND ID_NUMBER = id;
+
+-- MAKE MODERATOR
+UPDATE Group_Users SET USER_MODERATOR = TRUE WHERE GROUP_ID = gr AND ID_NUMBER = id;
+
+-- REMOVE MODERATOR
+UPDATE Group_Users SET USER_MODERATOR = FALSE WHERE GROUP_ID = gr AND ID_NUMBER = id;
+
+
+-- DELETE TABLE ENTRIES
+
+
+-- DELETE ACCOUNT
+DELETE FROM Users WHERE ID_NUMBER = id;
+
+-- DELETE GROUP
+DELETE FROM Groups WHERE GROUP_ID = gr;
+
+-- DELETE POST
+DELETE FROM Posts WHERE POST_ID = pid AND GROUP_ID = gr;
+
+-- DELETE FROM READ POSTS (Post no longer exists
+DELETE FROM Read_Posts WHERE POST_ID = pid AND GROUP_ID = gr;
+
+-- DELETE COMMENT
+DELETE FROM Comments WHERE COMMENT_ID = cid AND POST_ID = pid AND GROUP_ID = gr;
+
+-- REMOVE USER FROM GROUP
+DELETE FROM Group_Users WHERE GROUP_ID = gr AND ID_NUMBER = id;
+
+-- REMOVE INVITE FROM TABLE
+DELETE FROM Invited_Users WHERE GROUP_ID = gr AND INVITER_ID = id;
