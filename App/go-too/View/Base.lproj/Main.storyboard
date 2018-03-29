@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="13771" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="17h-wp-1b3">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="13771" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="WNa-ms-vve">
     <device id="retina5_5" orientation="portrait">
         <adaptation id="fullscreen"/>
     </device>
@@ -122,6 +122,26 @@
                     <view key="view" contentMode="scaleToFill" id="Qy6-3h-xf2">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="736"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="Macot_Recovered" translatesAutoresizingMaskIntoConstraints="NO" id="VEw-Sl-cPZ">
+                                <rect key="frame" x="165" y="148" width="84" height="88"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            </imageView>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="Message_Recovered" translatesAutoresizingMaskIntoConstraints="NO" id="8cg-vi-RiR">
+                                <rect key="frame" x="0.0" y="259" width="414" height="36"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            </imageView>
+                            <button opaque="NO" contentMode="scaleAspectFit" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Khc-hH-Lag">
+                                <rect key="frame" x="189" y="316" width="37" height="22"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <state key="normal" image="Login_Button_Recovered"/>
+                            </button>
+                            <button opaque="NO" contentMode="scaleAspectFit" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="HLr-QI-Yuc">
+                                <rect key="frame" x="168" y="357" width="78" height="22"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <state key="normal" image="Contact_Us_Button_Recovered"/>
+                            </button>
+                        </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <viewLayoutGuide key="safeArea" id="5YB-Fs-BH1"/>
                     </view>
@@ -191,12 +211,16 @@
     </scenes>
     <resources>
         <image name="Confirm_Password_Field_Sign_up" width="334" height="62"/>
+        <image name="Contact_Us_Button_Recovered" width="78" height="16"/>
         <image name="Email_Field_Login" width="334" height="62"/>
         <image name="Email_Field_Recovery" width="334" height="62"/>
         <image name="Go_Too_Logo_Login" width="246" height="96"/>
         <image name="Login_Button_Login" width="334" height="62"/>
+        <image name="Login_Button_Recovered" width="37" height="15"/>
+        <image name="Macot_Recovered" width="78" height="46"/>
         <image name="Macot_Sign_Up" width="78" height="83"/>
         <image name="Mascot_Recovery" width="78" height="87"/>
+        <image name="Message_Recovered" width="201" height="34"/>
         <image name="Organization_Email_Field_Sign_Up" width="334" height="62"/>
         <image name="Password_Field_Login" width="334" height="62"/>
         <image name="Password_Field_Sign_Up" width="334" height="62"/>
