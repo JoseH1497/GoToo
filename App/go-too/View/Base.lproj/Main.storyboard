@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="13771" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="WNa-ms-vve">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="13771" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="1ve-G8-AG0">
     <device id="retina5_5" orientation="portrait">
         <adaptation id="fullscreen"/>
     </device>
@@ -151,6 +151,76 @@
             <point key="canvasLocation" x="2359" y="133"/>
         </scene>
         <!--View Controller-->
+        <scene sceneID="o56-7O-Vqs">
+            <objects>
+                <viewController id="1ve-G8-AG0" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="4SE-1Q-JyB">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="736"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="Top Bar" translatesAutoresizingMaskIntoConstraints="NO" id="OoC-RF-006">
+                                <rect key="frame" x="0.0" y="0.0" width="414" height="80"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            </imageView>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="Bottom Bar" translatesAutoresizingMaskIntoConstraints="NO" id="8kL-dM-z84">
+                                <rect key="frame" x="0.0" y="656" width="414" height="80"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            </imageView>
+                            <button opaque="NO" contentMode="scaleAspectFit" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="4Ks-lU-h9S">
+                                <rect key="frame" x="14" y="29" width="42" height="42"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <state key="normal" image="Profile Button"/>
+                            </button>
+                            <button opaque="NO" contentMode="scaleAspectFit" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="wOp-Y5-3b5">
+                                <rect key="frame" x="208" y="30" width="90" height="40"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <state key="normal" image="Groups Tab"/>
+                            </button>
+                            <button opaque="NO" contentMode="scaleAspectFit" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="cIT-aP-3cU">
+                                <rect key="frame" x="366" y="39" width="33" height="22"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <state key="normal" image="Edit Button"/>
+                            </button>
+                            <button opaque="NO" contentMode="scaleAspectFit" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="1l9-7K-046">
+                                <rect key="frame" x="26" y="686" width="31" height="38"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <state key="normal" image="Home Button"/>
+                            </button>
+                            <button opaque="NO" contentMode="scaleAspectFit" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="EJO-nR-EuA">
+                                <rect key="frame" x="101" y="684" width="48" height="42"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <state key="normal" backgroundImage="Calendar Button"/>
+                            </button>
+                            <button opaque="NO" contentMode="scaleAspectFit" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="QLu-fK-gNu">
+                                <rect key="frame" x="197" y="685" width="20" height="22"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <state key="normal" image="Add Courses_Group Button"/>
+                            </button>
+                            <button opaque="NO" contentMode="scaleAspectFit" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="J7f-Og-blw">
+                                <rect key="frame" x="276" y="687" width="28" height="36"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <state key="normal" image="Mail Button"/>
+                            </button>
+                            <button opaque="NO" contentMode="scaleAspectFit" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="r3f-Jg-2Hu">
+                                <rect key="frame" x="357" y="686" width="33" height="38"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <state key="normal" image="Notifications Button"/>
+                            </button>
+                            <button opaque="NO" contentMode="scaleAspectFit" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="UHK-Cr-1V0">
+                                <rect key="frame" x="117" y="30" width="90" height="40"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <state key="normal" image="Groups Tab"/>
+                            </button>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <viewLayoutGuide key="safeArea" id="jHM-gB-8g5"/>
+                    </view>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="TLe-bf-FR0" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="3091.304347826087" y="132.88043478260872"/>
+        </scene>
+        <!--View Controller-->
         <scene sceneID="tne-QT-ifu">
             <objects>
                 <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="go_too" customModuleProvider="target" sceneMemberID="viewController">
@@ -210,24 +280,34 @@
         </scene>
     </scenes>
     <resources>
+        <image name="Add Courses_Group Button" width="20" height="20"/>
+        <image name="Bottom Bar" width="414" height="80"/>
+        <image name="Calendar Button" width="48" height="38"/>
         <image name="Confirm_Password_Field_Sign_up" width="334" height="62"/>
         <image name="Contact_Us_Button_Recovered" width="78" height="16"/>
+        <image name="Edit Button" width="33" height="19"/>
         <image name="Email_Field_Login" width="334" height="62"/>
         <image name="Email_Field_Recovery" width="334" height="62"/>
         <image name="Go_Too_Logo_Login" width="246" height="96"/>
+        <image name="Groups Tab" width="90" height="40"/>
+        <image name="Home Button" width="31" height="38"/>
         <image name="Login_Button_Login" width="334" height="62"/>
         <image name="Login_Button_Recovered" width="37" height="15"/>
         <image name="Macot_Recovered" width="78" height="46"/>
         <image name="Macot_Sign_Up" width="78" height="83"/>
+        <image name="Mail Button" width="28" height="36"/>
         <image name="Mascot_Recovery" width="78" height="87"/>
         <image name="Message_Recovered" width="201" height="34"/>
+        <image name="Notifications Button" width="33" height="38"/>
         <image name="Organization_Email_Field_Sign_Up" width="334" height="62"/>
         <image name="Password_Field_Login" width="334" height="62"/>
         <image name="Password_Field_Sign_Up" width="334" height="62"/>
+        <image name="Profile Button" width="42" height="42"/>
         <image name="Recovery_Button_Login" width="116" height="16"/>
         <image name="Send_Buttom_Recovery" width="334" height="62"/>
         <image name="Sign_Up_Button_Login" width="53" height="16"/>
         <image name="Sign_Up_Button_Sign_Up" width="334" height="62"/>
         <image name="Title_Recovery" width="224" height="23"/>
+        <image name="Top Bar" width="414" height="80"/>
     </resources>
 </document>
