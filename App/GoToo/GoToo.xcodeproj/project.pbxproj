@@ -7,6 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		243384DA207049AD00863B66 /* libsqlite3.tbd in Frameworks */ = {isa = PBXBuildFile; fileRef = 243384D9207049AD00863B66 /* libsqlite3.tbd */; };
+		243384E020704B2300863B66 /* DBManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 243384DF20704B2300863B66 /* DBManager.m */; };
 		24D3D7E720704493003F1E04 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 24D3D7E620704493003F1E04 /* AppDelegate.swift */; };
 		24D3D7E920704493003F1E04 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 24D3D7E820704493003F1E04 /* ViewController.swift */; };
 		24D3D7EC20704493003F1E04 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 24D3D7EA20704493003F1E04 /* Main.storyboard */; };
@@ -34,6 +36,10 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		243384D9207049AD00863B66 /* libsqlite3.tbd */ = {isa = PBXFileReference; lastKnownFileType = "sourcecode.text-based-dylib-definition"; name = libsqlite3.tbd; path = usr/lib/libsqlite3.tbd; sourceTree = SDKROOT; };
+		243384DD20704B2200863B66 /* GoToo-Bridging-Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "GoToo-Bridging-Header.h"; sourceTree = "<group>"; };
+		243384DE20704B2300863B66 /* DBManager.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = DBManager.h; sourceTree = "<group>"; };
+		243384DF20704B2300863B66 /* DBManager.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = DBManager.m; sourceTree = "<group>"; };
 		24D3D7E320704493003F1E04 /* GoToo.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = GoToo.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		24D3D7E620704493003F1E04 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		24D3D7E820704493003F1E04 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -54,6 +60,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				243384DA207049AD00863B66 /* libsqlite3.tbd in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -74,13 +81,25 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		243384D8207049AD00863B66 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				243384D9207049AD00863B66 /* libsqlite3.tbd */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
 		24D3D7DA20704493003F1E04 = {
 			isa = PBXGroup;
 			children = (
+				243384DE20704B2300863B66 /* DBManager.h */,
+				243384DF20704B2300863B66 /* DBManager.m */,
 				24D3D7E520704493003F1E04 /* GoToo */,
 				24D3D7FA20704494003F1E04 /* GoTooTests */,
 				24D3D80520704494003F1E04 /* GoTooUITests */,
 				24D3D7E420704493003F1E04 /* Products */,
+				243384D8207049AD00863B66 /* Frameworks */,
+				243384DD20704B2200863B66 /* GoToo-Bridging-Header.h */,
 			);
 			sourceTree = "<group>";
 		};
@@ -193,6 +212,7 @@
 				TargetAttributes = {
 					24D3D7E220704493003F1E04 = {
 						CreatedOnToolsVersion = 9.2;
+						LastSwiftMigration = 0920;
 						ProvisioningStyle = Automatic;
 					};
 					24D3D7F620704494003F1E04 = {
@@ -259,6 +279,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				243384E020704B2300863B66 /* DBManager.m in Sources */,
 				24D3D7E920704493003F1E04 /* ViewController.swift in Sources */,
 				24D3D7E720704493003F1E04 /* AppDelegate.swift in Sources */,
 			);
@@ -426,11 +447,14 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CLANG_ENABLE_MODULES = YES;
 				CODE_SIGN_STYLE = Automatic;
 				INFOPLIST_FILE = GoToo/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = GoToo.GoToo;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_OBJC_BRIDGING_HEADER = "GoToo-Bridging-Header.h";
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
 				SWIFT_VERSION = 4.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};
@@ -440,11 +464,13 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CLANG_ENABLE_MODULES = YES;
 				CODE_SIGN_STYLE = Automatic;
 				INFOPLIST_FILE = GoToo/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = GoToo.GoToo;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_OBJC_BRIDGING_HEADER = "GoToo-Bridging-Header.h";
 				SWIFT_VERSION = 4.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};
