@@ -1,9 +1,9 @@
 //
 //  ViewController.swift
-//  GoToo
+//  go-too
 //
-//  Created by Jose Herrera on 3/31/18.
-//  Copyright © 2018 Jose Herrera. All rights reserved.
+//  Created by Sergio Rosendo on 3/28/18.
+//  Copyright © 2018 Reactive Works. All rights reserved.
 //
 
 import UIKit
