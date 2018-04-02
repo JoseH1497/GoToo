@@ -8,9 +8,16 @@
 
 /* Begin PBXBuildFile section */
 		243384DA207049AD00863B66 /* libsqlite3.tbd in Frameworks */ = {isa = PBXBuildFile; fileRef = 243384D9207049AD00863B66 /* libsqlite3.tbd */; };
-		243384E020704B2300863B66 /* DBManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 243384DF20704B2300863B66 /* DBManager.m */; };
+		243384E52070629D00863B66 /* DBManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 243384DF20704B2300863B66 /* DBManager.m */; };
+		243384E9207066C300863B66 /* CONSTANTS.swift in Sources */ = {isa = PBXBuildFile; fileRef = 243384E8207066C300863B66 /* CONSTANTS.swift */; };
+		243384EE2071729F00863B66 /* Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 243384ED2071729F00863B66 /* Extensions.swift */; };
+		243384F520717FB400863B66 /* SignUpViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 243384F420717FB400863B66 /* SignUpViewController.swift */; };
+		243384F82071851B00863B66 /* ForgotPasswordViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 243384F72071851B00863B66 /* ForgotPasswordViewController.swift */; };
+		243384FA2071F84500863B66 /* confirmedSendButtonViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 243384F92071F84500863B66 /* confirmedSendButtonViewController.swift */; };
+		243384FC2071FCF900863B66 /* contactUsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 243384FB2071FCF900863B66 /* contactUsViewController.swift */; };
+		243384FF207202F100863B66 /* DashboardViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 243384FE207202F100863B66 /* DashboardViewController.swift */; };
 		24D3D7E720704493003F1E04 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 24D3D7E620704493003F1E04 /* AppDelegate.swift */; };
-		24D3D7E920704493003F1E04 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 24D3D7E820704493003F1E04 /* ViewController.swift */; };
+		24D3D7E920704493003F1E04 /* LoginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 24D3D7E820704493003F1E04 /* LoginViewController.swift */; };
 		24D3D7EC20704493003F1E04 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 24D3D7EA20704493003F1E04 /* Main.storyboard */; };
 		24D3D7EE20704493003F1E04 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 24D3D7ED20704493003F1E04 /* Assets.xcassets */; };
 		24D3D7F120704493003F1E04 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 24D3D7EF20704493003F1E04 /* LaunchScreen.storyboard */; };
@@ -40,9 +47,16 @@
 		243384DD20704B2200863B66 /* GoToo-Bridging-Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "GoToo-Bridging-Header.h"; sourceTree = "<group>"; };
 		243384DE20704B2300863B66 /* DBManager.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = DBManager.h; sourceTree = "<group>"; };
 		243384DF20704B2300863B66 /* DBManager.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = DBManager.m; sourceTree = "<group>"; };
+		243384E8207066C300863B66 /* CONSTANTS.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CONSTANTS.swift; sourceTree = "<group>"; };
+		243384ED2071729F00863B66 /* Extensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = Extensions.swift; path = /Users/joseherrerna/Desktop/CSE120/CourseFlow/App/GoToo/GoToo/Utils/Extensions.swift; sourceTree = "<absolute>"; };
+		243384F420717FB400863B66 /* SignUpViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SignUpViewController.swift; sourceTree = "<group>"; };
+		243384F72071851B00863B66 /* ForgotPasswordViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ForgotPasswordViewController.swift; sourceTree = "<group>"; };
+		243384F92071F84500863B66 /* confirmedSendButtonViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = confirmedSendButtonViewController.swift; path = /Users/joseherrerna/Desktop/CSE120/CourseFlow/App/GoToo/GoToo/LogIn/ForgotPassword/confirmedSendButtonViewController.swift; sourceTree = "<absolute>"; };
+		243384FB2071FCF900863B66 /* contactUsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = contactUsViewController.swift; path = /Users/joseherrerna/Desktop/CSE120/CourseFlow/App/GoToo/GoToo/SignUp/contactUsViewController.swift; sourceTree = "<absolute>"; };
+		243384FE207202F100863B66 /* DashboardViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DashboardViewController.swift; sourceTree = "<group>"; };
 		24D3D7E320704493003F1E04 /* GoToo.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = GoToo.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		24D3D7E620704493003F1E04 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
-		24D3D7E820704493003F1E04 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
+		24D3D7E820704493003F1E04 /* LoginViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginViewController.swift; sourceTree = "<group>"; };
 		24D3D7EB20704493003F1E04 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		24D3D7ED20704493003F1E04 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		24D3D7F020704493003F1E04 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
@@ -89,6 +103,50 @@
 			name = Frameworks;
 			sourceTree = "<group>";
 		};
+		243384E72070668600863B66 /* Utils */ = {
+			isa = PBXGroup;
+			children = (
+				243384ED2071729F00863B66 /* Extensions.swift */,
+				243384E8207066C300863B66 /* CONSTANTS.swift */,
+			);
+			path = Utils;
+			sourceTree = "<group>";
+		};
+		243384EF20717F1C00863B66 /* SignUp */ = {
+			isa = PBXGroup;
+			children = (
+				243384FB2071FCF900863B66 /* contactUsViewController.swift */,
+				243384F420717FB400863B66 /* SignUpViewController.swift */,
+			);
+			path = SignUp;
+			sourceTree = "<group>";
+		};
+		243384F020717F2400863B66 /* LogIn */ = {
+			isa = PBXGroup;
+			children = (
+				243384F6207184EF00863B66 /* ForgotPassword */,
+				24D3D7E820704493003F1E04 /* LoginViewController.swift */,
+			);
+			path = LogIn;
+			sourceTree = "<group>";
+		};
+		243384F6207184EF00863B66 /* ForgotPassword */ = {
+			isa = PBXGroup;
+			children = (
+				243384F92071F84500863B66 /* confirmedSendButtonViewController.swift */,
+				243384F72071851B00863B66 /* ForgotPasswordViewController.swift */,
+			);
+			path = ForgotPassword;
+			sourceTree = "<group>";
+		};
+		243384FD207202B600863B66 /* Dashboard */ = {
+			isa = PBXGroup;
+			children = (
+				243384FE207202F100863B66 /* DashboardViewController.swift */,
+			);
+			path = Dashboard;
+			sourceTree = "<group>";
+		};
 		24D3D7DA20704493003F1E04 = {
 			isa = PBXGroup;
 			children = (
@@ -116,8 +174,11 @@
 		24D3D7E520704493003F1E04 /* GoToo */ = {
 			isa = PBXGroup;
 			children = (
+				243384FD207202B600863B66 /* Dashboard */,
+				243384F020717F2400863B66 /* LogIn */,
+				243384EF20717F1C00863B66 /* SignUp */,
+				243384E72070668600863B66 /* Utils */,
 				24D3D7E620704493003F1E04 /* AppDelegate.swift */,
-				24D3D7E820704493003F1E04 /* ViewController.swift */,
 				24D3D7EA20704493003F1E04 /* Main.storyboard */,
 				24D3D7ED20704493003F1E04 /* Assets.xcassets */,
 				24D3D7EF20704493003F1E04 /* LaunchScreen.storyboard */,
@@ -279,9 +340,16 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				243384E020704B2300863B66 /* DBManager.m in Sources */,
-				24D3D7E920704493003F1E04 /* ViewController.swift in Sources */,
+				243384F520717FB400863B66 /* SignUpViewController.swift in Sources */,
+				243384F82071851B00863B66 /* ForgotPasswordViewController.swift in Sources */,
+				243384EE2071729F00863B66 /* Extensions.swift in Sources */,
+				243384E52070629D00863B66 /* DBManager.m in Sources */,
+				243384FC2071FCF900863B66 /* contactUsViewController.swift in Sources */,
+				24D3D7E920704493003F1E04 /* LoginViewController.swift in Sources */,
 				24D3D7E720704493003F1E04 /* AppDelegate.swift in Sources */,
+				243384FF207202F100863B66 /* DashboardViewController.swift in Sources */,
+				243384FA2071F84500863B66 /* confirmedSendButtonViewController.swift in Sources */,
+				243384E9207066C300863B66 /* CONSTANTS.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
