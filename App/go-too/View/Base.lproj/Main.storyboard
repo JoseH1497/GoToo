@@ -15,11 +15,11 @@
         </array>
     </customFonts>
     <scenes>
-        <!--View Controller-->
+        <!--Sign Up Screen View Controller-->
         <scene sceneID="KU5-0j-QnL">
             <objects>
-                <viewController id="9ja-Pl-ITT" sceneMemberID="viewController">
-                    <view key="view" contentMode="scaleToFill" id="wcG-ig-za8">
+                <viewController id="9ja-Pl-ITT" customClass="SignUpScreenViewController" customModule="go_too" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="wcG-ig-za8" customClass="Sign">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="736"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
@@ -74,10 +74,10 @@
             </objects>
             <point key="canvasLocation" x="852" y="133"/>
         </scene>
-        <!--View Controller-->
+        <!--Recovery Screen View Controller-->
         <scene sceneID="ovo-gl-4WV">
             <objects>
-                <viewController id="17h-wp-1b3" sceneMemberID="viewController">
+                <viewController id="17h-wp-1b3" customClass="RecoveryScreenViewController" customModule="go_too" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="qB7-Hc-OhD">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="736"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -115,10 +115,10 @@
             </objects>
             <point key="canvasLocation" x="1636" y="133"/>
         </scene>
-        <!--View Controller-->
+        <!--Recovered Screen View Controller-->
         <scene sceneID="WPs-Fe-Uqs">
             <objects>
-                <viewController id="WNa-ms-vve" sceneMemberID="viewController">
+                <viewController id="WNa-ms-vve" customClass="RecoveredScreenViewController" customModule="go_too" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="Qy6-3h-xf2">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="736"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -150,10 +150,10 @@
             </objects>
             <point key="canvasLocation" x="2359" y="133"/>
         </scene>
-        <!--View Controller-->
+        <!--Home Screen View Controller-->
         <scene sceneID="o56-7O-Vqs">
             <objects>
-                <viewController id="1ve-G8-AG0" sceneMemberID="viewController">
+                <viewController id="1ve-G8-AG0" customClass="HomeScreenViewController" customModule="go_too" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="4SE-1Q-JyB">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="736"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -220,11 +220,11 @@
             </objects>
             <point key="canvasLocation" x="3091.304347826087" y="132.88043478260872"/>
         </scene>
-        <!--View Controller-->
+        <!--Login Screen View Controller-->
         <scene sceneID="tne-QT-ifu">
             <objects>
-                <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="go_too" customModuleProvider="target" sceneMemberID="viewController">
-                    <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC" userLabel="Log_In_Screen">
+                <viewController id="BYZ-38-t0r" customClass="LoginScreenViewController" customModule="go_too" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC" userLabel="Log_In_Screen" customClass="Lo">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="736"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
