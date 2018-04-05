@@ -1,25 +1,20 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="13771" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="14109" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
     <device id="retina5_5" orientation="portrait">
         <adaptation id="fullscreen"/>
     </device>
     <dependencies>
         <deployment identifier="iOS"/>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="13772"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14088"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
-    <customFonts key="customFonts">
-        <array key="AppleSDGothicNeo.ttc">
-            <string>AppleSDGothicNeo-Regular</string>
-        </array>
-    </customFonts>
     <scenes>
         <!--Sign Up Screen View Controller-->
         <scene sceneID="KU5-0j-QnL">
             <objects>
-                <viewController id="9ja-Pl-ITT" customClass="SignUpScreenViewController" customModule="go_too" customModuleProvider="target" sceneMemberID="viewController">
-                    <view key="view" contentMode="scaleToFill" id="wcG-ig-za8" customClass="Sign">
+                <viewController id="9ja-Pl-ITT" customClass="SignUpScreenViewController" customModule="go_too" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="wcG-ig-za8">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="736"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
@@ -43,22 +38,25 @@
                                 <rect key="frame" x="41" y="490" width="334" height="62"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <state key="normal" image="Sign_Up_Button_Sign_Up"/>
+                                <connections>
+                                    <action selector="SignUpAction:" destination="9ja-Pl-ITT" eventType="touchUpInside" id="uR9-cI-A8O"/>
+                                </connections>
                             </button>
-                            <textField opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" text="Organization Email" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="qrz-Nd-cDK">
+                            <textField opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="Organization Email" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="qrz-Nd-cDK">
                                 <rect key="frame" x="51" y="262" width="314" height="30"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <color key="textColor" red="0.48627450980392156" green="0.48627450980392156" blue="0.48627450980392156" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <fontDescription key="fontDescription" name="AppleSDGothicNeo-Regular" family="Apple SD Gothic Neo" pointSize="16"/>
                                 <textInputTraits key="textInputTraits"/>
                             </textField>
-                            <textField opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" text="Password" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="wsS-Ym-kst">
+                            <textField opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="Password" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="wsS-Ym-kst">
                                 <rect key="frame" x="51" y="323" width="314" height="30"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <color key="textColor" red="0.4756349325" green="0.47564673419999998" blue="0.47564041610000002" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <fontDescription key="fontDescription" name="AppleSDGothicNeo-Regular" family="Apple SD Gothic Neo" pointSize="16"/>
                                 <textInputTraits key="textInputTraits"/>
                             </textField>
-                            <textField opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" text="Confirm Password" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="enB-3k-Gw5">
+                            <textField opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="Confirm Password" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="enB-3k-Gw5">
                                 <rect key="frame" x="51" y="384" width="314" height="30"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <color key="textColor" red="0.4862697124" green="0.48627120260000001" blue="0.48627465959999999" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
@@ -69,15 +67,23 @@
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <viewLayoutGuide key="safeArea" id="kVj-BO-smm"/>
                     </view>
+                    <navigationItem key="navigationItem" id="ru5-R1-3xi"/>
+                    <connections>
+                        <outlet property="ConfirmPasswordText" destination="enB-3k-Gw5" id="23w-qV-nNC"/>
+                        <outlet property="CreatePasswordText" destination="wsS-Ym-kst" id="tC2-hf-Xrr"/>
+                        <outlet property="EmailText" destination="qrz-Nd-cDK" id="cPc-UW-AOQ"/>
+                        <outlet property="SignUpButton" destination="lPv-RD-Oa3" id="6LY-i7-G2z"/>
+                        <segue destination="BYZ-38-t0r" kind="show" identifier="HaveAccountToLogIn" id="Ju4-SA-cUW"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="CNE-oy-9yx" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="852" y="133"/>
+            <point key="canvasLocation" x="462" y="916"/>
         </scene>
         <!--Recovery Screen View Controller-->
         <scene sceneID="ovo-gl-4WV">
             <objects>
-                <viewController id="17h-wp-1b3" customClass="RecoveryScreenViewController" customModule="go_too" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController id="17h-wp-1b3" customClass="RecoveryScreenViewController" customModule="go_too" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="qB7-Hc-OhD">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="736"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -94,7 +100,7 @@
                                 <rect key="frame" x="40" y="337" width="334" height="62"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                             </imageView>
-                            <textField opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" text="Email" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="H51-SZ-pV3" userLabel="Email_Filed">
+                            <textField opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="Email" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="H51-SZ-pV3" userLabel="Email_Filed">
                                 <rect key="frame" x="50" y="353" width="314" height="30"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <color key="textColor" red="0.48627450979999998" green="0.48627450979999998" blue="0.48627450979999998" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
@@ -105,20 +111,28 @@
                                 <rect key="frame" x="40" y="451" width="334" height="62"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <state key="normal" image="Send_Buttom_Recovery"/>
+                                <connections>
+                                    <action selector="SendButtonAction:" destination="17h-wp-1b3" eventType="touchUpInside" id="jqF-FS-Nmc"/>
+                                </connections>
                             </button>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <viewLayoutGuide key="safeArea" id="4hh-Z8-29E"/>
                     </view>
+                    <connections>
+                        <outlet property="EmailText" destination="H51-SZ-pV3" id="0db-I6-KHX"/>
+                        <outlet property="SendButton" destination="Nn5-uD-Boh" id="ikr-Yf-HK7"/>
+                        <segue destination="WNa-ms-vve" kind="show" identifier="SendPasswordInfo" id="zQT-o3-7tg"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="GH4-2T-xct" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1636" y="133"/>
+            <point key="canvasLocation" x="-901" y="956"/>
         </scene>
         <!--Recovered Screen View Controller-->
         <scene sceneID="WPs-Fe-Uqs">
             <objects>
-                <viewController id="WNa-ms-vve" customClass="RecoveredScreenViewController" customModule="go_too" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController id="WNa-ms-vve" customClass="RecoveredScreenViewController" customModule="go_too" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="Qy6-3h-xf2">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="736"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -135,11 +149,17 @@
                                 <rect key="frame" x="189" y="316" width="37" height="22"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <state key="normal" image="Login_Button_Recovered"/>
+                                <connections>
+                                    <segue destination="BYZ-38-t0r" kind="show" id="u7v-ca-cd1"/>
+                                </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleAspectFit" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="HLr-QI-Yuc">
                                 <rect key="frame" x="168" y="357" width="78" height="22"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <state key="normal" image="Contact_Us_Button_Recovered"/>
+                                <connections>
+                                    <segue destination="DpM-w1-fDk" kind="show" id="bQu-6N-sns"/>
+                                </connections>
                             </button>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
@@ -148,7 +168,22 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="lP9-Pw-EdM" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="2359" y="133"/>
+            <point key="canvasLocation" x="-901" y="1661"/>
+        </scene>
+        <!--Contact Us View Controller-->
+        <scene sceneID="6EK-1O-pZd">
+            <objects>
+                <viewController id="DpM-w1-fDk" customClass="ContactUsViewController" customModule="go_too" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="q0Q-ws-txu">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="736"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <viewLayoutGuide key="safeArea" id="u2K-io-0vX"/>
+                    </view>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="UB1-ts-kie" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="461" y="1661"/>
         </scene>
         <!--Home Screen View Controller-->
         <scene sceneID="o56-7O-Vqs">
@@ -215,16 +250,17 @@
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <viewLayoutGuide key="safeArea" id="jHM-gB-8g5"/>
                     </view>
+                    <navigationItem key="navigationItem" id="5Hd-hw-cJF"/>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="TLe-bf-FR0" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="3091.304347826087" y="132.88043478260872"/>
+            <point key="canvasLocation" x="1475" y="170"/>
         </scene>
         <!--Login Screen View Controller-->
         <scene sceneID="tne-QT-ifu">
             <objects>
-                <viewController id="BYZ-38-t0r" customClass="LoginScreenViewController" customModule="go_too" customModuleProvider="target" sceneMemberID="viewController">
-                    <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC" userLabel="Log_In_Screen" customClass="Lo">
+                <viewController id="BYZ-38-t0r" customClass="LoginScreenViewController" customModule="go_too" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC" userLabel="Log_In_Screen">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="736"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
@@ -244,39 +280,69 @@
                                 <rect key="frame" x="40" y="492" width="334" height="62"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <state key="normal" image="Login_Button_Login"/>
+                                <connections>
+                                    <action selector="LoginButtonAction:" destination="BYZ-38-t0r" eventType="touchUpInside" id="wdm-pO-cFq"/>
+                                </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleAspectFit" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Oc5-wF-sPm" userLabel="Sign_Up_Button">
                                 <rect key="frame" x="181" y="588" width="53" height="22"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <state key="normal" image="Sign_Up_Button_Login"/>
+                                <connections>
+                                    <segue destination="9ja-Pl-ITT" kind="show" id="Q8b-9r-tMf"/>
+                                </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleAspectFit" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="lmI-zm-hYY" userLabel="Recovery_Button">
                                 <rect key="frame" x="150" y="627" width="116" height="22"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <state key="normal" image="Recovery_Button_Login"/>
+                                <connections>
+                                    <segue destination="17h-wp-1b3" kind="show" id="DDy-na-RNk"/>
+                                </connections>
                             </button>
-                            <textField opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" text="Email" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="epe-3p-TSN" userLabel="Email_Filed">
+                            <textField opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="Email" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="epe-3p-TSN" userLabel="Email_Filed">
                                 <rect key="frame" x="50" y="323" width="314" height="30"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <color key="textColor" red="0.48627450980392156" green="0.48627450980392156" blue="0.48627450980392156" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                                 <fontDescription key="fontDescription" name="AppleSDGothicNeo-Regular" family="Apple SD Gothic Neo" pointSize="16"/>
                                 <textInputTraits key="textInputTraits"/>
                             </textField>
-                            <textField opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" text="Password" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="uBz-De-W3G" userLabel="Password_Field">
+                            <textField opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="Password" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="uBz-De-W3G" userLabel="Password_Field">
                                 <rect key="frame" x="50" y="384" width="314" height="30"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <color key="textColor" red="0.48626971244812012" green="0.4862712025642395" blue="0.48627465963363647" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                                 <fontDescription key="fontDescription" name="AppleSDGothicNeo-Regular" family="Apple SD Gothic Neo" pointSize="16"/>
                                 <textInputTraits key="textInputTraits"/>
                             </textField>
+                            <textField opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" text="Incorrect Password. Try Again!" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="WWW-hx-sr7">
+                                <rect key="frame" x="95" y="259" width="248" height="17"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <color key="textColor" red="1" green="0.023286350454939653" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits"/>
+                            </textField>
+                            <textField opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" text="Account Not Found. Wrong Email!" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="UUJ-ZE-gms">
+                                <rect key="frame" x="95" y="258" width="248" height="17"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <color key="textColor" red="1" green="0.02328635045" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits"/>
+                            </textField>
                         </subviews>
                         <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                     </view>
+                    <connections>
+                        <outlet property="LoginButton" destination="HXq-TC-nbI" id="bC3-Nb-t71"/>
+                        <outlet property="emailText" destination="epe-3p-TSN" id="K4M-Ff-rr3"/>
+                        <outlet property="incorrectAccount" destination="UUJ-ZE-gms" id="Lf4-yx-oFg"/>
+                        <outlet property="incorrectPassword" destination="WWW-hx-sr7" id="BJa-wL-eUx"/>
+                        <segue destination="1ve-G8-AG0" kind="show" identifier="LoginToHomeScreen" id="sv5-V3-hsd"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="139.13043478260872" y="132.88043478260872"/>
+            <point key="canvasLocation" x="-343.47826086956525" y="69.293478260869577"/>
         </scene>
     </scenes>
     <resources>
@@ -310,4 +376,7 @@
         <image name="Title_Recovery" width="224" height="23"/>
         <image name="Top Bar" width="414" height="80"/>
     </resources>
+    <inferredMetricsTieBreakers>
+        <segue reference="Ju4-SA-cUW"/>
+    </inferredMetricsTieBreakers>
 </document>
