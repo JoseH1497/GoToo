@@ -1,0 +1,6 @@
+framework module Pods_go_too {
+  umbrella header "Pods-go-too-umbrella.h"
+
+  export *
+  module * { export * }
+}
