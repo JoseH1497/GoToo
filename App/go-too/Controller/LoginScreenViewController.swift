@@ -21,15 +21,23 @@ class LoginScreenViewController: UIViewController {
         // Dispose of any resources that can be recreated.
     }
     
-
-    /*
-    // MARK: - Navigation
-
-    // In a storyboard-based application, you will often want to do a little preparation before navigation
-    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        // Get the new view controller using segue.destinationViewController.
-        // Pass the selected object to the new view controller.
+    //:MARK: UI functionality
+    @IBAction func email_entered(_ sender: UITextField) {
     }
-    */
-
+    
+    @IBAction func password_entered(_ sender: UITextField) {
+    }
+    
+    @IBAction func login_button_pressed(_ sender: UIButton) {
+    }
+    
+    @IBAction func signup_button_pressed(_ sender: UIButton) {
+        //:Redirect user to registration page
+        performSegue(withIdentifier: "registration_page_segue", sender: self)
+    }
+    
+    @IBAction func recovery_button_pressed(_ sender: UIButton) {
+        //:Redirect user to account recovery page
+        performSegue(withIdentifier: "recovery_page_segue", sender: self)
+    }
 }

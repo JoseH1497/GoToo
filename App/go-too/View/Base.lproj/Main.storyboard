@@ -69,10 +69,13 @@
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <viewLayoutGuide key="safeArea" id="kVj-BO-smm"/>
                     </view>
+                    <connections>
+                        <segue destination="1ve-G8-AG0" kind="presentation" identifier="registration " id="qfm-5e-zfy"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="CNE-oy-9yx" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="852" y="133"/>
+            <point key="canvasLocation" x="877" y="887"/>
         </scene>
         <!--Recovery Screen View Controller-->
         <scene sceneID="ovo-gl-4WV">
@@ -110,10 +113,13 @@
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <viewLayoutGuide key="safeArea" id="4hh-Z8-29E"/>
                     </view>
+                    <connections>
+                        <segue destination="WNa-ms-vve" kind="presentation" id="k4j-0t-JgC"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="GH4-2T-xct" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1636" y="133"/>
+            <point key="canvasLocation" x="904" y="-739"/>
         </scene>
         <!--Recovered Screen View Controller-->
         <scene sceneID="WPs-Fe-Uqs">
@@ -148,7 +154,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="lP9-Pw-EdM" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="2359" y="133"/>
+            <point key="canvasLocation" x="1667" y="-739"/>
         </scene>
         <!--Home Screen View Controller-->
         <scene sceneID="o56-7O-Vqs">
@@ -218,7 +224,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="TLe-bf-FR0" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="3091.304347826087" y="132.88043478260872"/>
+            <point key="canvasLocation" x="1639" y="158"/>
         </scene>
         <!--Login Screen View Controller-->
         <scene sceneID="tne-QT-ifu">
@@ -244,16 +250,25 @@
                                 <rect key="frame" x="40" y="492" width="334" height="62"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <state key="normal" image="Login_Button_Login"/>
+                                <connections>
+                                    <action selector="login_button_pressed:" destination="BYZ-38-t0r" eventType="touchUpInside" id="OAZ-TM-2fA"/>
+                                </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleAspectFit" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Oc5-wF-sPm" userLabel="Sign_Up_Button">
                                 <rect key="frame" x="181" y="588" width="53" height="22"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <state key="normal" image="Sign_Up_Button_Login"/>
+                                <connections>
+                                    <action selector="signup_button_pressed:" destination="BYZ-38-t0r" eventType="touchUpInside" id="AE2-F2-JLq"/>
+                                </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleAspectFit" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="lmI-zm-hYY" userLabel="Recovery_Button">
                                 <rect key="frame" x="150" y="627" width="116" height="22"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <state key="normal" image="Recovery_Button_Login"/>
+                                <connections>
+                                    <action selector="recovery_button_pressed:" destination="BYZ-38-t0r" eventType="touchUpInside" id="xrp-zu-kH4"/>
+                                </connections>
                             </button>
                             <textField opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" text="Email" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="epe-3p-TSN" userLabel="Email_Filed">
                                 <rect key="frame" x="50" y="323" width="314" height="30"/>
@@ -261,6 +276,9 @@
                                 <color key="textColor" red="0.48627450980392156" green="0.48627450980392156" blue="0.48627450980392156" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                                 <fontDescription key="fontDescription" name="AppleSDGothicNeo-Regular" family="Apple SD Gothic Neo" pointSize="16"/>
                                 <textInputTraits key="textInputTraits"/>
+                                <connections>
+                                    <action selector="email_entered:" destination="BYZ-38-t0r" eventType="editingDidEnd" id="o1r-wT-Nyi"/>
+                                </connections>
                             </textField>
                             <textField opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" text="Password" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="uBz-De-W3G" userLabel="Password_Field">
                                 <rect key="frame" x="50" y="384" width="314" height="30"/>
@@ -268,11 +286,19 @@
                                 <color key="textColor" red="0.48626971244812012" green="0.4862712025642395" blue="0.48627465963363647" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                                 <fontDescription key="fontDescription" name="AppleSDGothicNeo-Regular" family="Apple SD Gothic Neo" pointSize="16"/>
                                 <textInputTraits key="textInputTraits"/>
+                                <connections>
+                                    <action selector="password_entered:" destination="BYZ-38-t0r" eventType="editingDidEnd" id="INb-gn-rgK"/>
+                                </connections>
                             </textField>
                         </subviews>
                         <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                     </view>
+                    <connections>
+                        <segue destination="9ja-Pl-ITT" kind="presentation" identifier="registration_page_segue" id="dyS-l7-ru6"/>
+                        <segue destination="17h-wp-1b3" kind="presentation" identifier="recovery_page_segue" id="n1a-15-ejG"/>
+                        <segue destination="1ve-G8-AG0" kind="presentation" id="Tem-1V-BPe"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
@@ -310,4 +336,7 @@
         <image name="Title_Recovery" width="224" height="23"/>
         <image name="Top Bar" width="414" height="80"/>
     </resources>
+    <inferredMetricsTieBreakers>
+        <segue reference="Tem-1V-BPe"/>
+    </inferredMetricsTieBreakers>
 </document>
