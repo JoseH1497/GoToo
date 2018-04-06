@@ -7,9 +7,6 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		2484AE8C2075B08E00C035AA /* Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2484AE8B2075B08E00C035AA /* Extensions.swift */; };
-		2484AE932075B56C00C035AA /* ContactUsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2484AE922075B56C00C035AA /* ContactUsViewController.swift */; };
-		2484AE952075BF0300C035AA /* Constants.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2484AE942075BF0300C035AA /* Constants.swift */; };
 		5275BF80206DC52A000EA1F1 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 5275BF7F206DC529000EA1F1 /* Assets.xcassets */; };
 		52E9695B206C70AF00538307 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 52E9695A206C70AF00538307 /* AppDelegate.swift */; };
 		52E96960206C70AF00538307 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 52E9695E206C70AF00538307 /* Main.storyboard */; };
@@ -22,9 +19,6 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
-		2484AE8B2075B08E00C035AA /* Extensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Extensions.swift; sourceTree = "<group>"; };
-		2484AE922075B56C00C035AA /* ContactUsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContactUsViewController.swift; sourceTree = "<group>"; };
-		2484AE942075BF0300C035AA /* Constants.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Constants.swift; sourceTree = "<group>"; };
 		5275BF7F206DC529000EA1F1 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		52E96957206C70AF00538307 /* go-too.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "go-too.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		52E9695A206C70AF00538307 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
@@ -49,58 +43,6 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
-		2484AE8A2075B07B00C035AA /* Utils */ = {
-			isa = PBXGroup;
-			children = (
-				2484AE8B2075B08E00C035AA /* Extensions.swift */,
-				2484AE942075BF0300C035AA /* Constants.swift */,
-			);
-			path = Utils;
-			sourceTree = "<group>";
-		};
-		2484AE8D2075B3B200C035AA /* SignUp */ = {
-			isa = PBXGroup;
-			children = (
-				52F4C3842072BF4100F46DF2 /* SignUpScreenViewController.swift */,
-			);
-			path = SignUp;
-			sourceTree = "<group>";
-		};
-		2484AE8E2075B42300C035AA /* LogIn */ = {
-			isa = PBXGroup;
-			children = (
-				52F4C38C2072C03400F46DF2 /* LoginScreenViewController.swift */,
-				2484AE912075B53E00C035AA /* Contact Us */,
-				2484AE902075B47800C035AA /* Recovery */,
-			);
-			path = LogIn;
-			sourceTree = "<group>";
-		};
-		2484AE8F2075B42F00C035AA /* HomeScreen */ = {
-			isa = PBXGroup;
-			children = (
-				52F4C3882072BF8800F46DF2 /* HomeScreenViewController.swift */,
-			);
-			path = HomeScreen;
-			sourceTree = "<group>";
-		};
-		2484AE902075B47800C035AA /* Recovery */ = {
-			isa = PBXGroup;
-			children = (
-				52F4C38A2072BFA300F46DF2 /* RecoveredScreenViewController.swift */,
-				52F4C3862072BF7600F46DF2 /* RecoveryScreenViewController.swift */,
-			);
-			path = Recovery;
-			sourceTree = "<group>";
-		};
-		2484AE912075B53E00C035AA /* Contact Us */ = {
-			isa = PBXGroup;
-			children = (
-				2484AE922075B56C00C035AA /* ContactUsViewController.swift */,
-			);
-			path = "Contact Us";
-			sourceTree = "<group>";
-		};
 		52E9694E206C70AF00538307 = {
 			isa = PBXGroup;
 			children = (
@@ -120,7 +62,6 @@
 		52E96959206C70AF00538307 /* go-too */ = {
 			isa = PBXGroup;
 			children = (
-				2484AE8A2075B07B00C035AA /* Utils */,
 				52E9696E206C70EC00538307 /* Model */,
 				52E9696D206C70E500538307 /* View */,
 				52E9696C206C70DA00538307 /* Controller */,
@@ -133,9 +74,11 @@
 			isa = PBXGroup;
 			children = (
 				52E9695A206C70AF00538307 /* AppDelegate.swift */,
-				2484AE8D2075B3B200C035AA /* SignUp */,
-				2484AE8E2075B42300C035AA /* LogIn */,
-				2484AE8F2075B42F00C035AA /* HomeScreen */,
+				52F4C3842072BF4100F46DF2 /* SignUpScreenViewController.swift */,
+				52F4C3862072BF7600F46DF2 /* RecoveryScreenViewController.swift */,
+				52F4C3882072BF8800F46DF2 /* HomeScreenViewController.swift */,
+				52F4C38A2072BFA300F46DF2 /* RecoveredScreenViewController.swift */,
+				52F4C38C2072C03400F46DF2 /* LoginScreenViewController.swift */,
 			);
 			path = Controller;
 			sourceTree = "<group>";
@@ -232,12 +175,9 @@
 				52F4C38D2072C03400F46DF2 /* LoginScreenViewController.swift in Sources */,
 				52F4C3852072BF4100F46DF2 /* SignUpScreenViewController.swift in Sources */,
 				52E9695B206C70AF00538307 /* AppDelegate.swift in Sources */,
-				2484AE932075B56C00C035AA /* ContactUsViewController.swift in Sources */,
 				52F4C3872072BF7600F46DF2 /* RecoveryScreenViewController.swift in Sources */,
 				52F4C38B2072BFA300F46DF2 /* RecoveredScreenViewController.swift in Sources */,
 				52F4C3892072BF8800F46DF2 /* HomeScreenViewController.swift in Sources */,
-				2484AE8C2075B08E00C035AA /* Extensions.swift in Sources */,
-				2484AE952075BF0300C035AA /* Constants.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

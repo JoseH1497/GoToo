@@ -1,5 +1,5 @@
 //
-//  RecoveryScreenViewController.swift
+//  SignUpScreenViewController.swift
 //  go-too
 //
 //  Created by Sergio Rosendo on 4/2/18.
@@ -8,13 +8,8 @@
 
 import UIKit
 
-class RecoveryScreenViewController: UIViewController {
+class SignUpScreenViewController: UIViewController {
 
-    @IBOutlet weak var EmailText: UITextField!
-    
-    @IBOutlet weak var SendButton: UIButton!
-    
-    
     override func viewDidLoad() {
         super.viewDidLoad()
 
@@ -27,21 +22,6 @@ class RecoveryScreenViewController: UIViewController {
     }
     
 
-    @IBAction func SendButtonAction(_ sender: Any) {
-        /*
-         TODO: Check that Email in EmailText Field is in our database and
-               we can send password to email
-        */
-        let credentials = true
-        
-        if(credentials == true){
-            
-            self.performSegue(withIdentifier: "SendPasswordInfo", sender: self)
-        }else{
-            //don't push Recovered screen view controller
-        }
-        
-    }
     /*
     // MARK: - Navigation
 
