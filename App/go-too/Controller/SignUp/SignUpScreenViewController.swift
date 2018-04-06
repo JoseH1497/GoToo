@@ -19,6 +19,7 @@ class SignUpScreenViewController: UIViewController {
     @IBOutlet weak var ConfirmPasswordText: UITextField!
     @IBOutlet weak var SignUpButton: UIButton!
     
+    @IBOutlet weak var promptUserToEnter: UITextField!
     
     //Have account button
     let haveAccountButton: UIButton = {
@@ -45,6 +46,7 @@ class SignUpScreenViewController: UIViewController {
 
         // Do any additional setup after loading the view.
         setupHaveAccountButton()
+        promptUserToEnter.isHidden = true
     }
 
     override func didReceiveMemoryWarning() {
@@ -59,20 +61,41 @@ class SignUpScreenViewController: UIViewController {
         haveAccountButton.anchors(topAnchor: nil, topPad: 0, bottomAnchor: view.safeAreaLayoutGuide.bottomAnchor, bottomPad: 24, leftAnchor: view.leftAnchor, leftPad:120, rightAnchor: view.rightAnchor, rightPad: 120, height: 20, width: 0)
     }
     @objc func alreadyHaveAccAction(){
-        self.performSegue(withIdentifier: "HaveAccountToLogIn", sender: self)
+       // self.performSegue(withIdentifier: "HaveAccountToLogIn", sender: self)
+       self .dismiss(animated: true, completion: nil)
     }
  
 
     @IBAction func SignUpAction(_ sender: Any) {
-        
         /**
- 
+         
          TODO: Make sure each input is valid, then check that CreatePasswordText and ConfirmPasswordText are the same and then
-             add to the database the new account member and sign them up
-             still need to decide what view should be display once signup button is pressed and info is correctly submitted to database
- 
- 
+         add to the database the new account member and sign them up
+         still need to decide what view should be display once signup button is pressed and info is correctly submitted to database
+         
+         
          **/
+    /**if(checkAllDataIsInputed()){
+            
+            
+            
+            
+        }
+       **/
+        //check that there is input entered
+        let checkInput = isThereUserInput()
+        
+        if checkInput == false {
+            //no input, so return
+            return
+        }
+        
+        hidePromptUserToEnter()
+        inputValidate()
+        
+        
+        checkPasswordMatch()
+        
     }
     /*
     // MARK: - Navigation
@@ -84,4 +107,43 @@ class SignUpScreenViewController: UIViewController {
     }
     */
 
+    fileprivate func isThereUserInput() -> Bool{
+        if self.CreatePasswordText.text == ""{
+            
+            
+            //displaye
+            displayPromptUserToEnterEandP()
+            return false
+        }
+        if self.EmailText.text == "" {
+            //if(emailText.isEmpty || passwordText.isEmpty){
+            
+            
+            //display
+            displayPromptUserToEnterEandP()
+            return false
+            //}
+        }
+        return true
+    }
+    //make sure createpasswordText and ConfirmedPasswordText match
+    fileprivate func checkPasswordMatch(){
+    
+    }
+    
+    //validate input
+    fileprivate func inputValidate(){
+        
+    }
+    fileprivate func displayPromptUserToEnterEandP(){
+        promptUserToEnter.isHidden = false
+        
+    }
+    fileprivate func hidePromptUserToEnter(){
+        promptUserToEnter.isHidden = true
+    }
+    
 }
+
+
+

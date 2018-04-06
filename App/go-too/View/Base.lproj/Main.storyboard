@@ -63,6 +63,13 @@
                                 <fontDescription key="fontDescription" name="AppleSDGothicNeo-Regular" family="Apple SD Gothic Neo" pointSize="16"/>
                                 <textInputTraits key="textInputTraits"/>
                             </textField>
+                            <textField opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" text="Enter Email and Create Password" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="yiQ-w4-121">
+                                <rect key="frame" x="99" y="107" width="248" height="17"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <color key="textColor" red="1" green="0.02328635045" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits"/>
+                            </textField>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <viewLayoutGuide key="safeArea" id="kVj-BO-smm"/>
@@ -73,7 +80,7 @@
                         <outlet property="CreatePasswordText" destination="wsS-Ym-kst" id="tC2-hf-Xrr"/>
                         <outlet property="EmailText" destination="qrz-Nd-cDK" id="cPc-UW-AOQ"/>
                         <outlet property="SignUpButton" destination="lPv-RD-Oa3" id="6LY-i7-G2z"/>
-                        <segue destination="BYZ-38-t0r" kind="show" identifier="HaveAccountToLogIn" id="Ju4-SA-cUW"/>
+                        <outlet property="promptUserToEnter" destination="yiQ-w4-121" id="Ygf-Q7-7uv"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="CNE-oy-9yx" userLabel="First Responder" sceneMemberID="firstResponder"/>
@@ -168,7 +175,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="lP9-Pw-EdM" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-901" y="1661"/>
+            <point key="canvasLocation" x="-1961" y="1042"/>
         </scene>
         <!--Contact Us View Controller-->
         <scene sceneID="6EK-1O-pZd">
@@ -183,7 +190,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="UB1-ts-kie" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="461" y="1661"/>
+            <point key="canvasLocation" x="-1962" y="1885"/>
         </scene>
         <!--Home Screen View Controller-->
         <scene sceneID="o56-7O-Vqs">
@@ -322,7 +329,14 @@
                                 <textInputTraits key="textInputTraits"/>
                             </textField>
                             <textField opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" text="Account Not Found. Wrong Email!" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="UUJ-ZE-gms">
-                                <rect key="frame" x="95" y="258" width="248" height="17"/>
+                                <rect key="frame" x="83" y="259" width="248" height="17"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <color key="textColor" red="1" green="0.02328635045" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits"/>
+                            </textField>
+                            <textField opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" text="Enter Email and Password" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="GNl-iy-AqP">
+                                <rect key="frame" x="102" y="258" width="248" height="17"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <color key="textColor" red="1" green="0.02328635045" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
@@ -334,9 +348,12 @@
                     </view>
                     <connections>
                         <outlet property="LoginButton" destination="HXq-TC-nbI" id="bC3-Nb-t71"/>
+                        <outlet property="PromptToEnterInfo" destination="GNl-iy-AqP" id="kjf-8H-bhY"/>
                         <outlet property="emailText" destination="epe-3p-TSN" id="K4M-Ff-rr3"/>
                         <outlet property="incorrectAccount" destination="UUJ-ZE-gms" id="Lf4-yx-oFg"/>
                         <outlet property="incorrectPassword" destination="WWW-hx-sr7" id="BJa-wL-eUx"/>
+                        <outlet property="passwordTextField" destination="uBz-De-W3G" id="Z34-go-JYb"/>
+                        <outlet property="promptUserToEnter" destination="GNl-iy-AqP" id="Nlx-r4-Cui"/>
                         <segue destination="1ve-G8-AG0" kind="show" identifier="LoginToHomeScreen" id="sv5-V3-hsd"/>
                     </connections>
                 </viewController>
@@ -376,7 +393,4 @@
         <image name="Title_Recovery" width="224" height="23"/>
         <image name="Top Bar" width="414" height="80"/>
     </resources>
-    <inferredMetricsTieBreakers>
-        <segue reference="Ju4-SA-cUW"/>
-    </inferredMetricsTieBreakers>
 </document>
