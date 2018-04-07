@@ -10,7 +10,7 @@ import UIKit
 
 class LoginScreenViewController: UIViewController {
     
-    //:Creating Login Verification Mechanism
+    //:Initiate login verification mechanism 
     let login_verification : Login_Verification = Login_Verification()
 
     //:MARK: Preliminary functionality................................................
