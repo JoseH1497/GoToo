@@ -7,16 +7,16 @@
 //
 
 import UIKit
+import SQLite
 
 class LoginScreenViewController: UIViewController {
-    
     //:Initiate login verification mechanism 
     let login_verification : Login_Verification = Login_Verification()
+    
 
     //:MARK: Preliminary functionality................................................
     override func viewDidLoad() {
         super.viewDidLoad()
-
         // Do any additional setup after loading the view.
     }
 

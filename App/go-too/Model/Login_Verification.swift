@@ -7,6 +7,7 @@
 //
 
 import Foundation
+
 class Login_Verification {
     var email    : String
     var password : String
@@ -39,6 +40,7 @@ class Login_Verification {
     
     func verify_email() -> Bool{
         //:FIXME: Check if email exists in database records
+        
         return false
     }
     
