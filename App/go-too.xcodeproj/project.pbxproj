@@ -9,10 +9,10 @@
 /* Begin PBXBuildFile section */
 		5209AA802078359C008A14BF /* Login_Verification.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5209AA7F2078359C008A14BF /* Login_Verification.swift */; };
 		5275BF80206DC52A000EA1F1 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 5275BF7F206DC529000EA1F1 /* Assets.xcassets */; };
+		529261C9208052430052B25D /* User_Profile.swift in Sources */ = {isa = PBXBuildFile; fileRef = 529261C8208052430052B25D /* User_Profile.swift */; };
 		52E9695B206C70AF00538307 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 52E9695A206C70AF00538307 /* AppDelegate.swift */; };
 		52E96960206C70AF00538307 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 52E9695E206C70AF00538307 /* Main.storyboard */; };
 		52E96965206C70AF00538307 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 52E96963206C70AF00538307 /* LaunchScreen.storyboard */; };
-		52EB190F207957270027862B /* Password_Recovery.swift in Sources */ = {isa = PBXBuildFile; fileRef = 52EB190E207957270027862B /* Password_Recovery.swift */; };
 		52F4C3852072BF4100F46DF2 /* SignUpScreenViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 52F4C3842072BF4100F46DF2 /* SignUpScreenViewController.swift */; };
 		52F4C3872072BF7600F46DF2 /* RecoveryScreenViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 52F4C3862072BF7600F46DF2 /* RecoveryScreenViewController.swift */; };
 		52F4C3892072BF8800F46DF2 /* HomeScreenViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 52F4C3882072BF8800F46DF2 /* HomeScreenViewController.swift */; };
@@ -25,12 +25,12 @@
 		284B42E59D6A4856A2FF2991 /* Pods_go_too.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_go_too.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		5209AA7F2078359C008A14BF /* Login_Verification.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Login_Verification.swift; sourceTree = "<group>"; };
 		5275BF7F206DC529000EA1F1 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		529261C8208052430052B25D /* User_Profile.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = User_Profile.swift; sourceTree = "<group>"; };
 		52E96957206C70AF00538307 /* go-too.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "go-too.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		52E9695A206C70AF00538307 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		52E9695F206C70AF00538307 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		52E96964206C70AF00538307 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		52E96966206C70AF00538307 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		52EB190E207957270027862B /* Password_Recovery.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Password_Recovery.swift; sourceTree = "<group>"; };
 		52F4C3842072BF4100F46DF2 /* SignUpScreenViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignUpScreenViewController.swift; sourceTree = "<group>"; };
 		52F4C3862072BF7600F46DF2 /* RecoveryScreenViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RecoveryScreenViewController.swift; sourceTree = "<group>"; };
 		52F4C3882072BF8800F46DF2 /* HomeScreenViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeScreenViewController.swift; sourceTree = "<group>"; };
@@ -107,8 +107,8 @@
 		52E9696E206C70EC00538307 /* Model */ = {
 			isa = PBXGroup;
 			children = (
+				529261C8208052430052B25D /* User_Profile.swift */,
 				5209AA7F2078359C008A14BF /* Login_Verification.swift */,
-				52EB190E207957270027862B /* Password_Recovery.swift */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -159,7 +159,7 @@
 			isa = PBXProject;
 			attributes = {
 				LastSwiftUpdateCheck = 0920;
-				LastUpgradeCheck = 0920;
+				LastUpgradeCheck = 0930;
 				ORGANIZATIONNAME = "Reactive Works";
 				TargetAttributes = {
 					52E96956206C70AF00538307 = {
@@ -245,9 +245,9 @@
 			files = (
 				52F4C38D2072C03400F46DF2 /* LoginScreenViewController.swift in Sources */,
 				52F4C3852072BF4100F46DF2 /* SignUpScreenViewController.swift in Sources */,
-				52EB190F207957270027862B /* Password_Recovery.swift in Sources */,
 				52E9695B206C70AF00538307 /* AppDelegate.swift in Sources */,
 				52F4C3872072BF7600F46DF2 /* RecoveryScreenViewController.swift in Sources */,
+				529261C9208052430052B25D /* User_Profile.swift in Sources */,
 				52F4C38B2072BFA300F46DF2 /* RecoveredScreenViewController.swift in Sources */,
 				5209AA802078359C008A14BF /* Login_Verification.swift in Sources */,
 				52F4C3892072BF8800F46DF2 /* HomeScreenViewController.swift in Sources */,
@@ -290,6 +290,7 @@
 				CLANG_WARN_BOOL_CONVERSION = YES;
 				CLANG_WARN_COMMA = YES;
 				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
 				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
 				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
 				CLANG_WARN_EMPTY_BODY = YES;
@@ -297,6 +298,7 @@
 				CLANG_WARN_INFINITE_RECURSION = YES;
 				CLANG_WARN_INT_CONVERSION = YES;
 				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
 				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
 				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
 				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
@@ -347,6 +349,7 @@
 				CLANG_WARN_BOOL_CONVERSION = YES;
 				CLANG_WARN_COMMA = YES;
 				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
 				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
 				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
 				CLANG_WARN_EMPTY_BODY = YES;
@@ -354,6 +357,7 @@
 				CLANG_WARN_INFINITE_RECURSION = YES;
 				CLANG_WARN_INT_CONVERSION = YES;
 				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
 				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
 				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
 				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
