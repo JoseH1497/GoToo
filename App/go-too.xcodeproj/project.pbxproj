@@ -84,12 +84,12 @@
 		52E9696C206C70DA00538307 /* Controller */ = {
 			isa = PBXGroup;
 			children = (
+				52F4C38C2072C03400F46DF2 /* LoginScreenViewController.swift */,
 				52E9695A206C70AF00538307 /* AppDelegate.swift */,
 				52F4C3842072BF4100F46DF2 /* SignUpScreenViewController.swift */,
 				52F4C3862072BF7600F46DF2 /* RecoveryScreenViewController.swift */,
 				52F4C3882072BF8800F46DF2 /* HomeScreenViewController.swift */,
 				52F4C38A2072BFA300F46DF2 /* RecoveredScreenViewController.swift */,
-				52F4C38C2072C03400F46DF2 /* LoginScreenViewController.swift */,
 			);
 			path = Controller;
 			sourceTree = "<group>";

@@ -13,7 +13,7 @@ class LoginScreenViewController: UIViewController {
     //:Initiate login verification mechanism 
     let login_verification : Login_Verification = Login_Verification()
     
-
+    
     //:MARK: Preliminary functionality................................................
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -48,14 +48,17 @@ class LoginScreenViewController: UIViewController {
     
     @IBAction func login_button_pressed(_ sender: UIButton) {
         //:Validate user information
-        let account_exists : Bool = login_verification.verify_user_info()
+        //:NOTE: If email and password are correct a unique user id associated with the account will be returned
+        let id : Int? = login_verification.verify_user_info()
         
-        if account_exists ==  true {
-            //:FIXME: Direct user to home page
+        if let user_id = id {
+            //:Direct user to home page
+            //:TODO: TRANSFER USER ID TO THE NEXT VIEW CONTROLLER
+            print(user_id)
             performSegue(withIdentifier:"login_to_home_segue" , sender: self)
         }
         else{
-            //:Display error message
+            //:Display login error message
             display_error_message()
         }
     }

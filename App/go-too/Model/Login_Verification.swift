@@ -28,14 +28,15 @@ class Login_Verification {
     }
     
     //:Information verifiers....................................................................
-    func verify_user_info() -> Bool{
+    func verify_user_info() -> Int?{
         if verify_email(){
             if verify_password(){
-                return true
+                //:TODO: RETURN USER ID ASSOCIATED WITH PROVIDE EMAIL
+                return 
             }
         }
         
-        return false
+        return nil
     }
     
     func verify_email() -> Bool{
