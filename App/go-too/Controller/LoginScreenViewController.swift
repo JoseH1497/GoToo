@@ -49,9 +49,7 @@ class LoginScreenViewController: UIViewController {
     @IBAction func login_button_pressed(_ sender: UIButton) {
         //:Validate user information
         //:NOTE: If email and password are correct a unique user id associated with the account will be returned
-        let id : Int? = login_verification.verify_user_info()
-        
-        if let user_id = id {
+        if let user_id : Int = login_verification.verify_user_info(){
             //:Direct user to home page
             //:TODO: TRANSFER USER ID TO THE NEXT VIEW CONTROLLER
             print(user_id)

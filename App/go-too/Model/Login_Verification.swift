@@ -7,6 +7,7 @@
 //
 
 import Foundation
+import SQLite
 
 class Login_Verification {
     var email    : String
@@ -32,7 +33,7 @@ class Login_Verification {
         if verify_email(){
             if verify_password(){
                 //:TODO: RETURN USER ID ASSOCIATED WITH PROVIDE EMAIL
-                return 
+                return 333
             }
         }
         
@@ -40,13 +41,55 @@ class Login_Verification {
     }
     
     func verify_email() -> Bool{
-        //:FIXME: Check if email exists in database records
-        
-        return false
+        //:Attempting to conncet to database
+        if let database : Connection = try? Connection("/Users/serj/Desktop/APP-CLONE/SQLite_Database/backend_db.db"){
+            //:Determining if email exists in database
+            let users : Table      = Table("Users")
+            let email : Expression = Expression<String>("email")
+            
+            if let query_result : Int  = try? database.scalar(users.filter(email == self.email).count){
+                if query_result == 1 {
+                    return true
+                }
+                else{
+                    return false
+                }
+            }
+            else{
+                print("EMAIL VERIFICATION --- Query Failure")
+                return false
+            }
+        }
+        else{
+            print("EMAIL VERIFICATION --- Failed to connect to database")
+            return false
+        }
     }
     
     func verify_password() -> Bool{
-        //:FIXME: Check if password matches the password associated with the provided email
-        return false
+        //:Attempting to conncet to database
+        if let database : Connection = try? Connection("/Users/serj/Desktop/APP-CLONE/SQLite_Database/backend_db.db"){
+            //:Determining if password corresponds to provided email
+            let users : Table         = Table("Users")
+            let email : Expression    = Expression<String>("EMAIL")
+            let password : Expression = Expression<String>("PASSWORD_HASH")
+            
+            if let query_result : Int = try? database.scalar(users.filter(email == self.email && password == self.password).count){
+                if query_result == 1 {
+                    return true
+                }
+                else{
+                    return false
+                }
+            }
+            else{
+                print("PASSWORD VERIFICATION --- Query Failure")
+                return false
+            }
+        }
+        else{
+            print("PASSWORD VERIFICATION --- Failed to connect to database")
+            return false
+        }
     }
 }
