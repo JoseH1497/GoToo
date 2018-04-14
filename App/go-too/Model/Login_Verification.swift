@@ -7,6 +7,7 @@
 //
 
 import Foundation
+import SQLite
 
 class Login_Verification {
     var email    : String
@@ -41,11 +42,37 @@ class Login_Verification {
     func verify_email() -> Bool{
         //:FIXME: Check if email exists in database records
         
+        let users = Table("Users")
+        let EMAIL = Expression<String>("EMAIL")
+        
+        // var conn = "/Users/" + NSUserName() + "/Documents/GoToo/SQLite_Database/backend_db.db"
+        // let db = try! Connection(conn)
+        let db = try! Connection("/Users/user137911/Documents/GoToo/SQLite_Database/backend_db.db")
+        
+        let stmt = try! db.scalar(users.filter(EMAIL == email).count)
+        
+        if (stmt == 1) {
+            return true
+        }
+        
         return false
     }
     
     func verify_password() -> Bool{
         //:FIXME: Check if password matches the password associated with the provided email
+        
+        let users = Table("Users")
+        let EMAIL = Expression<String>("EMAIL")
+        let PW = Expression<String>("PASSWORD_HASH")
+        
+        let db = try! Connection("/Users/user137911/Documents/GoToo/SQLite_Database/backend_db.db")
+        
+        let stmt = try! db.scalar(users.filter(EMAIL == email && PW == password).count)
+        
+        if (stmt == 1) {
+            return true
+        }
+        
         return false
     }
 }
