@@ -70,5 +70,16 @@ CREATE TABLE Read_Posts (
   READ BOOLEAN NOT NULL /* Whether the post has been seen by the user */
 );
 
+/* TABLE OF SECURITY QUESTIONS
+CREATE TABLE SecurityQuestions (
+    USER_ID     INT         NOT NULL /* ID of the user */
+                            UNIQUE,
+    QUESTIONONE TEXT (1024) NOT NULL, /* First security question */
+    QONEANSWER  TEXT (1024) NOT NULL, /* Answer to first question */
+    QUESTIONTWO TEXT (1024) NOT NULL, /* Second security question */
+    QTWOANSWER  TEXT (1024) /* Answer to second question */
+);
+
+
 /* EXIT SQLITE */
 quit;

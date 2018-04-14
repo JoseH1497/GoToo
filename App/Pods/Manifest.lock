@@ -1,7 +1,7 @@
 PODS:
-  - SQLite.swift (0.11.4):
-    - SQLite.swift/standard (= 0.11.4)
-  - SQLite.swift/standard (0.11.4)
+  - SQLite.swift (0.11.5):
+    - SQLite.swift/standard (= 0.11.5)
+  - SQLite.swift/standard (0.11.5)
 
 DEPENDENCIES:
   - SQLite.swift (~> 0.11.4)
@@ -11,7 +11,7 @@ SPEC REPOS:
     - SQLite.swift
 
 SPEC CHECKSUMS:
-  SQLite.swift: 3e3bee21da701b5b9f87c4a672cb54f233505692
+  SQLite.swift: 6e5356850bb1791459f8c16d6ee9195b28714a2e
 
 PODFILE CHECKSUM: 2f06acfdeb85bee51127c91e45c8cb6e4f6cb196
 
