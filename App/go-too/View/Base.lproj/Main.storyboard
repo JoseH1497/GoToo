@@ -326,10 +326,10 @@
             </objects>
             <point key="canvasLocation" x="1614" y="165"/>
         </scene>
-        <!--View Controller-->
+        <!--Next Screen Controller-->
         <scene sceneID="ePn-Av-VFT">
             <objects>
-                <viewController id="MlP-XT-MxV" sceneMemberID="viewController">
+                <viewController id="MlP-XT-MxV" customClass="NextScreenController" customModule="go_too" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="QsG-fC-cIP">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="736"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
