@@ -8,8 +8,8 @@ import SQLite
 class User_Profile {
     //:MARK: Properties
     let USER_ID : Int
-
-    var user_name : String
+    
+    var username : String
     var email_address : String
     var password : String
 
@@ -20,99 +20,114 @@ class User_Profile {
     var security_question_2_ans : String
 
 
-    //:MARK: Constructor
-    init (ID : Int) {
-        self.USER_ID = ID
-
-        //:TODO: RETRIEVE INFORMATION FROM DATABASE ASSOCIATED WITH PROVIDED USER ID
+    //:MARK: Constructors
+    init(USER_ID : Int){
+        self.USER_ID       = USER_ID
         
-        if let database : Connection = try? Connection("/Users/user137911/Docuemnts/GoToo/SQLite_Database/backend_db.db") {
-            let user : Table = Table("Users")
-            let sec : Table = Table("SecurityQuestions")
+        self.username      = ""
+        self.email_address = ""
+        self.password      = ""
+        
+        self.security_question_1 = ""
+        self.security_question_2 = ""
+        
+        self.security_question_1_ans = ""
+        self.security_question_2_ans = ""
+    }
+    
+    //:NOTE: Constructor will receive an ID associated with the provided email address
+    convenience init? (ID : Int) {
+        self.init(USER_ID: ID)
+        //:Attempting to connect to database
+        if let database : Connection = try? Connection("/Users/serj/Desktop/GO-TOO/SQLite_Database/backend_db.db"){
+            let users : Table = Table("Users")
+            let security_questions : Table = Table("Security_Questions")
+            
+            //:User IDs needed to search for user information in User and Security_Questions tables
             let user_id : Expression = Expression<Int>("ID_NUMBER")
-            let sec_id : Expression = Expression<Int>("USER_ID")
+            
             let username : Expression = Expression<String>("NAME")
-            let email : Expression = Expression<String>("EMAIL")
+            let email    : Expression = Expression<String>("EMAIL")
             let password : Expression = Expression<String>("PASSWORD_HASH")
-            let question1 : Expression = Expression<String>("QUESTIONONE")
-            let question2 : Expression = Expression<String>("QUESTIONTWO")
-            let answer1 : Expression = Expression<String>("QONEANSWER")
-            let answer2 : Expression = Expression<String>("QTWOANSWER")
             
-            for row in try! database.prepare(user.filter(self.USER_ID == user_id)) {
-                self.user_name = row[username]
+            let question1 : Expression = Expression<String>("QUESTION_ONE")
+            let question2 : Expression = Expression<String>("QUESTION_TWO")
+            
+            let answer1   : Expression = Expression<String>("ANSWER_ONE")
+            let answer2   : Expression = Expression<String>("ANSWER_TWO")
+            
+            for row in try! database.prepare(users.filter(ID == user_id)) {
+                self.username      = row[username]
                 self.email_address = row[email]
-                self.password = row[password]
+                self.password      = row[password]
             }
-            
-            for col in try! database.prepare(sec.filter(self.USER_ID == sec_id)) {
+       
+            for col in try! database.prepare(security_questions.filter(ID == user_id)) {
                 self.security_question_1 = col[question1]
                 self.security_question_2 = col[question2]
                 
                 self.security_question_1_ans = col[answer1]
                 self.security_question_2_ans = col[answer2]
             }
-            
-            //:NOTE: THE PROVIDED USER ID CAN BE LINKED TO AN EXISTING ACCOUNT (CONTAINS PERSONAL INFO) OR TO A NEW ACCOUNT (CONTAINS DEFAULT VALUES)
-            //:USE ID NOT USER_ID TO RETRIEVE THE INFORMATION
-            //self.user_name = try? user.select(username).filter(ID == user_id).limit(1)
-            //self.email_address = try? user.select(email).filter(ID == user_id).limit(1)
-            //self.password = try? user.select(password).filter(ID == user_id).limit(1)
-            
-            //self.security_question_1 = try? sec.select(question1).filter(ID == sec_id).limit(1)
-            //self.security_question_2 = try? sec.select(question2).filter(ID == sec_id).limit(1)
-            
-            //self.security_question_1_ans = try? sec.select(answer1).filter(ID == sec_id).limit(1)
-            //self.security_question_2_ans = try? sec.select(answer2).filter(ID == sec_id).limit(1)
-            
         }
-        self.user_name = ""
-        self.email_address = ""
-        self.password = ""
-        self.security_question_1 = ""
-        self.security_question_2 = ""
-        self.security_question_1_ans = ""
-        self.security_question_2_ans = ""
+        
+        else{
+            print("ERROR TYPE: Failed to connect to database")
+            print("Location: class User_Profile")
+            print("Function: init")
+            return nil
+        }
     }
 
-    //:MARK: Setters / Database Updaters
-    func set_user_name (name : String) -> Bool {
-        self.user_name = name
-        //:TODO: UPDATE USER NAME IN DATABASE
+    //:MARK: Setters
+    func set_username (name : String) -> Bool {
+        self.username = name
         
-        if let database : Connection = try? Connection("/Users/user137911/Docuemnts/GoToo/SQLite_Database/backend_db.db") {
-            let user : Table = Table("Users")
-            let username : Expression = Expression<String>("NAME")
-            let user_id : Expression = Expression<Int>("ID_NUMBER")
+         //:Attempting to connect to database
+        if let database : Connection = try? Connection("/Users/serj/Desktop/GO-TOO/SQLite_Database/backend_db.db") {
+            let users : Table = Table("Users")
             
-            if let query : Int = try? database.scalar(user.filter(username == name).count) {
-                if (query == 0) {
-                    let temp = user.filter(self.USER_ID == user_id)
-                    try? database.run(temp.update(username <- name))
+            let username : Expression = Expression<String>("NAME")
+            
+            //:Determining if username is in user
+            if let query_result : Int = try? database.scalar(users.filter(self.username == username).count) {
+                if (query_result == 0) {
+                    //:Username is not in use
                     return true
-                } else {
+                }
+                
+                else {
+                    //:Username is in use
                     return false
                 }
             }
         }
+        else{
+            print("ERROR TYPE: Failed to connect to database")
+            print("Location: class User_Profile")
+            print("Function: set_user_name")
+        }
+        
         return false
     }
 
     func set_email_address (email : String) -> Bool {
         self.email_address = email
-        //:TODO: SET USER EMAIL IN DATABASE
         
-        if let database : Connection = try? Connection("/Users/user137911/Docuemnts/GoToo/SQLite_Database/backend_db.db") {
-            let user : Table = Table("Users")
-            let em : Expression = Expression<String>("EMAIL")
-            let user_id : Expression = Expression<Int>("ID_NUMBER")
+        //:Attempting to connect to database
+        if let database : Connection = try? Connection("/Users/serj/Desktop/GO-TOO/SQLite_Database/backend_db.db") {
+            let users : Table = Table("Users")
             
-            if let query : Int = try? database.scalar(user.filter(em == email).count) {
+            let email_address : Expression = Expression<String>("EMAIL")
+            
+            //:Determining if email is in use
+            if let query : Int = try? database.scalar(users.filter(self.email_address == email_address).count) {
                 if (query == 0) {
-                    let temp = user.filter(self.USER_ID == user_id)
-                    try? database.run(temp.update(em <- email))
+                    //:Email address is not in use
                     return true
+                    
                 } else {
+                    //:Email address is in use
                     return false
                 }
             }
@@ -121,75 +136,26 @@ class User_Profile {
     }
 
     func set_password (password : String){
-        //:TODO: CALL A FUNCTION THAT ENCRYPTS THE PROVIDED PASSWORD
+        //:TODO: Encrypt User Password
         self.password = password
-        //:TODO: UPDATE PASSWORD IN DATABASE
-        
-        if let database : Connection = try? Connection("/Users/user137911/Docuemnts/GoToo/SQLite_Database/backend_db.db") {
-            let user : Table = Table("Users")
-            let pw : Expression = Expression<String>("PASSWORD_HASH")
-            let user_id : Expression = Expression<Int>("ID_NUMBER")
-            
-            let temp = user.filter(self.USER_ID == user_id)
-            try? database.run(temp.update(pw <- password))
-        }    }
+    }
 
     func set_security_question_1 (q1 : String) {
         self.security_question_1 = q1
-        //:TODO: UPDATE SECURITY QUESTION 1 IN DATABASE
-        if let database : Connection = try? Connection("/Users/user137911/Docuemnts/GoToo/SQLite_Database/backend_db.db") {
-            let sec : Table = Table("SecurityQuestions")
-            let question : Expression = Expression<String>("QUESTIONONE")
-            let user_id : Expression = Expression<Int>("USER_ID")
-            
-            let temp = sec.filter(self.USER_ID == user_id)
-            try? database.run(temp.update(question <- q1))
-        }
     }
 
     func set_security_question_2 (q2 : String) {
         self.security_question_2 = q2
-        //:TODO: UPDATE SECURITY QUESTION 2 IN DATABASE
-        if let database : Connection = try? Connection("/Users/user137911/Docuemnts/GoToo/SQLite_Database/backend_db.db") {
-            let sec : Table = Table("SecurityQuestions")
-            let question : Expression = Expression<String>("QUESTIONTWO")
-            let user_id : Expression = Expression<Int>("USER_ID")
-            
-            let temp = sec.filter(self.USER_ID == user_id)
-            try? database.run(temp.update(question <- q2))
-        }
-        
     }
 
     func set_security_question_1_ans (answer : String) {
-        //:TODO: CALL A FUNCTION THAT ENCRYPTS THE PROVIDED ANSWER
+        //:TODO: Encrypt Answer To Question 1 Password
         self.security_question_1_ans = answer
-
-        //:TODO: UPDATE SECURITY QUESTION 1 ANSWER IN DATABASE
-        if let database : Connection = try? Connection("/Users/user137911/Docuemnts/GoToo/SQLite_Database/backend_db.db") {
-            let sec : Table = Table("SecurityQuestions")
-            let ans : Expression = Expression<String>("QONEANSWER")
-            let user_id : Expression = Expression<Int>("USER_ID")
-            
-            let temp = sec.filter(self.USER_ID == user_id)
-            try? database.run(temp.update(ans <- answer))
-        }
     }
 
     func set_security_question_2_ans (answer : String) {
-        //:TODO: CALL A FUNCTION THAT ENCRYPTS THE PROVIDED ANSWER
-
+        //:TODO: Encrypt Answer To Question 2 Password
         self.security_question_2_ans = answer
-        //:TODO: UPDATE SECURITY QUESTION 2 ANSWER IN DATABASE
-        if let database : Connection = try? Connection("/Users/user137911/Docuemnts/GoToo/SQLite_Database/backend_db.db") {
-            let sec : Table = Table("SecurityQuestions")
-            let ans : Expression = Expression<String>("QTWOANSWER")
-            let user_id : Expression = Expression<Int>("USER_ID")
-            
-            let temp = sec.filter(self.USER_ID == user_id)
-            try? database.run(temp.update(ans <- answer))
-        }
-
     }
 
 
@@ -199,7 +165,7 @@ class User_Profile {
     }
 
     func get_user_name () -> String{
-        return self.user_name
+        return self.username
     }
 
     func get_email () -> String{
@@ -207,7 +173,6 @@ class User_Profile {
     }
 
     func get_password () -> String{
-        //:TODO: RETURN UNENCRYPTED PASSWORD
         return self.password
     }
 
@@ -225,5 +190,83 @@ class User_Profile {
 
     func get_security_question_2_ans () -> String{
         return self.security_question_2_ans
+    }
+    
+    //:MARK: Database Updaters
+    func update_database_username(){
+        if let database : Connection = try? Connection("/Users/serj/Desktop/GO-TOO/SQLite_Database/backend_db.db") {
+            let user : Table = Table("Users")
+            let username : Expression = Expression<String>("NAME")
+            let user_id : Expression = Expression<Int>("ID_NUMBER")
+            
+            let temp = user.filter(self.USER_ID == user_id)
+            try? database.run(temp.update(username <- self.username))
+        }
+    }
+    
+    func update_database_email(){
+        if let database : Connection = try? Connection("/Users/serj/Desktop/GO-TOO/SQLite_Database/backend_db.db") {
+            let user : Table = Table("Users")
+            let email : Expression = Expression<String>("EMAIL")
+            let user_id : Expression = Expression<Int>("ID_NUMBER")
+            
+            let temp = user.filter(self.USER_ID == user_id)
+            try? database.run(temp.update(email <- self.email_address))
+        }
+    }
+    
+    func update_database_password(){
+        if let database : Connection = try? Connection("/Users/serj/Desktop/GO-TOO/SQLite_Database/backend_db.db") {
+            let user : Table = Table("Users")
+            let password : Expression = Expression<String>("PASSWORD_HASH")
+            let user_id : Expression = Expression<Int>("ID_NUMBER")
+            
+            let temp = user.filter(self.USER_ID == user_id)
+            try? database.run(temp.update(password <- self.password))
+        }
+    }
+    
+    func update_database_question_one(){
+        if let database : Connection = try? Connection("/Users/serj/Desktop/GO-TOO/SQLite_Database/backend_db.db") {
+            let sec : Table = Table("Security_Questions")
+            let question : Expression = Expression<String>("QUESTION_ONE")
+            let user_id : Expression = Expression<Int>("ID_NUMBER")
+            
+            let temp = sec.filter(self.USER_ID == user_id)
+            try? database.run(temp.update(question <- self.security_question_1))
+        }
+    }
+    
+    func update_database_question_two(){
+        if let database : Connection = try? Connection("/Users/serj/Desktop/GO-TOO/SQLite_Database/backend_db.db") {
+            let sec : Table = Table("Security_Questions")
+            let question : Expression = Expression<String>("QUESTION_TWO")
+            let user_id : Expression = Expression<Int>("ID_NUMBER")
+            
+            let temp = sec.filter(self.USER_ID == user_id)
+            try? database.run(temp.update(question <- self.security_question_2))
+        }
+    }
+    
+    func update_database_answer_one(){
+        if let database : Connection = try? Connection("/Users/serj/Desktop/GO-TOO/SQLite_Database/backend_db.db") {
+            let sec : Table = Table("Security_Questions")
+            let answer : Expression = Expression<String>("ANSWER_ONE")
+            let user_id : Expression = Expression<Int>("ID_NUMBER")
+            
+            let temp = sec.filter(self.USER_ID == user_id)
+            try? database.run(temp.update(answer <- self.security_question_1_ans))
+        }
+    }
+    
+    func update_database_answer_two(){
+        if let database : Connection = try? Connection("/Users/serj/Desktop/GO-TOO/SQLite_Database/backend_db.db") {
+            let sec : Table = Table("Security_Questions")
+            let answer : Expression = Expression<String>("ANSWER_TWO")
+            let user_id : Expression = Expression<Int>("ID_NUMBER")
+            
+            let temp = sec.filter(self.USER_ID == user_id)
+            try? database.run(temp.update(answer <- self.security_question_2_ans))
+        }
     }
 }

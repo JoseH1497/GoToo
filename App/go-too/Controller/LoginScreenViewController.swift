@@ -13,7 +13,6 @@ class LoginScreenViewController: UIViewController {
     //:Initiate login verification mechanism 
     let login_verification : Login_Verification = Login_Verification()
     
-    
     //:MARK: Preliminary functionality................................................
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -51,8 +50,7 @@ class LoginScreenViewController: UIViewController {
         //:NOTE: If email and password are correct a unique user id associated with the account will be returned
         if let user_id : Int = login_verification.verify_user_info(){
             //:Direct user to home page
-            //:TODO: TRANSFER USER ID TO THE NEXT VIEW CONTROLLER
-            print(user_id)
+            //:FIXME: TRANSFER USER ID TO THE NEXT VIEW CONTROLLER
             performSegue(withIdentifier:"login_to_home_segue" , sender: self)
         }
         else{

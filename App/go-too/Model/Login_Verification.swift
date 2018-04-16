@@ -32,16 +32,19 @@ class Login_Verification {
     func verify_user_info() -> Int?{
         if verify_email(){
             if verify_password(){
-                //:TODO: RETURN USER ID ASSOCIATED WITH PROVIDE EMAIL
+                //:Returning user ID associated with provided email
                 var id : Int = -1
-                if let database: Connection = try? Connection("Users/serj/Documents/Application/SQLite_Database/backend_db.db") {
+                
+                if let database: Connection = try? Connection("/Users/serj/Desktop/GO-TOO/SQLite_Database/backend_db.db") {
                     let users : Table      = Table("Users")
-                    let email : Expression = Expression<String>("email")
+                    
+                    let email   : Expression = Expression<String>("email")
                     let user_id : Expression = Expression<Int>("ID_NUMBER")
 
                     for row in try! database.prepare(users.filter(self.email == email)) {
                         id = row[user_id]
                     }
+                    
                     return id
                 }
             }
@@ -51,7 +54,7 @@ class Login_Verification {
     
     func verify_email() -> Bool{
         //:Attempting to conncet to database
-        if let database : Connection = try? Connection("/Users/serj/Documents/Application/SQLite_Database/backend_db.db"){
+        if let database : Connection = try? Connection("/Users/serj/Desktop/GO-TOO/SQLite_Database/backend_db.db"){
             //:Determining if email exists in database
             let users : Table      = Table("Users")
             let email : Expression = Expression<String>("email")
@@ -77,7 +80,7 @@ class Login_Verification {
     
     func verify_password() -> Bool{
         //:Attempting to conncet to database
-        if let database : Connection = try? Connection("/Users/serj/Documents/Application/SQLite_Database/backend_db.db"){
+        if let database : Connection = try? Connection("/Users/serj/Desktop/GO-TOO/SQLite_Database/backend_db.db"){
             //:Determining if password corresponds to provided email
             let users : Table         = Table("Users")
             let email : Expression    = Expression<String>("EMAIL")
