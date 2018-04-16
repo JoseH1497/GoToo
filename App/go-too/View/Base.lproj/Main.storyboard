@@ -253,15 +253,93 @@
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <state key="normal" image="Groups Tab"/>
                             </button>
+                            <stackView opaque="NO" contentMode="scaleToFill" fixedFrame="YES" axis="vertical" spacing="15" translatesAutoresizingMaskIntoConstraints="NO" id="J9g-fl-E5p">
+                                <rect key="frame" x="0.0" y="78" width="414" height="381"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMinX="YES" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <subviews>
+                                    <button opaque="NO" contentMode="scaleToFill" ambiguous="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="E2n-Wr-3BN">
+                                        <rect key="frame" x="0.0" y="0.0" width="414" height="51"/>
+                                        <inset key="contentEdgeInsets" minX="15" minY="0.0" maxX="15" maxY="0.0"/>
+                                        <state key="normal" title="Course 1" backgroundImage="Classes_Group_Purple_Button_Home"/>
+                                        <connections>
+                                            <action selector="Course1Action:" destination="1ve-G8-AG0" eventType="touchUpInside" id="89e-gI-MpO"/>
+                                        </connections>
+                                    </button>
+                                    <button opaque="NO" contentMode="scaleToFill" ambiguous="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="cQs-xF-K9a">
+                                        <rect key="frame" x="0.0" y="66" width="414" height="51"/>
+                                        <inset key="contentEdgeInsets" minX="15" minY="0.0" maxX="15" maxY="0.0"/>
+                                        <state key="normal" title="Course 2" backgroundImage="Classes_Group_Purple_Button_Home"/>
+                                        <connections>
+                                            <action selector="Course2Action:" destination="1ve-G8-AG0" eventType="touchUpInside" id="t4S-vX-Nz9"/>
+                                        </connections>
+                                    </button>
+                                    <button opaque="NO" contentMode="scaleToFill" ambiguous="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="e1E-77-DAc">
+                                        <rect key="frame" x="0.0" y="132" width="414" height="51"/>
+                                        <inset key="contentEdgeInsets" minX="15" minY="0.0" maxX="15" maxY="0.0"/>
+                                        <state key="normal" title="Course 3" backgroundImage="Classes_Group_Purple_Button_Home"/>
+                                        <connections>
+                                            <action selector="Course3Action:" destination="1ve-G8-AG0" eventType="touchUpInside" id="ztL-yd-VKU"/>
+                                        </connections>
+                                    </button>
+                                    <button opaque="NO" contentMode="scaleToFill" ambiguous="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="bdI-Q5-OQa">
+                                        <rect key="frame" x="0.0" y="198" width="414" height="51"/>
+                                        <inset key="contentEdgeInsets" minX="15" minY="0.0" maxX="15" maxY="0.0"/>
+                                        <state key="normal" title="Course 4" backgroundImage="Classes_Group_Purple_Button_Home"/>
+                                        <connections>
+                                            <action selector="Course4Action:" destination="1ve-G8-AG0" eventType="touchUpInside" id="w4L-b2-7ac"/>
+                                        </connections>
+                                    </button>
+                                    <button opaque="NO" contentMode="scaleToFill" ambiguous="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="MeR-zY-LBo">
+                                        <rect key="frame" x="0.0" y="264" width="414" height="51"/>
+                                        <inset key="contentEdgeInsets" minX="15" minY="0.0" maxX="15" maxY="0.0"/>
+                                        <state key="normal" title="Course 5" backgroundImage="Classes_Group_Purple_Button_Home"/>
+                                        <connections>
+                                            <action selector="Course5Action:" destination="1ve-G8-AG0" eventType="touchUpInside" id="sQN-5K-Imt"/>
+                                        </connections>
+                                    </button>
+                                    <button opaque="NO" contentMode="scaleToFill" ambiguous="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="8Jq-M8-y9I">
+                                        <rect key="frame" x="0.0" y="330" width="414" height="51"/>
+                                        <inset key="contentEdgeInsets" minX="15" minY="0.0" maxX="15" maxY="0.0"/>
+                                        <state key="normal" title="Course 6" backgroundImage="Classes_Group_Purple_Button_Home"/>
+                                        <connections>
+                                            <action selector="Course6Action:" destination="1ve-G8-AG0" eventType="touchUpInside" id="2He-ch-KC0"/>
+                                        </connections>
+                                    </button>
+                                </subviews>
+                            </stackView>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <viewLayoutGuide key="safeArea" id="jHM-gB-8g5"/>
                     </view>
                     <navigationItem key="navigationItem" id="5Hd-hw-cJF"/>
+                    <connections>
+                        <outlet property="Course1Button" destination="E2n-Wr-3BN" id="YOd-u5-oYd"/>
+                        <outlet property="Course2Button" destination="cQs-xF-K9a" id="pag-wj-ozf"/>
+                        <outlet property="Course3Button" destination="e1E-77-DAc" id="59f-LW-PiA"/>
+                        <outlet property="Course4Button" destination="bdI-Q5-OQa" id="oYP-TD-lgz"/>
+                        <outlet property="Course5Button" destination="MeR-zY-LBo" id="CvF-y0-KfV"/>
+                        <outlet property="Course6Button" destination="8Jq-M8-y9I" id="veB-NH-QuX"/>
+                        <segue destination="MlP-XT-MxV" kind="show" identifier="HomeScreenToNextCourseSegue" id="gMA-iy-xyl"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="TLe-bf-FR0" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1475" y="170"/>
+            <point key="canvasLocation" x="1614" y="165"/>
+        </scene>
+        <!--View Controller-->
+        <scene sceneID="ePn-Av-VFT">
+            <objects>
+                <viewController id="MlP-XT-MxV" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="QsG-fC-cIP">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="736"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <viewLayoutGuide key="safeArea" id="zNu-iu-sMz"/>
+                    </view>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="iwN-EY-unT" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="2874" y="62"/>
         </scene>
         <!--Login Screen View Controller-->
         <scene sceneID="tne-QT-ifu">
@@ -366,6 +444,7 @@
         <image name="Add Courses_Group Button" width="20" height="20"/>
         <image name="Bottom Bar" width="414" height="80"/>
         <image name="Calendar Button" width="48" height="38"/>
+        <image name="Classes_Group_Purple_Button_Home" width="414" height="51"/>
         <image name="Confirm_Password_Field_Sign_up" width="334" height="62"/>
         <image name="Contact_Us_Button_Recovered" width="78" height="16"/>
         <image name="Edit Button" width="33" height="19"/>

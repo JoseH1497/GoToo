@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		241CA168208541610081FAA3 /* Groups.swift in Sources */ = {isa = PBXBuildFile; fileRef = 241CA167208541610081FAA3 /* Groups.swift */; };
 		2484AE8C2075B08E00C035AA /* Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2484AE8B2075B08E00C035AA /* Extensions.swift */; };
 		2484AE932075B56C00C035AA /* ContactUsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2484AE922075B56C00C035AA /* ContactUsViewController.swift */; };
 		2484AE952075BF0300C035AA /* Constants.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2484AE942075BF0300C035AA /* Constants.swift */; };
@@ -22,6 +23,7 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		241CA167208541610081FAA3 /* Groups.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Groups.swift; sourceTree = "<group>"; };
 		2484AE8B2075B08E00C035AA /* Extensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Extensions.swift; sourceTree = "<group>"; };
 		2484AE922075B56C00C035AA /* ContactUsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContactUsViewController.swift; sourceTree = "<group>"; };
 		2484AE942075BF0300C035AA /* Constants.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Constants.swift; sourceTree = "<group>"; };
@@ -54,6 +56,7 @@
 			children = (
 				2484AE8B2075B08E00C035AA /* Extensions.swift */,
 				2484AE942075BF0300C035AA /* Constants.swift */,
+				241CA167208541610081FAA3 /* Groups.swift */,
 			);
 			path = Utils;
 			sourceTree = "<group>";
@@ -231,6 +234,7 @@
 			files = (
 				52F4C38D2072C03400F46DF2 /* LoginScreenViewController.swift in Sources */,
 				52F4C3852072BF4100F46DF2 /* SignUpScreenViewController.swift in Sources */,
+				241CA168208541610081FAA3 /* Groups.swift in Sources */,
 				52E9695B206C70AF00538307 /* AppDelegate.swift in Sources */,
 				2484AE932075B56C00C035AA /* ContactUsViewController.swift in Sources */,
 				52F4C3872072BF7600F46DF2 /* RecoveryScreenViewController.swift in Sources */,
