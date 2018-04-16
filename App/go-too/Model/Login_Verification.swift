@@ -33,10 +33,19 @@ class Login_Verification {
         if verify_email(){
             if verify_password(){
                 //:TODO: RETURN USER ID ASSOCIATED WITH PROVIDE EMAIL
-                return 333
+                var id : Int = -1
+                if let database: Connection = try? Connection("Users/serj/Documents/Application/SQLite_Database/backend_db.db") {
+                    let users : Table      = Table("Users")
+                    let email : Expression = Expression<String>("email")
+                    let user_id : Expression = Expression<Int>("ID_NUMBER")
+
+                    for row in try! database.prepare(users.filter(self.email == email)) {
+                        id = row[user_id]
+                    }
+                    return id
+                }
             }
         }
-        
         return nil
     }
     
