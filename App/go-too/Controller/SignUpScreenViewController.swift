@@ -30,6 +30,7 @@ class SignUpScreenViewController: UIViewController {
     
     //:MARK: UI Elements
     @IBAction func user_name_entered(_ sender: UITextField) {
+        
     }
     @IBAction func emailed_entered(_ sender: UITextField) {
     }

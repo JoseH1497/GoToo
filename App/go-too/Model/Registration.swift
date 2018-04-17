@@ -10,6 +10,50 @@ import Foundation
 import SQLite
 
 class Registration{
+    //:NOTE: There are 4 requirements that a user must satisfy when creating a GooToo account
+    //:User must use a username and email that are not already in use
+    //:User password and password confirmation must match
+    var username_satisfied : Bool
+    var email_satisfied    : Bool
+    var password_satisfied : Bool
+    var password_confirmation_satisfied : Bool
+    
+    
+    init (){
+        username_satisfied = false
+        email_satisfied    = false
+        password_satisfied = false
+        password_confirmation_satisfied = false
+    }
+
+    //:Functions will determine when a condition is satisfied or disatisfied
+    func set_username_satisfied (status : Bool){
+        username_satisfied = status
+    }
+    
+    func set_email_satisfied(status : Bool){
+        email_satisfied = status
+    }
+    
+    func set_password_satisfied(status : Bool){
+        password_satisfied = status
+    }
+    
+    func set_password_confirmation_satisfied(status : Bool){
+        password_confirmation_satisfied = status
+    }
+    
+    //:Function determines if all registration conditions have been satisfied 
+    func registration_completed() -> Bool{
+        if username_satisfied & email_satisfied & password_satisfied & password_confirmation_satisfied{
+            return true
+        }
+        else {
+            return false
+        }
+    }
+    
+    //:Function generates and returns the next available user id in the database
     func get_next_available_id () -> Int {
         var new_user_id : Int = 0
         
@@ -27,6 +71,7 @@ class Registration{
         return new_user_id
     }
     
+    //:Function deletes the space allocated in the database when user exits registration
     func user_cancelled_register (user_ID : Int) {
         if let database : Connection = try? Connection("/Users/serj/Desktop/Clone/SQLite_Database/backend_db.db") {
             let users : Table = Table("Users")
