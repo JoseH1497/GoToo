@@ -11,7 +11,7 @@ import UIKit
 class NextScreenController : UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
-        view.backgroundColor = UIColor.black
+        view.backgroundColor = UIColor.blue
         
     }
 
