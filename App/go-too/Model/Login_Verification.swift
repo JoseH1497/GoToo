@@ -35,7 +35,7 @@ class Login_Verification {
                 //:Returning user ID associated with provided email
                 var id : Int = -1
                 
-                if let database: Connection = try? Connection("/Users/serj/Desktop/GO-TOO/SQLite_Database/backend_db.db") {
+                if let database: Connection = try? Connection("/Users/serj/Desktop/Clone/SQLite_Database/backend_db.db") {
                     let users : Table      = Table("Users")
                     
                     let email   : Expression = Expression<String>("email")
@@ -54,7 +54,7 @@ class Login_Verification {
     
     func verify_email() -> Bool{
         //:Attempting to conncet to database
-        if let database : Connection = try? Connection("/Users/serj/Desktop/GO-TOO/SQLite_Database/backend_db.db"){
+        if let database : Connection = try? Connection("/Users/serj/Desktop/Clone/SQLite_Database/backend_db.db"){
             //:Determining if email exists in database
             let users : Table      = Table("Users")
             let email : Expression = Expression<String>("email")
@@ -80,7 +80,7 @@ class Login_Verification {
     
     func verify_password() -> Bool{
         //:Attempting to conncet to database
-        if let database : Connection = try? Connection("/Users/serj/Desktop/GO-TOO/SQLite_Database/backend_db.db"){
+        if let database : Connection = try? Connection("/Users/serj/Desktop/Clone/SQLite_Database/backend_db.db"){
             //:Determining if password corresponds to provided email
             let users : Table         = Table("Users")
             let email : Expression    = Expression<String>("EMAIL")

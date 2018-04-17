@@ -9,9 +9,10 @@ class User_Profile {
     //:MARK: Properties
     let USER_ID : Int
     
-    var username : String
+    var username      : String
     var email_address : String
-    var password : String
+    var password      : String
+    var user_status   : Int
 
     var security_question_1 : String
     var security_question_2 : String
@@ -27,6 +28,7 @@ class User_Profile {
         self.username      = ""
         self.email_address = ""
         self.password      = ""
+        self.user_status   = 0
         
         self.security_question_1 = ""
         self.security_question_2 = ""
@@ -39,7 +41,7 @@ class User_Profile {
     convenience init? (ID : Int) {
         self.init(USER_ID: ID)
         //:Attempting to connect to database
-        if let database : Connection = try? Connection("/Users/serj/Desktop/GO-TOO/SQLite_Database/backend_db.db"){
+        if let database : Connection = try? Connection("/Users/serj/Desktop/Clone/SQLite_Database/backend_db.db"){
             let users : Table = Table("Users")
             let security_questions : Table = Table("Security_Questions")
             
@@ -49,6 +51,7 @@ class User_Profile {
             let username : Expression = Expression<String>("NAME")
             let email    : Expression = Expression<String>("EMAIL")
             let password : Expression = Expression<String>("PASSWORD_HASH")
+            let status   : Expression = Expression<Int>("USER_STATUS")
             
             let question1 : Expression = Expression<String>("QUESTION_ONE")
             let question2 : Expression = Expression<String>("QUESTION_TWO")
@@ -56,18 +59,32 @@ class User_Profile {
             let answer1   : Expression = Expression<String>("ANSWER_ONE")
             let answer2   : Expression = Expression<String>("ANSWER_TWO")
             
-            for row in try! database.prepare(users.filter(ID == user_id)) {
-                self.username      = row[username]
-                self.email_address = row[email]
-                self.password      = row[password]
-            }
-       
-            for col in try! database.prepare(security_questions.filter(ID == user_id)) {
-                self.security_question_1 = col[question1]
-                self.security_question_2 = col[question2]
-                
-                self.security_question_1_ans = col[answer1]
-                self.security_question_2_ans = col[answer2]
+            //:Checking if user id exists in database records
+            if let query_result : Int = try? database.scalar(users.filter(ID == user_id).count){
+                //:User id exists ... User is logging into application
+                if query_result == 1{
+                    //:Retrieving user information
+                    for row in try! database.prepare(users.filter(ID == user_id)) {
+                        self.username      = row[username]
+                        self.email_address = row[email]
+                        self.password      = row[password]
+                        self.user_status   = row[status]
+                    }
+                    
+                    for col in try! database.prepare(security_questions.filter(ID == user_id)) {
+                        self.security_question_1 = col[question1]
+                        self.security_question_2 = col[question2]
+                        
+                        self.security_question_1_ans = col[answer1]
+                        self.security_question_2_ans = col[answer2]
+                    }
+                }
+                //:User id does not exist ... User is trying to create an account
+                else{
+                    //:Creating space in the database for new user
+                    try! database.run(users.insert(user_id <- self.USER_ID, username <- self.username, email <- self.email_address, password <- self.password, status <- self.user_status))
+                    try! database.run(security_questions.insert(user_id <- self.USER_ID, question1 <- self.security_question_1, answer1 <- self.security_question_1_ans, question2 <- self.security_question_2, answer2 <- self.security_question_2_ans))
+                }
             }
         }
         
@@ -84,7 +101,7 @@ class User_Profile {
         self.username = name
         
          //:Attempting to connect to database
-        if let database : Connection = try? Connection("/Users/serj/Desktop/GO-TOO/SQLite_Database/backend_db.db") {
+        if let database : Connection = try? Connection("/Users/serj/Desktop/Clone/SQLite_Database/backend_db.db") {
             let users : Table = Table("Users")
             
             let username : Expression = Expression<String>("NAME")
@@ -115,7 +132,7 @@ class User_Profile {
         self.email_address = email
         
         //:Attempting to connect to database
-        if let database : Connection = try? Connection("/Users/serj/Desktop/GO-TOO/SQLite_Database/backend_db.db") {
+        if let database : Connection = try? Connection("/Users/serj/Desktop/Clone/SQLite_Database/backend_db.db") {
             let users : Table = Table("Users")
             
             let email_address : Expression = Expression<String>("EMAIL")
@@ -194,79 +211,79 @@ class User_Profile {
     
     //:MARK: Database Updaters
     func update_database_username(){
-        if let database : Connection = try? Connection("/Users/serj/Desktop/GO-TOO/SQLite_Database/backend_db.db") {
+        if let database : Connection = try? Connection("/Users/serj/Desktop/Clone/SQLite_Database/backend_db.db") {
             let user : Table = Table("Users")
             let username : Expression = Expression<String>("NAME")
             let user_id : Expression = Expression<Int>("ID_NUMBER")
             
             let temp = user.filter(self.USER_ID == user_id)
-            try? database.run(temp.update(username <- self.username))
+            try! database.run(temp.update(username <- self.username))
         }
     }
     
     func update_database_email(){
-        if let database : Connection = try? Connection("/Users/serj/Desktop/GO-TOO/SQLite_Database/backend_db.db") {
+        if let database : Connection = try? Connection("/Users/serj/Desktop/Clone/SQLite_Database/backend_db.db") {
             let user : Table = Table("Users")
             let email : Expression = Expression<String>("EMAIL")
             let user_id : Expression = Expression<Int>("ID_NUMBER")
             
             let temp = user.filter(self.USER_ID == user_id)
-            try? database.run(temp.update(email <- self.email_address))
+            try! database.run(temp.update(email <- self.email_address))
         }
     }
     
     func update_database_password(){
-        if let database : Connection = try? Connection("/Users/serj/Desktop/GO-TOO/SQLite_Database/backend_db.db") {
+        if let database : Connection = try? Connection("/Users/serj/Desktop/Clone/SQLite_Database/backend_db.db") {
             let user : Table = Table("Users")
             let password : Expression = Expression<String>("PASSWORD_HASH")
             let user_id : Expression = Expression<Int>("ID_NUMBER")
             
             let temp = user.filter(self.USER_ID == user_id)
-            try? database.run(temp.update(password <- self.password))
+            try! database.run(temp.update(password <- self.password))
         }
     }
     
     func update_database_question_one(){
-        if let database : Connection = try? Connection("/Users/serj/Desktop/GO-TOO/SQLite_Database/backend_db.db") {
+        if let database : Connection = try? Connection("/Users/serj/Desktop/Clone/SQLite_Database/backend_db.db") {
             let sec : Table = Table("Security_Questions")
             let question : Expression = Expression<String>("QUESTION_ONE")
             let user_id : Expression = Expression<Int>("ID_NUMBER")
             
             let temp = sec.filter(self.USER_ID == user_id)
-            try? database.run(temp.update(question <- self.security_question_1))
+            try! database.run(temp.update(question <- self.security_question_1))
         }
     }
     
     func update_database_question_two(){
-        if let database : Connection = try? Connection("/Users/serj/Desktop/GO-TOO/SQLite_Database/backend_db.db") {
+        if let database : Connection = try? Connection("/Users/serj/Desktop/Clone/SQLite_Database/backend_db.db") {
             let sec : Table = Table("Security_Questions")
             let question : Expression = Expression<String>("QUESTION_TWO")
             let user_id : Expression = Expression<Int>("ID_NUMBER")
             
             let temp = sec.filter(self.USER_ID == user_id)
-            try? database.run(temp.update(question <- self.security_question_2))
+            try! database.run(temp.update(question <- self.security_question_2))
         }
     }
     
     func update_database_answer_one(){
-        if let database : Connection = try? Connection("/Users/serj/Desktop/GO-TOO/SQLite_Database/backend_db.db") {
+        if let database : Connection = try? Connection("/Users/serj/Desktop/Clone/SQLite_Database/backend_db.db") {
             let sec : Table = Table("Security_Questions")
             let answer : Expression = Expression<String>("ANSWER_ONE")
             let user_id : Expression = Expression<Int>("ID_NUMBER")
             
             let temp = sec.filter(self.USER_ID == user_id)
-            try? database.run(temp.update(answer <- self.security_question_1_ans))
+            try! database.run(temp.update(answer <- self.security_question_1_ans))
         }
     }
     
     func update_database_answer_two(){
-        if let database : Connection = try? Connection("/Users/serj/Desktop/GO-TOO/SQLite_Database/backend_db.db") {
+        if let database : Connection = try? Connection("/Users/serj/Desktop/Clone/SQLite_Database/backend_db.db") {
             let sec : Table = Table("Security_Questions")
             let answer : Expression = Expression<String>("ANSWER_TWO")
             let user_id : Expression = Expression<Int>("ID_NUMBER")
             
             let temp = sec.filter(self.USER_ID == user_id)
-            try? database.run(temp.update(answer <- self.security_question_2_ans))
+            try! database.run(temp.update(answer <- self.security_question_2_ans))
         }
     }
 }

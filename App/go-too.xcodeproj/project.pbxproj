@@ -8,6 +8,7 @@
 
 /* Begin PBXBuildFile section */
 		5209AA802078359C008A14BF /* Login_Verification.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5209AA7F2078359C008A14BF /* Login_Verification.swift */; };
+		5268871C20858B200087BE94 /* Registration.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5268871B20858B200087BE94 /* Registration.swift */; };
 		526BCFB3208523D100D69514 /* User.swift in Sources */ = {isa = PBXBuildFile; fileRef = 526BCFB2208523D100D69514 /* User.swift */; };
 		5275BF80206DC52A000EA1F1 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 5275BF7F206DC529000EA1F1 /* Assets.xcassets */; };
 		529261C9208052430052B25D /* User_Profile.swift in Sources */ = {isa = PBXBuildFile; fileRef = 529261C8208052430052B25D /* User_Profile.swift */; };
@@ -25,6 +26,7 @@
 /* Begin PBXFileReference section */
 		284B42E59D6A4856A2FF2991 /* Pods_go_too.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_go_too.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		5209AA7F2078359C008A14BF /* Login_Verification.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Login_Verification.swift; sourceTree = "<group>"; };
+		5268871B20858B200087BE94 /* Registration.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Registration.swift; sourceTree = "<group>"; };
 		526BCFB2208523D100D69514 /* User.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = User.swift; sourceTree = "<group>"; };
 		5275BF7F206DC529000EA1F1 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		529261C8208052430052B25D /* User_Profile.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = User_Profile.swift; sourceTree = "<group>"; };
@@ -112,6 +114,7 @@
 				529261C8208052430052B25D /* User_Profile.swift */,
 				526BCFB2208523D100D69514 /* User.swift */,
 				5209AA7F2078359C008A14BF /* Login_Verification.swift */,
+				5268871B20858B200087BE94 /* Registration.swift */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -254,6 +257,7 @@
 				526BCFB3208523D100D69514 /* User.swift in Sources */,
 				52F4C38B2072BFA300F46DF2 /* RecoveredScreenViewController.swift in Sources */,
 				5209AA802078359C008A14BF /* Login_Verification.swift in Sources */,
+				5268871C20858B200087BE94 /* Registration.swift in Sources */,
 				52F4C3892072BF8800F46DF2 /* HomeScreenViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
