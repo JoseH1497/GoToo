@@ -6,16 +6,23 @@ import Foundation
 import SQLite
 
 class Account_Receovery{
-    // Database attributes
+    // MARK: Database Attributes
     let database : Connection
     let Users    : Table      = Table("Users")
     let USER_ID  : Expression = Expression<Int>("ID_NUMBER")
     let EMAIL    : Expression = Expression<String>("EMAIL")
     
-    var email             : String
-    var user_id           : Int
-    var selected_question : Int
+    // MARK: Account Recovery Attributes
+    var user_id      : Int
+    var email        : String
     
+    var sec_ques_num : Int
+    var sec_ques_ans : String
+    
+    var provided_ans : String
+    
+    
+    // MARK: Initializers
     init?(){
         // Attempting to connect database
         // Successful connection ---> initialization continues
@@ -29,10 +36,17 @@ class Account_Receovery{
             return nil
         }
         
-        self.email             = ""
-        self.user_id           = 0
-        self.selected_question = 0
+        // Initializing account recovery attributes
+        self.email        = ""
+        self.user_id      = 0
+        
+        self.sec_ques_num = 0
+        self.sec_ques_ans = ""
+        
+        self.provided_ans = ""
     }
+    
+    // MARK: Information Verifiers
     
     // Function determines if the provided email is associated with an account
     // Successful verifiaction ---> returns user id
@@ -55,20 +69,37 @@ class Account_Receovery{
         return id
     }
     
-    // Setters
+    func verify_sec_ques_ans() -> Bool{
+        if self.sec_ques_ans == self.provided_ans{
+            return true
+        }
+        
+        return false
+    }
+    
+    
+    // MARK: Information Setters
+    func set_user_id(_ id : Int){
+        self.user_id = id
+    }
+    
     func set_email(_ email : String){
         self.email = email
     }
     
     func set_selected_question(_ question_num : Int){
-        self.selected_question = question_num
+        self.sec_ques_num = question_num
     }
     
-    func set_user_id(_ id : Int){
-        self.user_id = id
+    func set_selected_sec_ques_ans(_ answer : String){
+        self.sec_ques_ans = answer
     }
     
-    // Getters
+    func set_provided_ans(_ answer : String){
+        self.provided_ans = answer
+    }
+    
+    // MARK: Information Getters
     func get_user_id() -> Int{
         return user_id
     }

@@ -18,6 +18,7 @@
 		52E9695B206C70AF00538307 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 52E9695A206C70AF00538307 /* AppDelegate.swift */; };
 		52E96960206C70AF00538307 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 52E9695E206C70AF00538307 /* Main.storyboard */; };
 		52E96965206C70AF00538307 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 52E96963206C70AF00538307 /* LaunchScreen.storyboard */; };
+		52EE4B88208D0F6400771CE3 /* PasswordResetScreenViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 52EE4B87208D0F6400771CE3 /* PasswordResetScreenViewController.swift */; };
 		52F4C3852072BF4100F46DF2 /* SignUpScreenViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 52F4C3842072BF4100F46DF2 /* SignUpScreenViewController.swift */; };
 		52F4C3872072BF7600F46DF2 /* RecoveryScreenViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 52F4C3862072BF7600F46DF2 /* RecoveryScreenViewController.swift */; };
 		52F4C3892072BF8800F46DF2 /* HomeScreenViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 52F4C3882072BF8800F46DF2 /* HomeScreenViewController.swift */; };
@@ -41,6 +42,7 @@
 		52E9695F206C70AF00538307 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		52E96964206C70AF00538307 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		52E96966206C70AF00538307 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		52EE4B87208D0F6400771CE3 /* PasswordResetScreenViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PasswordResetScreenViewController.swift; sourceTree = "<group>"; };
 		52F4C3842072BF4100F46DF2 /* SignUpScreenViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignUpScreenViewController.swift; sourceTree = "<group>"; };
 		52F4C3862072BF7600F46DF2 /* RecoveryScreenViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RecoveryScreenViewController.swift; sourceTree = "<group>"; };
 		52F4C3882072BF8800F46DF2 /* HomeScreenViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeScreenViewController.swift; sourceTree = "<group>"; };
@@ -121,6 +123,7 @@
 				52E9695A206C70AF00538307 /* AppDelegate.swift */,
 				52F4C3882072BF8800F46DF2 /* HomeScreenViewController.swift */,
 				52F4C38A2072BFA300F46DF2 /* RecoveredScreenViewController.swift */,
+				52EE4B87208D0F6400771CE3 /* PasswordResetScreenViewController.swift */,
 			);
 			path = Controller;
 			sourceTree = "<group>";
@@ -279,6 +282,7 @@
 				52956D3120871C480006EDAA /* Login_Verification.swift in Sources */,
 				52644209208C4E3200D0DDC4 /* RecoveryScreenQuestionViewController.swift in Sources */,
 				52F4C3852072BF4100F46DF2 /* SignUpScreenViewController.swift in Sources */,
+				52EE4B88208D0F6400771CE3 /* PasswordResetScreenViewController.swift in Sources */,
 				52E9695B206C70AF00538307 /* AppDelegate.swift in Sources */,
 				52644205208BC42200D0DDC4 /* SecuritySetupStageTwoViewController.swift in Sources */,
 				52F4C3872072BF7600F46DF2 /* RecoveryScreenViewController.swift in Sources */,
