@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="14109" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="9ja-Pl-ITT">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="14109" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
     <device id="retina5_5" orientation="portrait">
         <adaptation id="fullscreen"/>
     </device>
@@ -126,7 +126,7 @@
                                     <action selector="continue_button_pressed:" destination="ka7-YS-iuQ" eventType="touchUpInside" id="71h-pk-55u"/>
                                 </connections>
                             </button>
-                            <textField opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Security Question One" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="maP-Cg-Gb4">
+                            <textField opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="Security Question One" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="maP-Cg-Gb4">
                                 <rect key="frame" x="50" y="312" width="314" height="30"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <nil key="textColor"/>
@@ -136,7 +136,7 @@
                                     <action selector="security_question_entered:" destination="ka7-YS-iuQ" eventType="editingDidEndOnExit" id="4uR-ng-Cqk"/>
                                 </connections>
                             </textField>
-                            <textField opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Answer" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="usd-xt-cdd">
+                            <textField opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="Answer" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="usd-xt-cdd">
                                 <rect key="frame" x="50" y="371" width="314" height="30"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <nil key="textColor"/>
@@ -178,31 +178,40 @@
                                 <rect key="frame" x="40" y="337" width="334" height="62"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                             </imageView>
-                            <textField opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" text="Email" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="H51-SZ-pV3" userLabel="Email_Filed">
+                            <textField opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="Email" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="H51-SZ-pV3" userLabel="Email_Filed">
                                 <rect key="frame" x="50" y="353" width="314" height="30"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <color key="textColor" red="0.48627450979999998" green="0.48627450979999998" blue="0.48627450979999998" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                                 <fontDescription key="fontDescription" name="AppleSDGothicNeo-Regular" family="Apple SD Gothic Neo" pointSize="16"/>
                                 <textInputTraits key="textInputTraits"/>
+                                <connections>
+                                    <action selector="email_entered:" destination="17h-wp-1b3" eventType="editingDidEndOnExit" id="6VI-vh-8qR"/>
+                                </connections>
                             </textField>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Nn5-uD-Boh">
+                            <button opaque="NO" contentMode="scaleAspectFit" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Nn5-uD-Boh">
                                 <rect key="frame" x="40" y="451" width="334" height="62"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <state key="normal" image="Send_Buttom_Recovery"/>
+                                <state key="normal" image="Continue_Buttom_Security"/>
+                                <connections>
+                                    <action selector="continue_button_pressed:" destination="17h-wp-1b3" eventType="touchUpInside" id="KDC-qW-vId"/>
+                                </connections>
                             </button>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <viewLayoutGuide key="safeArea" id="4hh-Z8-29E"/>
                     </view>
+                    <connections>
+                        <segue destination="V2u-qB-rqI" kind="presentation" identifier="account_recovery_email_question_segue" id="Z5u-sl-vhE"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="GH4-2T-xct" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="904" y="-739"/>
         </scene>
-        <!--View Controller-->
+        <!--Recovery Screen Question View Controller-->
         <scene sceneID="DOL-Xb-l5X">
             <objects>
-                <viewController id="V2u-qB-rqI" sceneMemberID="viewController">
+                <viewController id="V2u-qB-rqI" customClass="RecoveryScreenQuestionViewController" customModule="go_too" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="8ds-gi-Ysp">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="736"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -228,10 +237,32 @@
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <state key="normal" title="Button" image="Continue_Buttom_Security"/>
                             </button>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="D66-Rd-XYd">
+                                <rect key="frame" x="50" y="324" width="314" height="30"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" name="AppleSDGothicNeo-Regular" family="Apple SD Gothic Neo" pointSize="17"/>
+                                <color key="textColor" red="0.4756349325" green="0.47564673419999998" blue="0.47564041610000002" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <textField opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="Answer" textAlignment="center" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="NTR-DU-IUs" userLabel="Email_Filed">
+                                <rect key="frame" x="50" y="383" width="314" height="30"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <color key="textColor" red="0.48627450979999998" green="0.48627450979999998" blue="0.48627450979999998" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                <fontDescription key="fontDescription" name="AppleSDGothicNeo-Regular" family="Apple SD Gothic Neo" pointSize="16"/>
+                                <textInputTraits key="textInputTraits"/>
+                                <connections>
+                                    <action selector="answer_entered:" destination="V2u-qB-rqI" eventType="editingDidEndOnExit" id="twJ-5d-Lch"/>
+                                    <action selector="email_entered:" destination="17h-wp-1b3" eventType="editingDidEndOnExit" id="nwf-BB-1dy"/>
+                                </connections>
+                            </textField>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <viewLayoutGuide key="safeArea" id="Pwg-Xh-Hha"/>
                     </view>
+                    <connections>
+                        <outlet property="question_display_label" destination="D66-Rd-XYd" id="6Nt-79-FEp"/>
+                        <segue destination="WNa-ms-vve" kind="presentation" id="QPm-Ko-27D"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="b6d-9D-s7n" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
@@ -374,11 +405,17 @@
                                 <rect key="frame" x="181" y="588" width="53" height="22"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <state key="normal" image="Sign_Up_Button_Login"/>
+                                <connections>
+                                    <action selector="sign_up_button_pressed:" destination="BYZ-38-t0r" eventType="touchUpInside" id="ZOR-Wo-lo3"/>
+                                </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleAspectFit" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="lmI-zm-hYY" userLabel="Recovery_Button">
                                 <rect key="frame" x="150" y="627" width="116" height="22"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <state key="normal" image="Recovery_Button_Login"/>
+                                <connections>
+                                    <action selector="recovery_button_page:" destination="BYZ-38-t0r" eventType="touchUpInside" id="Y4o-eI-UPD"/>
+                                </connections>
                             </button>
                             <textField opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="Email" textAlignment="natural" clearsOnBeginEditing="YES" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="epe-3p-TSN" userLabel="Email_Filed">
                                 <rect key="frame" x="50" y="323" width="314" height="30"/>
@@ -405,8 +442,8 @@
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                     </view>
                     <connections>
-                        <segue destination="9ja-Pl-ITT" kind="presentation" identifier="registration_page_segue" animates="NO" id="dyS-l7-ru6"/>
-                        <segue destination="17h-wp-1b3" kind="presentation" identifier="recovery_page_segue" id="n1a-15-ejG"/>
+                        <segue destination="9ja-Pl-ITT" kind="presentation" identifier="login_registration_segue" animates="NO" id="dyS-l7-ru6"/>
+                        <segue destination="17h-wp-1b3" kind="presentation" identifier="login_recovery_segue" id="n1a-15-ejG"/>
                         <segue destination="1ve-G8-AG0" kind="presentation" identifier="login_home_segue" id="Tem-1V-BPe"/>
                     </connections>
                 </viewController>
@@ -442,7 +479,7 @@
                                     <action selector="continue_button_pressed:" destination="Fjq-Jw-5kw" eventType="touchUpInside" id="CSl-ix-8zo"/>
                                 </connections>
                             </button>
-                            <textField opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Security Question One" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="9KJ-A0-CNk">
+                            <textField opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="Security Question One" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="9KJ-A0-CNk">
                                 <rect key="frame" x="50" y="312" width="314" height="30"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <nil key="textColor"/>
@@ -452,7 +489,7 @@
                                     <action selector="security_question_entered:" destination="Fjq-Jw-5kw" eventType="editingDidEndOnExit" id="T5G-BS-L50"/>
                                 </connections>
                             </textField>
-                            <textField opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Answer" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="1LG-gi-gMZ">
+                            <textField opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="Answer" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="1LG-gi-gMZ">
                                 <rect key="frame" x="50" y="371" width="314" height="30"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <nil key="textColor"/>
@@ -503,7 +540,6 @@
         <image name="Question_Field_Questions" width="334" height="62"/>
         <image name="Question_Field_Security" width="334" height="62"/>
         <image name="Recovery_Button_Login" width="116" height="16"/>
-        <image name="Send_Buttom_Recovery" width="334" height="62"/>
         <image name="Sign_Up_Button" width="334" height="62"/>
         <image name="Sign_Up_Button_Login" width="53" height="16"/>
         <image name="Title_Almost_Security" width="206" height="95"/>

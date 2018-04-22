@@ -51,6 +51,16 @@ class LoginScreenViewController: UIViewController {
         }
     }
     
+    // Function redirects user to sign up page
+    @IBAction func sign_up_button_pressed(_ sender: UIButton) {
+        performSegue(withIdentifier: "login_registration_segue", sender: nil)
+    }
+    
+    // Function redirects user to recovery page
+    @IBAction func recovery_button_page(_ sender: UIButton) {
+        performSegue(withIdentifier: "login_recovery_segue", sender: nil)
+    }
+    
     // MARK: Error Handling
     func display_error(_ title : String , _ message : String){
         let alert : UIAlertController = UIAlertController(title: title, message: message, preferredStyle: .alert)

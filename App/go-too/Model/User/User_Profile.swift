@@ -1,5 +1,6 @@
 //  Created by Sergio Rosendo on 4/17/18.
 // The following class will contain and organize users account information
+
 import Foundation
 import SQLite
 
