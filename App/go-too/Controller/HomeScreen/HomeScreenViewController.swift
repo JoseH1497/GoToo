@@ -76,32 +76,32 @@ class HomeScreenViewController: UIViewController {
             case 1:
                 //course 1 button
                 Course1Button.isHidden = false;
-                //Course1Button.setTitle(courseNames[i-1], for: .normal)
+                Course1Button.setTitle(courseNames[i-1], for: .normal)
                 break
             case 2:
                 //course 2 button
                 Course2Button.isHidden = false;
-                //Course2Button.setTitle(courseNames[i-1], for: .normal)
+                Course2Button.setTitle(courseNames[i-1], for: .normal)
                 break
             case 3:
                 //course 3 button
                 Course3Button.isHidden = false;
-                //Course3Button.setTitle(courseNames[i-1], for: .normal)
+                Course3Button.setTitle(courseNames[i-1], for: .normal)
                 break
             case 4:
                 //course 4 button
                 Course4Button.isHidden = false;
-                //Course4Button.setTitle(courseNames[i-1], for: .normal)
+                Course4Button.setTitle(courseNames[i-1], for: .normal)
                 break
             case 5:
                 //course 5 button
                 Course5Button.isHidden = false;
-                //Course5Button.setTitle(courseNames[i-1], for: .normal)
+                Course5Button.setTitle(courseNames[i-1], for: .normal)
                 break
             case 6:
                 //course 6 button
                 Course6Button.isHidden = false;
-                //Course6Button.setTitle(courseNames[i-1], for: .normal)
+                Course6Button.setTitle(courseNames[i-1], for: .normal)
                 break
                 
             //should never get here
@@ -129,13 +129,14 @@ class HomeScreenViewController: UIViewController {
          **/
         
         
-        buttonCount = 6;//here for testing
+        buttonCount = 2;//here for testing
         
         return buttonCount
     }
     
     //Function to hide all coursebuttons in StackView
     fileprivate func hideAllCourseButtons(){
+        
         Course6Button.isHidden = true
         Course5Button.isHidden = true
         Course4Button.isHidden = true

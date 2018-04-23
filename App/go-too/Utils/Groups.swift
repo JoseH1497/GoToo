@@ -12,20 +12,21 @@ import UIKit
 class Group {
     var groupName   : String
     var isAdmin : Bool
-    /**var groupMembers = []
-     var onlineMembers = []
+    var groupMembers = [String]()
+    var onlineMembers = [String]()
      
-     var newPosts = []
-     var allPosts = []
-     var newQuestions = []
-     var allQuestions = []**/
+     var newPosts = [String]()
+     var allPosts = [String]()
+     var newQuestions = [String]()
+     var allQuestions = [String]()
     //:Constructors..............................................................................
     init(){
         /**TODO:Populate groupMembers[], onlineMembers[], newPosts[] and allPosts[], newQuestions[], allQuestions[]
          We need to either use a timestamp mechanism or something to tell what is a new post
+         
          **/
         groupName = ""
-        isAdmin = true
+        isAdmin = false
         
     }
     
@@ -68,6 +69,20 @@ class Group {
     }
     func displayAllQuestions(){
         
+    }
+    
+    //func will load info from database if there is stuff to load
+    //MARK: -Im thinking we can create a function that will load info to the group objects in super class
+    func loadInfoFromDataBase(name : String, isAd : Bool, groupMembs : Array<String>, onlineMembs : Array<String>, newPost : Array<String>, allPost : Array <String>, newQs : Array<String>, allQs : Array<String>){
+        groupName  = name
+        isAdmin = isAd
+        groupMembers = groupMembs
+        onlineMembers = onlineMembs
+        newPosts = newPost
+        allPosts = allPost
+        newQuestions = newQs
+        allQuestions = allQs
+  
     }
     
 }
