@@ -7,12 +7,18 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		5209AA802078359C008A14BF /* Login_Verification.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5209AA7F2078359C008A14BF /* Login_Verification.swift */; };
+		52644205208BC42200D0DDC4 /* SecuritySetupStageTwoViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 52644204208BC42200D0DDC4 /* SecuritySetupStageTwoViewController.swift */; };
+		52644207208C363900D0DDC4 /* Account_Recovery.swift in Sources */ = {isa = PBXBuildFile; fileRef = 52644206208C363900D0DDC4 /* Account_Recovery.swift */; };
+		52644209208C4E3200D0DDC4 /* RecoveryScreenQuestionViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 52644208208C4E3200D0DDC4 /* RecoveryScreenQuestionViewController.swift */; };
+		5268871C20858B200087BE94 /* Registration.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5268871B20858B200087BE94 /* Registration.swift */; };
 		5275BF80206DC52A000EA1F1 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 5275BF7F206DC529000EA1F1 /* Assets.xcassets */; };
+		52872627208BAADE00EDBA57 /* SecuritySetupStageOneViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 52872626208BAADE00EDBA57 /* SecuritySetupStageOneViewController.swift */; };
+		52956D3120871C480006EDAA /* Login_Verification.swift in Sources */ = {isa = PBXBuildFile; fileRef = 52956D3020871C470006EDAA /* Login_Verification.swift */; };
+		52ACF9712087B08300A675B9 /* User_Profile.swift in Sources */ = {isa = PBXBuildFile; fileRef = 52ACF9702087B08300A675B9 /* User_Profile.swift */; };
 		52E9695B206C70AF00538307 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 52E9695A206C70AF00538307 /* AppDelegate.swift */; };
 		52E96960206C70AF00538307 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 52E9695E206C70AF00538307 /* Main.storyboard */; };
 		52E96965206C70AF00538307 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 52E96963206C70AF00538307 /* LaunchScreen.storyboard */; };
-		52EB190F207957270027862B /* Password_Recovery.swift in Sources */ = {isa = PBXBuildFile; fileRef = 52EB190E207957270027862B /* Password_Recovery.swift */; };
+		52EE4B88208D0F6400771CE3 /* PasswordResetScreenViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 52EE4B87208D0F6400771CE3 /* PasswordResetScreenViewController.swift */; };
 		52F4C3852072BF4100F46DF2 /* SignUpScreenViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 52F4C3842072BF4100F46DF2 /* SignUpScreenViewController.swift */; };
 		52F4C3872072BF7600F46DF2 /* RecoveryScreenViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 52F4C3862072BF7600F46DF2 /* RecoveryScreenViewController.swift */; };
 		52F4C3892072BF8800F46DF2 /* HomeScreenViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 52F4C3882072BF8800F46DF2 /* HomeScreenViewController.swift */; };
@@ -23,14 +29,20 @@
 
 /* Begin PBXFileReference section */
 		284B42E59D6A4856A2FF2991 /* Pods_go_too.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_go_too.framework; sourceTree = BUILT_PRODUCTS_DIR; };
-		5209AA7F2078359C008A14BF /* Login_Verification.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Login_Verification.swift; sourceTree = "<group>"; };
+		52644204208BC42200D0DDC4 /* SecuritySetupStageTwoViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SecuritySetupStageTwoViewController.swift; sourceTree = "<group>"; };
+		52644206208C363900D0DDC4 /* Account_Recovery.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Account_Recovery.swift; sourceTree = "<group>"; };
+		52644208208C4E3200D0DDC4 /* RecoveryScreenQuestionViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RecoveryScreenQuestionViewController.swift; sourceTree = "<group>"; };
+		5268871B20858B200087BE94 /* Registration.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Registration.swift; sourceTree = "<group>"; };
 		5275BF7F206DC529000EA1F1 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		52872626208BAADE00EDBA57 /* SecuritySetupStageOneViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SecuritySetupStageOneViewController.swift; sourceTree = "<group>"; };
+		52956D3020871C470006EDAA /* Login_Verification.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Login_Verification.swift; sourceTree = "<group>"; };
+		52ACF9702087B08300A675B9 /* User_Profile.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = User_Profile.swift; sourceTree = "<group>"; };
 		52E96957206C70AF00538307 /* go-too.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "go-too.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		52E9695A206C70AF00538307 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		52E9695F206C70AF00538307 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		52E96964206C70AF00538307 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		52E96966206C70AF00538307 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		52EB190E207957270027862B /* Password_Recovery.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Password_Recovery.swift; sourceTree = "<group>"; };
+		52EE4B87208D0F6400771CE3 /* PasswordResetScreenViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PasswordResetScreenViewController.swift; sourceTree = "<group>"; };
 		52F4C3842072BF4100F46DF2 /* SignUpScreenViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignUpScreenViewController.swift; sourceTree = "<group>"; };
 		52F4C3862072BF7600F46DF2 /* RecoveryScreenViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RecoveryScreenViewController.swift; sourceTree = "<group>"; };
 		52F4C3882072BF8800F46DF2 /* HomeScreenViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeScreenViewController.swift; sourceTree = "<group>"; };
@@ -52,6 +64,24 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		52956D3220871E0A0006EDAA /* Registration_And_Verification */ = {
+			isa = PBXGroup;
+			children = (
+				5268871B20858B200087BE94 /* Registration.swift */,
+				52956D3020871C470006EDAA /* Login_Verification.swift */,
+				52644206208C363900D0DDC4 /* Account_Recovery.swift */,
+			);
+			path = Registration_And_Verification;
+			sourceTree = "<group>";
+		};
+		52ACF96F2087B06600A675B9 /* User */ = {
+			isa = PBXGroup;
+			children = (
+				52ACF9702087B08300A675B9 /* User_Profile.swift */,
+			);
+			path = User;
+			sourceTree = "<group>";
+		};
 		52E9694E206C70AF00538307 = {
 			isa = PBXGroup;
 			children = (
@@ -84,12 +114,16 @@
 		52E9696C206C70DA00538307 /* Controller */ = {
 			isa = PBXGroup;
 			children = (
-				52E9695A206C70AF00538307 /* AppDelegate.swift */,
+				52F4C38C2072C03400F46DF2 /* LoginScreenViewController.swift */,
 				52F4C3842072BF4100F46DF2 /* SignUpScreenViewController.swift */,
+				52872626208BAADE00EDBA57 /* SecuritySetupStageOneViewController.swift */,
+				52644204208BC42200D0DDC4 /* SecuritySetupStageTwoViewController.swift */,
 				52F4C3862072BF7600F46DF2 /* RecoveryScreenViewController.swift */,
+				52644208208C4E3200D0DDC4 /* RecoveryScreenQuestionViewController.swift */,
+				52EE4B87208D0F6400771CE3 /* PasswordResetScreenViewController.swift */,
+				52E9695A206C70AF00538307 /* AppDelegate.swift */,
 				52F4C3882072BF8800F46DF2 /* HomeScreenViewController.swift */,
 				52F4C38A2072BFA300F46DF2 /* RecoveredScreenViewController.swift */,
-				52F4C38C2072C03400F46DF2 /* LoginScreenViewController.swift */,
 			);
 			path = Controller;
 			sourceTree = "<group>";
@@ -107,8 +141,8 @@
 		52E9696E206C70EC00538307 /* Model */ = {
 			isa = PBXGroup;
 			children = (
-				5209AA7F2078359C008A14BF /* Login_Verification.swift */,
-				52EB190E207957270027862B /* Password_Recovery.swift */,
+				52ACF96F2087B06600A675B9 /* User */,
+				52956D3220871E0A0006EDAA /* Registration_And_Verification */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -159,7 +193,7 @@
 			isa = PBXProject;
 			attributes = {
 				LastSwiftUpdateCheck = 0920;
-				LastUpgradeCheck = 0920;
+				LastUpgradeCheck = 0930;
 				ORGANIZATIONNAME = "Reactive Works";
 				TargetAttributes = {
 					52E96956206C70AF00538307 = {
@@ -243,13 +277,19 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				52644207208C363900D0DDC4 /* Account_Recovery.swift in Sources */,
 				52F4C38D2072C03400F46DF2 /* LoginScreenViewController.swift in Sources */,
+				52956D3120871C480006EDAA /* Login_Verification.swift in Sources */,
+				52644209208C4E3200D0DDC4 /* RecoveryScreenQuestionViewController.swift in Sources */,
 				52F4C3852072BF4100F46DF2 /* SignUpScreenViewController.swift in Sources */,
-				52EB190F207957270027862B /* Password_Recovery.swift in Sources */,
+				52EE4B88208D0F6400771CE3 /* PasswordResetScreenViewController.swift in Sources */,
 				52E9695B206C70AF00538307 /* AppDelegate.swift in Sources */,
+				52644205208BC42200D0DDC4 /* SecuritySetupStageTwoViewController.swift in Sources */,
 				52F4C3872072BF7600F46DF2 /* RecoveryScreenViewController.swift in Sources */,
 				52F4C38B2072BFA300F46DF2 /* RecoveredScreenViewController.swift in Sources */,
-				5209AA802078359C008A14BF /* Login_Verification.swift in Sources */,
+				52ACF9712087B08300A675B9 /* User_Profile.swift in Sources */,
+				5268871C20858B200087BE94 /* Registration.swift in Sources */,
+				52872627208BAADE00EDBA57 /* SecuritySetupStageOneViewController.swift in Sources */,
 				52F4C3892072BF8800F46DF2 /* HomeScreenViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -290,6 +330,7 @@
 				CLANG_WARN_BOOL_CONVERSION = YES;
 				CLANG_WARN_COMMA = YES;
 				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
 				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
 				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
 				CLANG_WARN_EMPTY_BODY = YES;
@@ -297,6 +338,7 @@
 				CLANG_WARN_INFINITE_RECURSION = YES;
 				CLANG_WARN_INT_CONVERSION = YES;
 				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
 				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
 				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
 				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
@@ -347,6 +389,7 @@
 				CLANG_WARN_BOOL_CONVERSION = YES;
 				CLANG_WARN_COMMA = YES;
 				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
 				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
 				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
 				CLANG_WARN_EMPTY_BODY = YES;
@@ -354,6 +397,7 @@
 				CLANG_WARN_INFINITE_RECURSION = YES;
 				CLANG_WARN_INT_CONVERSION = YES;
 				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
 				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
 				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
 				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
@@ -389,6 +433,7 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = Y33D78N7QQ;
 				INFOPLIST_FILE = "go-too/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = "com.reactiveworks.go-too";
@@ -404,6 +449,7 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = Y33D78N7QQ;
 				INFOPLIST_FILE = "go-too/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = "com.reactiveworks.go-too";

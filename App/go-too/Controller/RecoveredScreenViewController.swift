@@ -21,15 +21,13 @@ class RecoveredScreenViewController: UIViewController {
         // Dispose of any resources that can be recreated.
     }
     
-
-    /*
-    // MARK: - Navigation
-
-    // In a storyboard-based application, you will often want to do a little preparation before navigation
-    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        // Get the new view controller using segue.destinationViewController.
-        // Pass the selected object to the new view controller.
+    // MARK: UI Functionality
+    @IBAction func login_button_pressed(_ sender: UIButton) {
+        // Redirect user to login page
+        performSegue(withIdentifier: "recovered_to_login_segue", sender: nil)
     }
-    */
-
+    
+    @IBAction func contact_us_button_pressed(_ sender: UIButton) {
+        // TODO: Future feature that will allow users to contact us 
+    }
 }

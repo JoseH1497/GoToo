@@ -1,19 +1,14 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="13771" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="V2u-qB-rqI">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="14109" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
     <device id="retina5_5" orientation="portrait">
         <adaptation id="fullscreen"/>
     </device>
     <dependencies>
         <deployment identifier="iOS"/>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="13772"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14088"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
-    <customFonts key="customFonts">
-        <array key="AppleSDGothicNeo.ttc">
-            <string>AppleSDGothicNeo-Regular</string>
-        </array>
-    </customFonts>
     <scenes>
         <!--Sign Up Screen View Controller-->
         <scene sceneID="KU5-0j-QnL">
@@ -23,64 +18,90 @@
                         <rect key="frame" x="0.0" y="0.0" width="414" height="736"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="Macot_Sign_Up" translatesAutoresizingMaskIntoConstraints="NO" id="onT-zq-iHI">
+                            <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="Macot" translatesAutoresizingMaskIntoConstraints="NO" id="onT-zq-iHI">
                                 <rect key="frame" x="165" y="132" width="84" height="106"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                             </imageView>
-                            <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="Organization_Email_Field_Sign_Up" translatesAutoresizingMaskIntoConstraints="NO" id="i9Z-8R-8Wc">
+                            <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="Username_Field" translatesAutoresizingMaskIntoConstraints="NO" id="i9Z-8R-8Wc">
                                 <rect key="frame" x="41" y="246" width="334" height="62"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                             </imageView>
-                            <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="Password_Field_Sign_Up" translatesAutoresizingMaskIntoConstraints="NO" id="Dvk-h4-vyf">
+                            <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="Organization_Email_Sign_Up" translatesAutoresizingMaskIntoConstraints="NO" id="GFd-kD-0QI">
                                 <rect key="frame" x="41" y="307" width="334" height="62"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                             </imageView>
-                            <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="Confirm_Password_Field_Sign_up" translatesAutoresizingMaskIntoConstraints="NO" id="nrw-FB-28f">
+                            <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="Password_Field_Sign_Up" translatesAutoresizingMaskIntoConstraints="NO" id="Dvk-h4-vyf">
                                 <rect key="frame" x="41" y="368" width="334" height="62"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                             </imageView>
-                            <button opaque="NO" contentMode="scaleAspectFit" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="lPv-RD-Oa3">
-                                <rect key="frame" x="41" y="490" width="334" height="62"/>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="Confirm_Password_Field_Sign_Up" translatesAutoresizingMaskIntoConstraints="NO" id="nrw-FB-28f">
+                                <rect key="frame" x="41" y="429" width="334" height="62"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <state key="normal" image="Sign_Up_Button_Sign_Up"/>
+                            </imageView>
+                            <button opaque="NO" contentMode="scaleAspectFit" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="lPv-RD-Oa3">
+                                <rect key="frame" x="41" y="521" width="334" height="62"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <state key="normal" image="Sign_Up_Button"/>
+                                <connections>
+                                    <action selector="sign_up_button_pressed:" destination="9ja-Pl-ITT" eventType="touchUpInside" id="dmP-au-6ZE"/>
+                                </connections>
                             </button>
-                            <textField opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" text="Organization Email" textAlignment="natural" clearsOnBeginEditing="YES" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="qrz-Nd-cDK">
+                            <textField opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="Username" textAlignment="natural" clearsOnBeginEditing="YES" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="qrz-Nd-cDK">
                                 <rect key="frame" x="51" y="262" width="314" height="30"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <color key="textColor" red="0.48627450980392156" green="0.48627450980392156" blue="0.48627450980392156" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <fontDescription key="fontDescription" name="AppleSDGothicNeo-Regular" family="Apple SD Gothic Neo" pointSize="16"/>
                                 <textInputTraits key="textInputTraits"/>
+                                <connections>
+                                    <action selector="username_entered:" destination="9ja-Pl-ITT" eventType="editingDidEndOnExit" id="fqT-jQ-Qvs"/>
+                                </connections>
                             </textField>
-                            <textField opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" text="Password" textAlignment="natural" clearsOnBeginEditing="YES" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="wsS-Ym-kst">
-                                <rect key="frame" x="51" y="323" width="314" height="30"/>
+                            <textField opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="Password" textAlignment="natural" clearsOnBeginEditing="YES" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="wsS-Ym-kst">
+                                <rect key="frame" x="51" y="387" width="314" height="30"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <color key="textColor" red="0.4756349325" green="0.47564673419999998" blue="0.47564041610000002" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <fontDescription key="fontDescription" name="AppleSDGothicNeo-Regular" family="Apple SD Gothic Neo" pointSize="16"/>
-                                <textInputTraits key="textInputTraits"/>
+                                <textInputTraits key="textInputTraits" secureTextEntry="YES"/>
+                                <connections>
+                                    <action selector="password_entered:" destination="9ja-Pl-ITT" eventType="editingDidEndOnExit" id="J15-aw-fiT"/>
+                                </connections>
                             </textField>
-                            <textField opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" text="Confirm Password" textAlignment="natural" clearsOnBeginEditing="YES" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="enB-3k-Gw5">
-                                <rect key="frame" x="51" y="384" width="314" height="30"/>
+                            <textField opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="Confirm Password" textAlignment="natural" clearsOnBeginEditing="YES" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="enB-3k-Gw5">
+                                <rect key="frame" x="51" y="448" width="314" height="30"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <color key="textColor" red="0.4862697124" green="0.48627120260000001" blue="0.48627465959999999" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                                 <fontDescription key="fontDescription" name="AppleSDGothicNeo-Regular" family="Apple SD Gothic Neo" pointSize="16"/>
+                                <textInputTraits key="textInputTraits" secureTextEntry="YES"/>
+                                <connections>
+                                    <action selector="password_conf_entered:" destination="9ja-Pl-ITT" eventType="editingDidEndOnExit" id="Ifb-YA-TL1"/>
+                                </connections>
+                            </textField>
+                            <textField opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="Organization Email" textAlignment="natural" clearsOnBeginEditing="YES" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="2te-qI-Tih">
+                                <rect key="frame" x="51" y="323" width="314" height="30"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <color key="textColor" red="0.48627450979999998" green="0.48627450979999998" blue="0.48627450979999998" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <fontDescription key="fontDescription" name="AppleSDGothicNeo-Regular" family="Apple SD Gothic Neo" pointSize="16"/>
                                 <textInputTraits key="textInputTraits"/>
+                                <connections>
+                                    <action selector="email_entered:" destination="9ja-Pl-ITT" eventType="editingDidEndOnExit" id="oKz-j4-Nd4"/>
+                                </connections>
                             </textField>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <viewLayoutGuide key="safeArea" id="kVj-BO-smm"/>
                     </view>
                     <connections>
-                        <segue destination="ka7-YS-iuQ" kind="presentation" id="CVp-oN-4eD"/>
+                        <segue destination="ka7-YS-iuQ" kind="presentation" identifier="registration_sec_ques_one_segue" id="CVp-oN-4eD"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="CNE-oy-9yx" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="877" y="887"/>
         </scene>
-        <!--View Controller-->
+        <!--Security Setup Stage One View Controller-->
         <scene sceneID="ztX-rC-NIt">
             <objects>
-                <viewController id="ka7-YS-iuQ" sceneMemberID="viewController">
+                <viewController id="ka7-YS-iuQ" customClass="SecuritySetupStageOneViewController" customModule="go_too" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="eWH-RH-40A">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="736"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -101,13 +122,36 @@
                                 <rect key="frame" x="40" y="480" width="334" height="62"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <state key="normal" image="Continue_Buttom_Security"/>
+                                <connections>
+                                    <action selector="continue_button_pressed:" destination="ka7-YS-iuQ" eventType="touchUpInside" id="71h-pk-55u"/>
+                                </connections>
                             </button>
+                            <textField opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="Security Question One" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="maP-Cg-Gb4">
+                                <rect key="frame" x="50" y="312" width="314" height="30"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <nil key="textColor"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits"/>
+                                <connections>
+                                    <action selector="security_question_entered:" destination="ka7-YS-iuQ" eventType="editingDidEndOnExit" id="4uR-ng-Cqk"/>
+                                </connections>
+                            </textField>
+                            <textField opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="Answer" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="usd-xt-cdd">
+                                <rect key="frame" x="50" y="371" width="314" height="30"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <nil key="textColor"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits"/>
+                                <connections>
+                                    <action selector="answer_entered:" destination="ka7-YS-iuQ" eventType="editingDidEndOnExit" id="7cr-nS-hvv"/>
+                                </connections>
+                            </textField>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <viewLayoutGuide key="safeArea" id="ixf-BI-tH7"/>
                     </view>
                     <connections>
-                        <segue destination="Fjq-Jw-5kw" kind="presentation" id="REs-ik-yGJ"/>
+                        <segue destination="Fjq-Jw-5kw" kind="presentation" identifier="sec_stage_one_sec_stage_two_segue" id="REs-ik-yGJ"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="oZ4-Ex-RYg" userLabel="First Responder" sceneMemberID="firstResponder"/>
@@ -134,31 +178,40 @@
                                 <rect key="frame" x="40" y="337" width="334" height="62"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                             </imageView>
-                            <textField opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" text="Email" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="H51-SZ-pV3" userLabel="Email_Filed">
+                            <textField opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="Email" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="H51-SZ-pV3" userLabel="Email_Filed">
                                 <rect key="frame" x="50" y="353" width="314" height="30"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <color key="textColor" red="0.48627450979999998" green="0.48627450979999998" blue="0.48627450979999998" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                                 <fontDescription key="fontDescription" name="AppleSDGothicNeo-Regular" family="Apple SD Gothic Neo" pointSize="16"/>
                                 <textInputTraits key="textInputTraits"/>
+                                <connections>
+                                    <action selector="email_entered:" destination="17h-wp-1b3" eventType="editingDidEndOnExit" id="6VI-vh-8qR"/>
+                                </connections>
                             </textField>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Nn5-uD-Boh">
+                            <button opaque="NO" contentMode="scaleAspectFit" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Nn5-uD-Boh">
                                 <rect key="frame" x="40" y="451" width="334" height="62"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <state key="normal" image="Send_Buttom_Recovery"/>
+                                <state key="normal" image="Continue_Buttom_Security"/>
+                                <connections>
+                                    <action selector="continue_button_pressed:" destination="17h-wp-1b3" eventType="touchUpInside" id="KDC-qW-vId"/>
+                                </connections>
                             </button>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <viewLayoutGuide key="safeArea" id="4hh-Z8-29E"/>
                     </view>
+                    <connections>
+                        <segue destination="V2u-qB-rqI" kind="presentation" identifier="account_recovery_email_question_segue" id="Z5u-sl-vhE"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="GH4-2T-xct" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="904" y="-739"/>
+            <point key="canvasLocation" x="901" y="-704"/>
         </scene>
-        <!--View Controller-->
+        <!--Recovery Screen Question View Controller-->
         <scene sceneID="DOL-Xb-l5X">
             <objects>
-                <viewController id="V2u-qB-rqI" sceneMemberID="viewController">
+                <viewController id="V2u-qB-rqI" customClass="RecoveryScreenQuestionViewController" customModule="go_too" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="8ds-gi-Ysp">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="736"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -183,15 +236,40 @@
                                 <rect key="frame" x="40" y="472" width="334" height="62"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <state key="normal" title="Button" image="Continue_Buttom_Security"/>
+                                <connections>
+                                    <action selector="continue_button_pressed:" destination="V2u-qB-rqI" eventType="touchUpInside" id="OmI-Rl-WcE"/>
+                                </connections>
                             </button>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="D66-Rd-XYd">
+                                <rect key="frame" x="50" y="324" width="314" height="30"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" name="AppleSDGothicNeo-Regular" family="Apple SD Gothic Neo" pointSize="17"/>
+                                <color key="textColor" red="0.4756349325" green="0.47564673419999998" blue="0.47564041610000002" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <textField opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="Answer" textAlignment="center" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="NTR-DU-IUs" userLabel="Email_Filed">
+                                <rect key="frame" x="50" y="383" width="314" height="30"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <color key="textColor" red="0.48627450979999998" green="0.48627450979999998" blue="0.48627450979999998" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                <fontDescription key="fontDescription" name="AppleSDGothicNeo-Regular" family="Apple SD Gothic Neo" pointSize="16"/>
+                                <textInputTraits key="textInputTraits"/>
+                                <connections>
+                                    <action selector="answer_entered:" destination="V2u-qB-rqI" eventType="editingDidEndOnExit" id="twJ-5d-Lch"/>
+                                    <action selector="email_entered:" destination="17h-wp-1b3" eventType="editingDidEndOnExit" id="nwf-BB-1dy"/>
+                                </connections>
+                            </textField>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <viewLayoutGuide key="safeArea" id="Pwg-Xh-Hha"/>
                     </view>
+                    <connections>
+                        <outlet property="question_display_label" destination="D66-Rd-XYd" id="6Nt-79-FEp"/>
+                        <segue destination="gTY-Il-6oU" kind="presentation" identifier="security_question_to_password_reset_segue" id="SJo-KK-gRl"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="b6d-9D-s7n" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1616" y="-739"/>
+            <point key="canvasLocation" x="1688" y="-704"/>
         </scene>
         <!--Recovered Screen View Controller-->
         <scene sceneID="WPs-Fe-Uqs">
@@ -206,27 +284,36 @@
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                             </imageView>
                             <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="Message_Recovered" translatesAutoresizingMaskIntoConstraints="NO" id="8cg-vi-RiR">
-                                <rect key="frame" x="0.0" y="259" width="414" height="36"/>
+                                <rect key="frame" x="53" y="259" width="308" height="36"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                             </imageView>
                             <button opaque="NO" contentMode="scaleAspectFit" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Khc-hH-Lag">
                                 <rect key="frame" x="189" y="316" width="37" height="22"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <state key="normal" image="Login_Button_Recovered"/>
+                                <connections>
+                                    <action selector="login_button_pressed:" destination="WNa-ms-vve" eventType="touchUpInside" id="TOT-Sh-yPd"/>
+                                </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleAspectFit" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="HLr-QI-Yuc">
                                 <rect key="frame" x="168" y="357" width="78" height="22"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <state key="normal" image="Contact_Us_Button_Recovered"/>
+                                <connections>
+                                    <action selector="contact_us_button_pressed:" destination="WNa-ms-vve" eventType="touchUpInside" id="Ex9-oK-LJb"/>
+                                </connections>
                             </button>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <viewLayoutGuide key="safeArea" id="5YB-Fs-BH1"/>
                     </view>
+                    <connections>
+                        <segue destination="BYZ-38-t0r" kind="presentation" identifier="recovered_to_login_segue" id="an1-qQ-4cw"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="lP9-Pw-EdM" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="2390" y="-739"/>
+            <point key="canvasLocation" x="3233" y="-704"/>
         </scene>
         <!--Home Screen View Controller-->
         <scene sceneID="o56-7O-Vqs">
@@ -301,8 +388,8 @@
         <!--Login Screen View Controller-->
         <scene sceneID="tne-QT-ifu">
             <objects>
-                <viewController id="BYZ-38-t0r" customClass="LoginScreenViewController" customModule="go_too" customModuleProvider="target" sceneMemberID="viewController">
-                    <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC" userLabel="Log_In_Screen" customClass="Lo">
+                <viewController id="BYZ-38-t0r" customClass="LoginScreenViewController" customModule="go_too" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC" userLabel="Log_In_Screen">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="736"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
@@ -323,7 +410,7 @@
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <state key="normal" image="Login_Button_Login"/>
                                 <connections>
-                                    <action selector="login_button_pressed:" destination="BYZ-38-t0r" eventType="touchUpInside" id="OAZ-TM-2fA"/>
+                                    <action selector="login_button_pressed:" destination="BYZ-38-t0r" eventType="touchUpInside" id="cVD-q6-FaJ"/>
                                 </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleAspectFit" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Oc5-wF-sPm" userLabel="Sign_Up_Button">
@@ -331,7 +418,7 @@
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <state key="normal" image="Sign_Up_Button_Login"/>
                                 <connections>
-                                    <action selector="signup_button_pressed:" destination="BYZ-38-t0r" eventType="touchUpInside" id="AE2-F2-JLq"/>
+                                    <action selector="sign_up_button_pressed:" destination="BYZ-38-t0r" eventType="touchUpInside" id="ZOR-Wo-lo3"/>
                                 </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleAspectFit" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="lmI-zm-hYY" userLabel="Recovery_Button">
@@ -339,27 +426,27 @@
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <state key="normal" image="Recovery_Button_Login"/>
                                 <connections>
-                                    <action selector="recovery_button_pressed:" destination="BYZ-38-t0r" eventType="touchUpInside" id="xrp-zu-kH4"/>
+                                    <action selector="recovery_button_page:" destination="BYZ-38-t0r" eventType="touchUpInside" id="Y4o-eI-UPD"/>
                                 </connections>
                             </button>
-                            <textField opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" text="Email" textAlignment="natural" clearsOnBeginEditing="YES" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="epe-3p-TSN" userLabel="Email_Filed">
+                            <textField opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="Email" textAlignment="natural" clearsOnBeginEditing="YES" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="epe-3p-TSN" userLabel="Email_Filed">
                                 <rect key="frame" x="50" y="323" width="314" height="30"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <color key="textColor" red="0.48627450980392156" green="0.48627450980392156" blue="0.48627450980392156" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                                 <fontDescription key="fontDescription" name="AppleSDGothicNeo-Regular" family="Apple SD Gothic Neo" pointSize="16"/>
                                 <textInputTraits key="textInputTraits" autocorrectionType="no" textContentType="email"/>
                                 <connections>
-                                    <action selector="email_entered:" destination="BYZ-38-t0r" eventType="editingDidEnd" id="o1r-wT-Nyi"/>
+                                    <action selector="email_entered:" destination="BYZ-38-t0r" eventType="editingDidEndOnExit" id="d7V-zZ-tba"/>
                                 </connections>
                             </textField>
-                            <textField opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" text="Password" textAlignment="natural" clearsOnBeginEditing="YES" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="uBz-De-W3G" userLabel="Password_Field">
+                            <textField opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="Password" textAlignment="natural" clearsOnBeginEditing="YES" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="uBz-De-W3G" userLabel="Password_Field">
                                 <rect key="frame" x="50" y="384" width="314" height="30"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <color key="textColor" red="0.48626971244812012" green="0.4862712025642395" blue="0.48627465963363647" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                                 <fontDescription key="fontDescription" name="AppleSDGothicNeo-Regular" family="Apple SD Gothic Neo" pointSize="16"/>
-                                <textInputTraits key="textInputTraits" autocorrectionType="no"/>
+                                <textInputTraits key="textInputTraits" autocorrectionType="no" secureTextEntry="YES"/>
                                 <connections>
-                                    <action selector="password_entered:" destination="BYZ-38-t0r" eventType="editingDidEnd" id="INb-gn-rgK"/>
+                                    <action selector="password_entered:" destination="BYZ-38-t0r" eventType="editingDidEndOnExit" id="kJM-2n-PcI"/>
                                 </connections>
                             </textField>
                         </subviews>
@@ -367,19 +454,19 @@
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                     </view>
                     <connections>
-                        <segue destination="9ja-Pl-ITT" kind="presentation" identifier="registration_page_segue" animates="NO" id="dyS-l7-ru6"/>
-                        <segue destination="17h-wp-1b3" kind="presentation" identifier="recovery_page_segue" id="n1a-15-ejG"/>
-                        <segue destination="1ve-G8-AG0" kind="presentation" identifier="login_to_home_segue" id="Tem-1V-BPe"/>
+                        <segue destination="9ja-Pl-ITT" kind="presentation" identifier="login_registration_segue" animates="NO" id="dyS-l7-ru6"/>
+                        <segue destination="17h-wp-1b3" kind="presentation" identifier="login_recovery_segue" id="n1a-15-ejG"/>
+                        <segue destination="1ve-G8-AG0" kind="presentation" identifier="login_home_segue" id="Tem-1V-BPe"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="139.13043478260872" y="132.88043478260872"/>
         </scene>
-        <!--View Controller-->
+        <!--Security Setup Stage Two View Controller-->
         <scene sceneID="LcW-w2-5uk">
             <objects>
-                <viewController id="Fjq-Jw-5kw" sceneMemberID="viewController">
+                <viewController id="Fjq-Jw-5kw" customClass="SecuritySetupStageTwoViewController" customModule="go_too" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="OQG-VM-9vV">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="736"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -400,7 +487,30 @@
                                 <rect key="frame" x="40" y="480" width="334" height="62"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <state key="normal" image="Continue_Buttom_Security"/>
+                                <connections>
+                                    <action selector="continue_button_pressed:" destination="Fjq-Jw-5kw" eventType="touchUpInside" id="CSl-ix-8zo"/>
+                                </connections>
                             </button>
+                            <textField opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="Security Question One" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="9KJ-A0-CNk">
+                                <rect key="frame" x="50" y="312" width="314" height="30"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <nil key="textColor"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits"/>
+                                <connections>
+                                    <action selector="security_question_entered:" destination="Fjq-Jw-5kw" eventType="editingDidEndOnExit" id="T5G-BS-L50"/>
+                                </connections>
+                            </textField>
+                            <textField opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="Answer" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="1LG-gi-gMZ">
+                                <rect key="frame" x="50" y="371" width="314" height="30"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <nil key="textColor"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits"/>
+                                <connections>
+                                    <action selector="answer_entered:" destination="Fjq-Jw-5kw" eventType="editingDidEndOnExit" id="QBf-Ix-XDK"/>
+                                </connections>
+                            </textField>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <viewLayoutGuide key="safeArea" id="0PI-k0-wpG"/>
@@ -410,6 +520,66 @@
             </objects>
             <point key="canvasLocation" x="2391" y="887"/>
         </scene>
+        <!--Password Reset Screen View Controller-->
+        <scene sceneID="8c7-Xe-4Qs">
+            <objects>
+                <viewController id="gTY-Il-6oU" customClass="PasswordResetScreenViewController" customModule="go_too" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="lvI-cW-Lmo">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="736"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="Title_Password_Reset" translatesAutoresizingMaskIntoConstraints="NO" id="5zg-Hd-1g2">
+                                <rect key="frame" x="104" y="131" width="206" height="107"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            </imageView>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="Question_Field_Password_Reset" translatesAutoresizingMaskIntoConstraints="NO" id="YKT-rA-SCo">
+                                <rect key="frame" x="40" y="296" width="334" height="62"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            </imageView>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="Confirm_Password_Field" translatesAutoresizingMaskIntoConstraints="NO" id="l2J-Su-eKF">
+                                <rect key="frame" x="40" y="355" width="334" height="62"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            </imageView>
+                            <button opaque="NO" contentMode="scaleAspectFit" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="cWG-ml-Bwy">
+                                <rect key="frame" x="40" y="480" width="334" height="62"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <state key="normal" image="Continue_Buttom_Security"/>
+                                <connections>
+                                    <action selector="continue_button_pressed:" destination="gTY-Il-6oU" eventType="touchUpInside" id="A7f-da-bi7"/>
+                                </connections>
+                            </button>
+                            <textField opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="Password" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="ptE-mG-TN4">
+                                <rect key="frame" x="50" y="312" width="314" height="30"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <nil key="textColor"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits"/>
+                                <connections>
+                                    <action selector="password_entered:" destination="gTY-Il-6oU" eventType="editingDidEndOnExit" id="H6I-zn-Xfg"/>
+                                </connections>
+                            </textField>
+                            <textField opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="Confirm Password" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="zVE-KY-mGC">
+                                <rect key="frame" x="50" y="371" width="314" height="30"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <nil key="textColor"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits"/>
+                                <connections>
+                                    <action selector="password_confirmation_entered:" destination="gTY-Il-6oU" eventType="editingDidEndOnExit" id="QrY-pE-GrH"/>
+                                </connections>
+                            </textField>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <viewLayoutGuide key="safeArea" id="eQy-bq-sqb"/>
+                    </view>
+                    <connections>
+                        <segue destination="WNa-ms-vve" kind="presentation" identifier="password_reset_to_completion_segue" id="ZN5-ko-kUO"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="Rti-PO-2J0" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="2468" y="-704"/>
+        </scene>
     </scenes>
     <resources>
         <image name="Add Courses_Group Button" width="20" height="20"/>
@@ -417,7 +587,8 @@
         <image name="Answer_Field_Security" width="334" height="62"/>
         <image name="Bottom Bar" width="414" height="80"/>
         <image name="Calendar Button" width="48" height="38"/>
-        <image name="Confirm_Password_Field_Sign_up" width="334" height="62"/>
+        <image name="Confirm_Password_Field" width="334" height="62"/>
+        <image name="Confirm_Password_Field_Sign_Up" width="334" height="62"/>
         <image name="Contact_Us_Button_Recovered" width="78" height="16"/>
         <image name="Continue_Buttom_Security" width="334" height="62"/>
         <image name="Edit Button" width="33" height="19"/>
@@ -428,27 +599,29 @@
         <image name="Home Button" width="31" height="38"/>
         <image name="Login_Button_Login" width="334" height="62"/>
         <image name="Login_Button_Recovered" width="37" height="15"/>
+        <image name="Macot" width="78" height="83"/>
         <image name="Macot_Recovered" width="78" height="46"/>
-        <image name="Macot_Sign_Up" width="78" height="83"/>
         <image name="Mail Button" width="28" height="36"/>
         <image name="Mascot_Questions" width="89" height="82"/>
         <image name="Mascot_Recovery" width="78" height="87"/>
-        <image name="Message_Recovered" width="201" height="34"/>
+        <image name="Message_Recovered" width="306" height="16"/>
         <image name="Notifications Button" width="33" height="38"/>
-        <image name="Organization_Email_Field_Sign_Up" width="334" height="62"/>
+        <image name="Organization_Email_Sign_Up" width="334" height="62"/>
         <image name="Password_Field_Login" width="334" height="62"/>
         <image name="Password_Field_Sign_Up" width="334" height="62"/>
         <image name="Profile Button" width="42" height="42"/>
+        <image name="Question_Field_Password_Reset" width="334" height="62"/>
         <image name="Question_Field_Questions" width="334" height="62"/>
         <image name="Question_Field_Security" width="334" height="62"/>
         <image name="Recovery_Button_Login" width="116" height="16"/>
-        <image name="Send_Buttom_Recovery" width="334" height="62"/>
+        <image name="Sign_Up_Button" width="334" height="62"/>
         <image name="Sign_Up_Button_Login" width="53" height="16"/>
-        <image name="Sign_Up_Button_Sign_Up" width="334" height="62"/>
         <image name="Title_Almost_Security" width="206" height="95"/>
+        <image name="Title_Password_Reset" width="206" height="95"/>
         <image name="Title_Questions" width="318" height="26"/>
         <image name="Title_Recovery" width="224" height="23"/>
         <image name="Title_Security" width="206" height="95"/>
         <image name="Top Bar" width="414" height="80"/>
+        <image name="Username_Field" width="334" height="62"/>
     </resources>
 </document>
