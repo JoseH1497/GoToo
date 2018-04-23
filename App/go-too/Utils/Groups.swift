@@ -55,6 +55,7 @@ class Group {
     
     
     //:Display Lists.........................................................................
+    //not sure if these should go here or inside each view controller and just called upon from object
     func displayOnlineMembers(){
         
     }
