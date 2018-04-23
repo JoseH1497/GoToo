@@ -16,11 +16,13 @@ class Account_Receovery{
     var user_id      : Int
     var email        : String
     
+    // Keeps track of the security question that was selected at random
     var sec_ques_num : Int
     var sec_ques_ans : String
     
     var provided_ans : String
     
+    var password_reset_reqs : [String : Bool]
     
     // MARK: Initializers
     init?(){
@@ -44,10 +46,12 @@ class Account_Receovery{
         self.sec_ques_ans = ""
         
         self.provided_ans = ""
+        
+        self.password_reset_reqs = ["new_password" : false , "password_conf" : false]
+        
     }
     
     // MARK: Information Verifiers
-    
     // Function determines if the provided email is associated with an account
     // Successful verifiaction ---> returns user id
     // Failed verification     ---> return -1
@@ -77,6 +81,21 @@ class Account_Receovery{
         return false
     }
     
+    // Function determines if registration was successfully completed
+    func verify_password_reset_completion() -> Bool{
+        let new_password_status  : Bool = self.password_reset_reqs["new_password"]!
+        let password_conf_status : Bool = self.password_reset_reqs["password_conf"]!
+    
+        
+        if new_password_status && password_conf_status{
+            // Requirements have been completed
+            return true
+        }
+        
+        // Requirements have not been completed
+        return false
+    }
+    
     
     // MARK: Information Setters
     func set_user_id(_ id : Int){
@@ -87,7 +106,7 @@ class Account_Receovery{
         self.email = email
     }
     
-    func set_selected_question(_ question_num : Int){
+    func set_selected_ques(_ question_num : Int){
         self.sec_ques_num = question_num
     }
     
@@ -99,6 +118,11 @@ class Account_Receovery{
         self.provided_ans = answer
     }
     
+    // Function updates the requirements checklist
+    func update_satisfied_requirements(_ req_name : String , _ status : Bool){
+        self.password_reset_reqs[req_name] = status
+    }
+
     // MARK: Information Getters
     func get_user_id() -> Int{
         return user_id

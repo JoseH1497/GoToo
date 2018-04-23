@@ -19,7 +19,7 @@ class RecoveryScreenQuestionViewController: UIViewController {
         // Selecting a random security question for user to answer
         let random_question_num : Int = Int(arc4random_uniform(1)) + 1
         
-        account_recovery.set_selected_question(random_question_num)
+        account_recovery.set_selected_ques(random_question_num)
         account_recovery.set_selected_sec_ques_ans(user_profile.get_sec_ques_ans(random_question_num))
         
         //Displaying selected security question
@@ -50,12 +50,19 @@ class RecoveryScreenQuestionViewController: UIViewController {
         let correct_answer : Bool = account_recovery.verify_sec_ques_ans()
         
         if correct_answer{
-            // FIXME: Redirect user to password reset page
-            print("Correct")
+            performSegue(withIdentifier: "security_question_to_password_reset_segue", sender: nil)
             
         }else{
             display_error_message("Incorrect answer to security question")
         }
+    }
+    
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        let destination : PasswordResetScreenViewController = segue.destination as! PasswordResetScreenViewController
+        
+        // Transfering data
+        destination.account_recovery = self.account_recovery
+        destination.user_profile     = User_Profile(account_recovery.get_user_id())
     }
     
     func display_error_message(_ message : String){
