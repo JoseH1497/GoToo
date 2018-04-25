@@ -17,7 +17,7 @@ class LoginScreenViewController: UIViewController {
     @IBOutlet weak var passwordText: UITextField!
     @IBOutlet weak var PromptToEnterInfo: UITextField!
     @IBOutlet weak var passwordTextField: UITextField!
-    
+    var userID: Int = 0
     @IBOutlet weak var promptUserToEnter: UITextField!
     //text field that will pop up when a wrong password is entered
     let wrongPassword: UITextField = {
@@ -125,7 +125,7 @@ class LoginScreenViewController: UIViewController {
             
             //displaye
             displayPromptUserToEnterEandP()
-            return false
+            return true //MARK: CHANGE BACK TO FALSE
         }
         if self.emailText.text == "" {
             //if(emailText.isEmpty || passwordText.isEmpty){
@@ -134,7 +134,7 @@ class LoginScreenViewController: UIViewController {
             
             //display
             displayPromptUserToEnterEandP()
-            return false
+            return true //MARK: CHANGE BACK TO FALSE
             //}
         }
         return true
@@ -174,11 +174,15 @@ class LoginScreenViewController: UIViewController {
     /*
     // MARK: - Navigation
 
-    // In a storyboard-based application, you will often want to do a little preparation before navigation
+    // In a storyboard-based application, you will often want to do a little preparation before navigation*/
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
         // Get the new view controller using segue.destinationViewController.
         // Pass the selected object to the new view controller.
+        if let destinationViewController = segue.destination as? HomeScreenViewController {
+            destinationViewController.uID = userID
+            
+        }
     }
-    */
+ 
 
 }

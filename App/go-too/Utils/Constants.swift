@@ -11,6 +11,16 @@ import UIKit
 
 let BLUE_THEME = UIColor.rgb(r: 43, g: 129, b: 233)
 
+
+class GroupTable{
+    var groupID : Int
+    var groupName: String
+    
+    init(){
+        groupID = -1
+        groupName = ""
+    }
+}
 /**
 call this function when need to validate input wherever needed
 need a way to put varied number of arguments,

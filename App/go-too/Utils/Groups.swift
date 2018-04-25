@@ -11,34 +11,53 @@ import UIKit
 
 class Group {
     var groupName   : String
+    var userID : Int
     var isAdmin : Bool
     var groupMembers = [String]()
     var onlineMembers = [String]()
-     
-     var newPosts = [String]()
-     var allPosts = [String]()
-     var newQuestions = [String]()
-     var allQuestions = [String]()
+    var groupID : Int
+    var newPosts = [String]()
+    var allPosts = [String]()
+    var newQuestions = [String]()
+    var allQuestions = [String]()
     //:Constructors..............................................................................
     init(){
         /**TODO:Populate groupMembers[], onlineMembers[], newPosts[] and allPosts[], newQuestions[], allQuestions[]
          We need to either use a timestamp mechanism or something to tell what is a new post
          
          **/
+        //TODO: Connect to database
+        // Attempting to connect database
+        // Successful connection ---> initialization continues
+        // Failed connection     ---> initialization stops and nil is returned
+       /** do{
+            database = try Connection("/Users/serj/Desktop/Clone/SQLite_Database/backend_db.db")
+        }catch{
+            print("Location: User_Verfication (CLASS)")
+            print("Error: Failed to connect to database")
+            return nil
+        }**/
         groupName = ""
         isAdmin = false
+        groupID = -1
+        userID = -1
         
     }
     
     //:Information setters.......................................................................
-    func changeGroupName(newName : String){
-        if isAdmin {
-            self.groupName = newName
-            //TODO: Database needs to change group name for all members of the group
-        }
+    func setUserID(userID : Int){
+        self.userID = userID
+    }
+    func setGroupName(groupName : String){
+        self.groupName = groupName
         
     }
-    
+    func setGroupID(groupID : Int){
+        self.groupID = groupID
+    }
+    func setAdmin(){
+        //TODO: use groupID and current userID
+    }
     
     
     
