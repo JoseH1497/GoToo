@@ -16,11 +16,18 @@ class GroupTable{
     var groupID : Int
     var groupName: String
     
+    var userID: Int
+    var score: Int
+    
     init(){
         groupID = -1
         groupName = ""
+        userID = -1
+        score = 0
     }
 }
+
+
 /**
 call this function when need to validate input wherever needed
 need a way to put varied number of arguments,

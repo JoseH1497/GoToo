@@ -13,7 +13,8 @@ class Group {
     var groupName   : String
     var userID : Int
     var isAdmin : Bool
-    var groupMembers = [String]()
+    var groupMembers = [GroupTable]()
+    var groupSize: Int
     var onlineMembers = [String]()
     var groupID : Int
     var newPosts = [String]()
@@ -41,6 +42,7 @@ class Group {
         isAdmin = false
         groupID = -1
         userID = -1
+        groupSize = 0
         
     }
     
@@ -59,17 +61,80 @@ class Group {
         //TODO: use groupID and current userID
     }
     
-    
+    func setGroupSize(){
+        //TODO: Set groupSize of current group using groupID and put into
+        //groupSize so we can use it
+    }
+    func setGroupMembers(){
+        for i in 0..<groupSize{
+            var alloc = GroupTable()
+            groupMembers.append(alloc)
+        }
+        
+        
+        //TODO: Get each groupMember ID and current score
+        /**
+         for i in 0..<groupSize{
+                groupMembers[i].userID = userID from database
+                groupMembers[i].score = score for current userID from database
+         
+         }
+        
+         ONCE WE HAVE GROUPMEMBERS IN PLACE,
+         I will rank them according to the top scores
+        **/
+        //sort by rank
+        
+        
+    }
     
     //:Information getters....................................................................
     func getGroupName() -> String {
         return groupName
     }
     
+    func getGroupID() ->Int{
+        return groupID
+    }
     //Need to get next member to display
     func getNextGroupMembers() -> String {
         return ""
         //return groupMembers
+    }
+    func isGroupAdmin()->Bool{
+        return isAdmin
+    }
+    func getGroupSize() -> Int{
+        return groupSize
+    }
+    func getTopRankedMembers() -> Array<GroupTable>{
+        //sort GroupMembers
+        var topMembers = [GroupTable]()
+        switch(groupSize){
+            case 0:
+                print("ERROR")
+                break
+            case 1:
+                return groupMembers
+            break
+        case 2:
+            for i in 0..<2{
+                var groupTab = GroupTable()
+                topMembers.append(groupTab)
+            }
+        case 3:
+            for i in 0..<3{
+                var groupTabl = GroupTable()
+                topMembers.append(groupTabl)
+            }
+            
+        default:
+            print("Should never get here")
+            break
+        }
+        
+        return groupMembers
+        
     }
     
     
@@ -96,7 +161,7 @@ class Group {
     func loadInfoFromDataBase(name : String, isAd : Bool, groupMembs : Array<String>, onlineMembs : Array<String>, newPost : Array<String>, allPost : Array <String>, newQs : Array<String>, allQs : Array<String>){
         groupName  = name
         isAdmin = isAd
-        groupMembers = groupMembs
+        //groupMembers = groupMembs
         onlineMembers = onlineMembs
         newPosts = newPost
         allPosts = allPost

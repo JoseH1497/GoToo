@@ -27,6 +27,9 @@ class HomeScreenViewController: UIViewController {
     
     //set when user presses button, groupId data will be passed to GroupViewController
     var groupId: Int = 0
+    //set groupName to be passed to GroupViewController
+    var groupSelected = GroupTable()
+    
     //uID is user id of current user, transferred from login view controller
     var uID: Int!
     var numOfCourses: Int = 0
@@ -34,6 +37,8 @@ class HomeScreenViewController: UIViewController {
     var Home:HomeScreen!
     //create array to hold all course names and set each button title to that course name for display
     var courseNames = [GroupTable] ()
+    
+    //function not really needed anymore, fixed bug
     fileprivate func unhideAllCourseButtons(){
         Course6Button.isHidden = false
         Course5Button.isHidden = false
@@ -171,7 +176,10 @@ class HomeScreenViewController: UIViewController {
         
         //TODO: Get correct groupID from database
         groupId = courseNames[0].groupID
-        
+        //information to send over
+        groupSelected.groupID = courseNames[0].groupID
+        groupSelected.groupName = courseNames[0].groupName
+        //groupName = courseNames
         self.performSegue(withIdentifier: "HomeScreenToNextCourseSegue", sender: self)
     }
     
@@ -179,6 +187,8 @@ class HomeScreenViewController: UIViewController {
         //this will send to the next view
          //TODO: Get correct groupID from database
         groupId = courseNames[1].groupID
+        groupSelected.groupID = courseNames[1].groupID
+        groupSelected.groupName = courseNames[1].groupName
         self.performSegue(withIdentifier: "HomeScreenToNextCourseSegue", sender: self)
     }
     
@@ -187,6 +197,8 @@ class HomeScreenViewController: UIViewController {
          //TODO: Get correct groupID from database
         groupId = courseNames[2].groupID
         
+        groupSelected.groupID = courseNames[2].groupID
+        groupSelected.groupName = courseNames[2].groupName
         self.performSegue(withIdentifier: "HomeScreenToNextCourseSegue", sender: self)
     }
     
@@ -194,12 +206,16 @@ class HomeScreenViewController: UIViewController {
         //this will send to the next view
          //TODO: Get correct groupID from database
         groupId = courseNames[3].groupID
+        groupSelected.groupID = courseNames[3].groupID
+        groupSelected.groupName = courseNames[3].groupName
         self.performSegue(withIdentifier: "HomeScreenToNextCourseSegue", sender: self)
     }
     @IBAction func Course5Action(_ sender: Any) {
         //this will send to the next view
          //TODO: Get correct groupID from database
         groupId = courseNames[4].groupID
+        groupSelected.groupID = courseNames[4].groupID
+        groupSelected.groupName = courseNames[4].groupName
         self.performSegue(withIdentifier: "HomeScreenToNextCourseSegue", sender: self)
     }
     
@@ -207,6 +223,8 @@ class HomeScreenViewController: UIViewController {
         //this will send to the next view
          //TODO: Get correct groupID from database
         groupId = courseNames[5].groupID
+        groupSelected.groupID = courseNames[5].groupID
+        groupSelected.groupName = courseNames[5].groupName
         
         self.performSegue(withIdentifier: "HomeScreenToNextCourseSegue", sender: self)
     }
@@ -270,11 +288,11 @@ class HomeScreenViewController: UIViewController {
     
     //send group id to next screen for loading data
     override func prepare(for segue: UIStoryboardSegue, sender: Any?){
-        let gID = groupId
+        
         let userID = uID
         if let destinationViewController = segue.destination as? NextScreenController {
-            destinationViewController.groupID = gID
             destinationViewController.userID = userID
+            destinationViewController.groupSelected = groupSelected
         }
         if let destinationViewController = segue.destination as? AddCourseViewController {
             
