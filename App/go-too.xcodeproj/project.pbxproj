@@ -14,6 +14,8 @@
 		2484AE952075BF0300C035AA /* Constants.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2484AE942075BF0300C035AA /* Constants.swift */; };
 		24E8D1E6209065D40095AE43 /* HomeScreen.swift in Sources */ = {isa = PBXBuildFile; fileRef = 24E8D1E5209065D40095AE43 /* HomeScreen.swift */; };
 		24E8D1E8209082020095AE43 /* AddCourseViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 24E8D1E7209082020095AE43 /* AddCourseViewController.swift */; };
+		24E8D1EB209204D30095AE43 /* myPointsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 24E8D1EA209204D30095AE43 /* myPointsView.swift */; };
+		24E8D1EE2092092F0095AE43 /* GroupMembersView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 24E8D1ED2092092F0095AE43 /* GroupMembersView.swift */; };
 		5275BF80206DC52A000EA1F1 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 5275BF7F206DC529000EA1F1 /* Assets.xcassets */; };
 		52E9695B206C70AF00538307 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 52E9695A206C70AF00538307 /* AppDelegate.swift */; };
 		52E96960206C70AF00538307 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 52E9695E206C70AF00538307 /* Main.storyboard */; };
@@ -34,6 +36,8 @@
 		2484AE942075BF0300C035AA /* Constants.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Constants.swift; sourceTree = "<group>"; };
 		24E8D1E5209065D40095AE43 /* HomeScreen.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeScreen.swift; sourceTree = "<group>"; };
 		24E8D1E7209082020095AE43 /* AddCourseViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddCourseViewController.swift; sourceTree = "<group>"; };
+		24E8D1EA209204D30095AE43 /* myPointsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = myPointsView.swift; sourceTree = "<group>"; };
+		24E8D1ED2092092F0095AE43 /* GroupMembersView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GroupMembersView.swift; sourceTree = "<group>"; };
 		5275BF7F206DC529000EA1F1 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		52E96957206C70AF00538307 /* go-too.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "go-too.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		52E9695A206C70AF00538307 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
@@ -100,7 +104,7 @@
 			children = (
 				52F4C3882072BF8800F46DF2 /* HomeScreenViewController.swift */,
 				241CA169208543740081FAA3 /* NextScreen.swift */,
-				24E8D1E7209082020095AE43 /* AddCourseViewController.swift */,
+				24E8D1E9209204690095AE43 /* Groups */,
 			);
 			path = HomeScreen;
 			sourceTree = "<group>";
@@ -120,6 +124,16 @@
 				2484AE922075B56C00C035AA /* ContactUsViewController.swift */,
 			);
 			path = "Contact Us";
+			sourceTree = "<group>";
+		};
+		24E8D1E9209204690095AE43 /* Groups */ = {
+			isa = PBXGroup;
+			children = (
+				24E8D1E7209082020095AE43 /* AddCourseViewController.swift */,
+				24E8D1EA209204D30095AE43 /* myPointsView.swift */,
+				24E8D1ED2092092F0095AE43 /* GroupMembersView.swift */,
+			);
+			path = Groups;
 			sourceTree = "<group>";
 		};
 		52E9694E206C70AF00538307 = {
@@ -263,7 +277,9 @@
 				24E8D1E8209082020095AE43 /* AddCourseViewController.swift in Sources */,
 				52F4C3892072BF8800F46DF2 /* HomeScreenViewController.swift in Sources */,
 				2484AE8C2075B08E00C035AA /* Extensions.swift in Sources */,
+				24E8D1EE2092092F0095AE43 /* GroupMembersView.swift in Sources */,
 				2484AE952075BF0300C035AA /* Constants.swift in Sources */,
+				24E8D1EB209204D30095AE43 /* myPointsView.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

@@ -64,7 +64,7 @@ class HomeScreenViewController: UIViewController {
         //hideAllCourseButtons()
         
         Home = HomeScreen(userID: uID) //initialize with proper userID
-        
+        groupSelected.userID = uID //SET USERID for next screens
         //button Count will get the number of courses or groups this user has
         numOfCourses = Home.getNumOfCourses()
         
@@ -292,6 +292,7 @@ class HomeScreenViewController: UIViewController {
         let userID = uID
         if let destinationViewController = segue.destination as? NextScreenController {
             destinationViewController.userID = userID
+           
             destinationViewController.groupSelected = groupSelected
         }
         if let destinationViewController = segue.destination as? AddCourseViewController {
