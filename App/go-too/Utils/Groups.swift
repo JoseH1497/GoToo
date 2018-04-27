@@ -30,7 +30,9 @@ class Group {
     //Score of user with User ID, so we can display when user wants to see their points
     var userScore : Int
     
-    
+    //Questions:
+    var numOfQuestions: Int
+    var QuestionsArray = [Questions]()
     
     var newPosts = [String]()
     var allPosts = [String]()
@@ -60,6 +62,7 @@ class Group {
         self.groupSize = 0
         self.userScore = 0
         self.onlineSize = 0
+        self.numOfQuestions = 0
         
         
     }
@@ -71,6 +74,7 @@ class Group {
         self.groupSize = 0
         self.userScore = 0
         self.onlineSize = 0
+        self.numOfQuestions = 0
        
     }
     
@@ -108,10 +112,42 @@ class Group {
         
         
     }
+    func setQuestionSize(){
+        //TODO: Get question size from database using groupID to get all questions for this group
+        //testing
+        numOfQuestions = 3
+    }
+    //set questions from database
+    func setQuestionsArray(){
+        self.setQuestionSize()
+        
+        //allocate space for numOfQuestions
+        for i in 0..<numOfQuestions{
+            var alloc = Questions()
+            QuestionsArray.append(alloc)
+        }
+        
+        //TODO: Get each postID with actual question and num OfAnswers and put answers in array Answers
+        /**
+         for i in 0..<numOfQuestions{
+         QuestionsArray[i].questionID = questionID from database
+         QuestonsArray[i].question = question for current postID from database
+         QuestionsArray[i].setAnswersArray()
+         /*GoToo Questions.swift and look at setAnswersArray()*/
+         
+         }
+         
+         **/
+        
+        
+        
+        
+    }
+    
     func setOnlineMembers(){
         //set size of online group
         self.setOnlineSize()
-        
+        //allocate space
         for i in 0..<onlineSize{
             var alloc = GroupTable()
             onlineMembers.append(alloc)
@@ -126,8 +162,7 @@ class Group {
          
          }
          
-         ONCE WE HAVE GROUPMEMBERS IN PLACE,
-         I will rank them according to the top scores
+        
          **/
         
         
@@ -378,7 +413,10 @@ class Group {
         return MemberName
         
     }
-    
+    //get num of Questions
+    func getNumOfQuestions()->Int{
+        return self.numOfQuestions
+    }
     //returns top 1, 2 or 3 group members based on points
     func getTopRankedMembers() -> Array<GroupTable>{
         setRanking()

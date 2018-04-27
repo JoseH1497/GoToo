@@ -46,7 +46,7 @@ class myPointsViewController : UIViewController{
             groupSelected.groupID = currentGroup.getGroupID()
             groupSelected.userID = currentGroup.getUserID()
             groupSelected.groupName = currentGroup.getGroupName()
-            
+            groupSelected.score = currentGroup.getUserScore()
             destinationViewController.groupSelected = groupSelected
             
         }

@@ -31,12 +31,14 @@ class NextScreenController : UIViewController {
         initCurrentGroup()
         /**print(currentGroup.getGroupID())
         **/
+        print("NexScreen: ")
         print("GroupName")
         print(currentGroup.getGroupName())
         
         print("GroupID")
         print(currentGroup.getGroupID())
-        
+        print("UserID")
+        print(groupSelected.userID)
         grade.text = String(currentGroup.getGroupID())
         
     }
@@ -111,6 +113,7 @@ class NextScreenController : UIViewController {
     }
     
     @IBAction func QuestionsAction(_ sender: Any) {
+        self.performSegue(withIdentifier: "CourseToQuestions", sender: self)
     }
     
     @IBAction func NotesAction(_ sender: Any) {
@@ -121,7 +124,7 @@ class NextScreenController : UIViewController {
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
         //user presses back to all courses button
         if let destinationViewController = segue.destination as? HomeScreenViewController {
-            destinationViewController.uID = groupSelected.userID
+            destinationViewController.uID = currentGroup.getUserID()
             
         }
         //prepare data for when user presses my points
@@ -134,6 +137,9 @@ class NextScreenController : UIViewController {
         if let destinationViewController = segue.destination as? GroupMembersViewController {
             destinationViewController.currentGroup = self.currentGroup
             
+        }
+        if let destinationViewController = segue.destination as? QuestionsViewController{
+            destinationViewController.currentGroup = self.currentGroup
         }
     }
 }

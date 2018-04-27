@@ -55,6 +55,7 @@ class HomeScreenViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         // Do any additional setup after loading the view.
+        print("USERID IN HomeSCREEN: ")
         print(uID)
         //Start by having all course buttons hidden
         //unhideAllCourseButtons()
@@ -72,6 +73,7 @@ class HomeScreenViewController: UIViewController {
         if(numOfCourses != 0){
             generateButtons(ButtonCount: numOfCourses)
         }
+        
         
     }
     

@@ -28,10 +28,11 @@ class DisplayMembersViewController : UIViewController,UITableViewDataSource, UIT
         //set Online members
        // currentGroup.setOnlineMembers()
         
-        
+        //Tell TableView to be in this view controller
         onlineTableView.delegate = self
         onlineTableView.dataSource = self
         
+        //want to display online members so getOnlineSize first
         if(currentGroup.getOnlineSize() == 0){
             onlineTableView.isHidden = true
             NoOneOnlineTextField.isHidden = false
@@ -45,11 +46,11 @@ class DisplayMembersViewController : UIViewController,UITableViewDataSource, UIT
     //Handles data for table.............................................................
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         
-        return currentGroup.onlineMembers.count
+        return currentGroup.onlineMembers.count //array size
     }
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        
+        //function of table view
         let cell = onlineTableView.dequeueReusableCell(withIdentifier: "cell")
         
         cell?.textLabel?.text = String(currentGroup.onlineMembers[indexPath.row].userID)
