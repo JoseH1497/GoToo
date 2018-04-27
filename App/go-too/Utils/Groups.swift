@@ -107,7 +107,7 @@ class Group {
         
         //testing
         
-        onlineSize = 0
+        onlineSize = 3
         
         
         
@@ -138,6 +138,30 @@ class Group {
          }
          
          **/
+        
+        for i in 0..<numOfQuestions{
+            switch(i){
+            case 0:
+                QuestionsArray[i].questionID = i
+                QuestionsArray[i].question = "What is square root of 2?"
+            case 1:
+                QuestionsArray[i].questionID = i
+                QuestionsArray[i].question = "What is 2+2?"
+            case 2:
+                QuestionsArray[i].questionID = i
+                QuestionsArray[i].question = "What is pi?"
+            case 3:
+                QuestionsArray[i].questionID = i
+                QuestionsArray[i].question = "Where can I find Phi?"
+            case 4:
+                QuestionsArray[i].questionID = i
+                QuestionsArray[i].question = "Has anyone figured out problem 3?"
+                
+                
+            default:
+                break
+            }
+        }
         
         
         

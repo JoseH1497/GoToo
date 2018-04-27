@@ -26,7 +26,7 @@ class Questions{
         //TODO: Use question ID to get the number of answers for this question
         
         //testing:
-        numOfAnswers = 3
+        numOfAnswers = 0
     }
     func setAnswersArray(){
         
