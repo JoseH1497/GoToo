@@ -11,6 +11,7 @@ import Foundation
 import UIKit
 class myPointsViewController : UIViewController{
     
+    @IBOutlet weak var scoreTextField: UITextField!
     //group Object passed over
     
     var currentGroup: Group! = Group()
@@ -20,10 +21,18 @@ class myPointsViewController : UIViewController{
         super.viewDidLoad()
         print("User Score")
         print(currentGroup.getUserScore())
-        
+        displayScore()
+        print("GroupName")
+        print(currentGroup.getGroupName())
+        print("GroupID")
+        print(currentGroup.getGroupID())
         
     }
     
+    
+    fileprivate func displayScore(){
+        scoreTextField.text = String(currentGroup.getUserScore())
+    }
     
     
     @IBAction func BackToCourseAction(_ sender: Any) {

@@ -16,6 +16,7 @@
 		24E8D1E8209082020095AE43 /* AddCourseViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 24E8D1E7209082020095AE43 /* AddCourseViewController.swift */; };
 		24E8D1EB209204D30095AE43 /* myPointsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 24E8D1EA209204D30095AE43 /* myPointsView.swift */; };
 		24E8D1EE2092092F0095AE43 /* GroupMembersView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 24E8D1ED2092092F0095AE43 /* GroupMembersView.swift */; };
+		24E8D1F020928F1D0095AE43 /* DisplayMembers.swift in Sources */ = {isa = PBXBuildFile; fileRef = 24E8D1EF20928F1D0095AE43 /* DisplayMembers.swift */; };
 		5275BF80206DC52A000EA1F1 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 5275BF7F206DC529000EA1F1 /* Assets.xcassets */; };
 		52E9695B206C70AF00538307 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 52E9695A206C70AF00538307 /* AppDelegate.swift */; };
 		52E96960206C70AF00538307 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 52E9695E206C70AF00538307 /* Main.storyboard */; };
@@ -38,6 +39,7 @@
 		24E8D1E7209082020095AE43 /* AddCourseViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddCourseViewController.swift; sourceTree = "<group>"; };
 		24E8D1EA209204D30095AE43 /* myPointsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = myPointsView.swift; sourceTree = "<group>"; };
 		24E8D1ED2092092F0095AE43 /* GroupMembersView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GroupMembersView.swift; sourceTree = "<group>"; };
+		24E8D1EF20928F1D0095AE43 /* DisplayMembers.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DisplayMembers.swift; sourceTree = "<group>"; };
 		5275BF7F206DC529000EA1F1 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		52E96957206C70AF00538307 /* go-too.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "go-too.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		52E9695A206C70AF00538307 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
@@ -132,6 +134,7 @@
 				24E8D1E7209082020095AE43 /* AddCourseViewController.swift */,
 				24E8D1EA209204D30095AE43 /* myPointsView.swift */,
 				24E8D1ED2092092F0095AE43 /* GroupMembersView.swift */,
+				24E8D1EF20928F1D0095AE43 /* DisplayMembers.swift */,
 			);
 			path = Groups;
 			sourceTree = "<group>";
@@ -270,6 +273,7 @@
 				241CA16A208543740081FAA3 /* NextScreen.swift in Sources */,
 				241CA168208541610081FAA3 /* Groups.swift in Sources */,
 				52E9695B206C70AF00538307 /* AppDelegate.swift in Sources */,
+				24E8D1F020928F1D0095AE43 /* DisplayMembers.swift in Sources */,
 				2484AE932075B56C00C035AA /* ContactUsViewController.swift in Sources */,
 				52F4C3872072BF7600F46DF2 /* RecoveryScreenViewController.swift in Sources */,
 				52F4C38B2072BFA300F46DF2 /* RecoveredScreenViewController.swift in Sources */,

@@ -30,10 +30,13 @@ class NextScreenController : UIViewController {
         //initialize group object with group id passed and then load info from
         initCurrentGroup()
         /**print(currentGroup.getGroupID())
-        
+        **/
         print("GroupName")
         print(currentGroup.getGroupName())
-        **/
+        
+        print("GroupID")
+        print(currentGroup.getGroupID())
+        
         grade.text = String(currentGroup.getGroupID())
         
     }
@@ -53,6 +56,12 @@ class NextScreenController : UIViewController {
         }
         //use userID and groupID to see if this user ID is admin or not 
         currentGroup.setAdmin()
+        
+        //set size of group and load members from database
+        currentGroup.setGroupMembers()
+        //set online and load
+        currentGroup.setOnlineMembers()
+        
         
         //set Title to screen
         if(currentGroup.getGroupName() != ""){

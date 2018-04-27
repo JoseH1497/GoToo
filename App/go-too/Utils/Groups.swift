@@ -23,10 +23,13 @@ class Group {
     var topMembers = [GroupTable]()
     //# of members
     var groupSize: Int
+    //#of online Members currently
+    var onlineSize: Int
     //current Online Members
-    var onlineMembers = [String]()
+    var onlineMembers = [GroupTable]()
     //Score of user with User ID, so we can display when user wants to see their points
     var userScore : Int
+    
     
     
     var newPosts = [String]()
@@ -56,6 +59,7 @@ class Group {
         self.userID = -1
         self.groupSize = 0
         self.userScore = 0
+        self.onlineSize = 0
         
         
     }
@@ -66,6 +70,7 @@ class Group {
         self.groupID = -1
         self.groupSize = 0
         self.userScore = 0
+        self.onlineSize = 0
        
     }
     
@@ -91,9 +96,82 @@ class Group {
         //groupSize so we can use it
         
         //testing:
-        groupSize = 5
+        groupSize = 16
+    }
+    func setOnlineSize(){
+        //TODO: Set online Size for current group using groupID and seeing what Members online bit is on or off
+        
+        //testing
+        
+        onlineSize = 0
+        
+        
+        
+    }
+    func setOnlineMembers(){
+        //set size of online group
+        self.setOnlineSize()
+        
+        for i in 0..<onlineSize{
+            var alloc = GroupTable()
+            onlineMembers.append(alloc)
+        }
+        
+        
+        //TODO: Get each groupMember ID and current score
+        /**
+         for i in 0..<groupSize{
+         groupMembers[i].userID = userID from database
+         groupMembers[i].score = score for current userID from database
+         
+         }
+         
+         ONCE WE HAVE GROUPMEMBERS IN PLACE,
+         I will rank them according to the top scores
+         **/
+        
+        
+        //testing purposes: populating with random data
+        for i in 0..<onlineSize{
+            switch(i){
+            case 0:
+                onlineMembers[i].userID = 1
+                onlineMembers[i].score = 25
+                onlineMembers[i].groupID = self.getGroupID()
+                break
+            case 1:
+                onlineMembers[i].userID = 2
+                onlineMembers[i].score = 37
+                onlineMembers[i].groupID = self.getGroupID()
+                break
+            case 2:
+                onlineMembers[i].userID = 3
+                onlineMembers[i].score = 2
+                onlineMembers[i].groupID = self.getGroupID()
+                break
+            case 3:
+                onlineMembers[i].userID = 4
+                onlineMembers[i].score = 9
+                onlineMembers[i].groupID = self.getGroupID()
+                break
+            case 4:
+                onlineMembers[i].userID = 5
+                onlineMembers[i].score = 152
+                onlineMembers[i].groupID = self.getGroupID()
+                break
+            
+            default:
+                break
+                
+                
+            }
+        }
+        
     }
     func setGroupMembers(){
+        //set size of group
+        self.setGroupSize()
+        
         for i in 0..<groupSize{
             var alloc = GroupTable()
             groupMembers.append(alloc)
@@ -111,30 +189,96 @@ class Group {
          ONCE WE HAVE GROUPMEMBERS IN PLACE,
          I will rank them according to the top scores
         **/
+        
         //sort by rank
         
         //testing purposes: populating with random data
         for i in 0..<groupSize{
             switch(i){
             case 0:
-                groupMembers[0].userID = 1
-                groupMembers[0].score = 25
+                groupMembers[i].userID = 1
+                groupMembers[i].score = 25
+                groupMembers[i].groupID = self.getGroupID()
                 break
             case 1:
-                groupMembers[1].userID = 2
-                groupMembers[1].score = 37
+                groupMembers[i].userID = 2
+                groupMembers[i].score = 37
+                groupMembers[i].groupID = self.getGroupID()
                 break
             case 2:
                 groupMembers[2].userID = 3
                 groupMembers[2].score = 2
+                groupMembers[2].groupID = self.getGroupID()
                 break
             case 3:
                 groupMembers[3].userID = 4
                 groupMembers[3].score = 9
+                groupMembers[3].groupID = self.getGroupID()
                 break
             case 4:
                 groupMembers[4].userID = 5
                 groupMembers[4].score = 152
+                groupMembers[4].groupID = self.getGroupID()
+                break
+            case 5:
+                groupMembers[5].userID = 6
+                groupMembers[5].score = 192
+                groupMembers[5].groupID = self.getGroupID()
+                break
+            case 6:
+                groupMembers[6].userID = 7
+                groupMembers[6].score = 162
+                groupMembers[6].groupID = self.getGroupID()
+                break
+            case 7:
+                groupMembers[i].userID = 8
+                groupMembers[i].score = 152
+                groupMembers[i].groupID = self.getGroupID()
+                break
+            case 8:
+                groupMembers[i].userID = 9
+                groupMembers[i].score = 11
+                groupMembers[i].groupID = self.getGroupID()
+                break
+            case 9:
+                groupMembers[i].userID = 10
+                groupMembers[i].score = 142
+                groupMembers[i].groupID = self.getGroupID()
+                break
+            case 10:
+                groupMembers[i].userID = 11
+                groupMembers[i].score = 45
+                groupMembers[i].groupID = self.getGroupID()
+                break
+            case 11:
+                groupMembers[i].userID = 12
+                groupMembers[i].score = 90
+                groupMembers[i].groupID = self.getGroupID()
+                break
+            case 12:
+                groupMembers[i].userID = 13
+                groupMembers[i].score = 10
+                groupMembers[i].groupID = self.getGroupID()
+                break
+            case 13:
+                groupMembers[i].userID = 14
+                groupMembers[i].score = 100
+                groupMembers[i].groupID = self.getGroupID()
+                break
+            case 14:
+                groupMembers[i].userID = 15
+                groupMembers[i].score = 109
+                groupMembers[i].groupID = self.getGroupID()
+                break
+            case 15:
+                groupMembers[i].userID = 16
+                groupMembers[i].score = 103
+                groupMembers[i].groupID = self.getGroupID()
+                break
+            case 16:
+                groupMembers[i].userID = 17
+                groupMembers[i].score = 135
+                groupMembers[i].groupID = self.getGroupID()
                 break
             default:
                 break
@@ -145,6 +289,7 @@ class Group {
         
         
     }
+    //function sets user Score from current score stored in database
     func setUserScore(userID: Int){
         var score: Int
         //TODO: Set var score to score of current user based on userID from database
@@ -170,9 +315,12 @@ class Group {
         return userID
     }
     //Need to get next member to display
-    func getNextGroupMembers() -> String {
-        return ""
+    func getGroupMembersByID() -> Array<GroupTable> {
+        return groupMembers
         //return groupMembers
+    }
+    func getOnlineMembersByID()->Array<GroupTable>{
+        return onlineMembers
     }
     func isGroupAdmin()->Bool{
         return isAdmin
@@ -184,18 +332,49 @@ class Group {
     func getUserScore() -> Int{
         return userScore
     }
+   
+    //this function will return an array of strings holding names of all members of group
+    //uses getMemberName fucntion to get each name for all members based on userID
+    func getGroupMembersByName() -> Array<String>{
+       var MemberNames = [String]() //
+        
+        for i in 0..<groupSize{
+            //get each name one by one
+            MemberNames.append(getMemberName(userId: groupMembers[i].userID, groupID: groupID))
+        }
+         //return names
+        return MemberNames
+    }
+    func getOnlineSize()->Int{
+        return self.onlineSize
+    }
+    //this function will return an array of strings holding names of all members of group
+    //uses getMemberName fucntion to get each name for all members based on userID
+    func getOnlineMembersByName() -> Array<String>{
+        var MemberNames = [String]() //
+        
+        for i in 0..<onlineSize{
+            //get each name one by one
+            MemberNames.append(getMemberName(userId: onlineMembers[i].userID, groupID: groupID))
+        }
+        //return names
+        return MemberNames
+    }
+    
+    
+    //This function uses userID to get name of user
     func getMemberName(userId: Int, groupID: Int) -> String{
         
         var MemberName: String = ""
         /**
          
-         TODO: Knowing, userID, and groupID, get name of this user
+         TODO: Knowing, userID, and groupID, get name of this user from database
          
          
          
          
          **/
-    
+        
         return MemberName
         
     }
@@ -290,7 +469,7 @@ class Group {
         groupName  = name
         isAdmin = isAd
         //groupMembers = groupMembs
-        onlineMembers = onlineMembs
+        //onlineMembers = onlineMembs
         newPosts = newPost
         allPosts = allPost
         newQuestions = newQs
