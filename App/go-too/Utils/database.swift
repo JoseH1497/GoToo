@@ -86,20 +86,51 @@ class GroupsInDB{
     }
 }
 
+class questionsDB{
+    var questionID: Int
+    var groupID: Int
+    var numOfAnswers:Int
+    var Answers = [String]()
+    var questionString: String
+    var date: String
+    var name: String
+    
+    init(){
+        questionID = -1
+        groupID = -1
+        numOfAnswers = 0
+        questionString = ""
+        date = ""
+        name = ""
+    }
+    init(questionID: Int, groupID: Int, numOfAnswers: Int, Answers: Array<String>, questionString: String, date: String, name: String){
+        self.questionID = questionID
+        self.groupID = groupID
+        self.numOfAnswers = numOfAnswers
+        self.questionString = questionString
+        self.date = date
+        self.name = name
+        self.Answers = Answers
+    }
+}
 class Database{
     var Users = [User]()
     var Groups = [GroupsInDB]()
+    var Questions = [questionsDB]()
     var userCount:Int
     var groupCount: Int
-    
+    var questionSelected: Int
     var onlineSize: Int
     init(){
         onlineSize = 0
         userCount = 2
         groupCount = 7//current group count
+        questionSelected = -1
         setUsers()
         setGroups()
         setOnline()
+        setQuestions()
+        
     }
     func setUsers(){
         for i in 0..<userCount{
@@ -161,7 +192,10 @@ class Database{
         }
     }
     
-    
+    func setQuestionSelected(selected: Int){
+        questionSelected = selected
+        
+    }
     func findUser(email: String, passWord: String)-> Int{
         var userID: Int = -1
         for i in 0..<userCount{
@@ -270,5 +304,52 @@ class Database{
     }
     func getOnlineSize()->Int{
         return onlineSize
+    }
+    func setQuestions(){
+        var answers = [String]()
+        answers.append("In COB 132")
+        answers.append("Always in COB 132!")
+        answers.append("Go Now! Professor is there!")
+        //Q1
+        Questions.append(questionsDB(questionID: 0, groupID: 0, numOfAnswers: 3, Answers: answers, questionString:"Where is the professors Room?", date: "04/28/2018", name: "Jose Herrera"))
+        answers[0] = "Yes!, meet me in COB2!"
+        answers[1] = "I am also in COB2"
+        
+        //Q2
+        Questions.append(questionsDB(questionID: 1, groupID: 0, numOfAnswers: 2, Answers: answers, questionString:"Can anyone help me with problem 3 for homework?", date: "04/28/2018", name: "Jovon Johnson"))
+        
+        //Q3
+        answers[0] = "It is about 3.14"
+        Questions.append(questionsDB(questionID: 2, groupID: 0, numOfAnswers: 1, Answers: answers, questionString:"How can we calculate Pi?", date: "04/27/2018", name: "Karina Herrera"))
+        //Q4
+        answers[0] = "I found this very useful link, I will send it to you later!"
+        answers[1] = "We are having a tutoring session for UML's in S&E2 321, come by!"
+        answers[2] = "Come to lecture tomorrow, this will be the topic!"
+         Questions.append(questionsDB(questionID: 3, groupID: 0, numOfAnswers: 3, Answers: answers, questionString:"Does anyone know the best method to create UML's?", date: "04/27/2018", name: "Hunter Brown"))
+        //Q5
+        answers[0] = "Yes, I will private message you"
+        Questions.append(questionsDB(questionID: 4, groupID: 0, numOfAnswers: 1, Answers: answers, questionString:"Can someone help me calculate the radius of a circle?", date: "04/26/2018", name: "Jovon Johnson"))
+        
+        
+        //Q6
+        answers[0] = "I found this very useful link, I will send it to you later!"
+        answers[1] = "We are having a tutoring session for UML's in S&E2 321, come by!"
+        answers[2] = "Come to lecture tomorrow, this will be the topic!"
+        Questions.append(questionsDB(questionID: 3, groupID: 1, numOfAnswers: 3, Answers: answers, questionString:"Does anyone know the best method to create UML's?", date: "04/27/2018", name: "Jose Herrera"))
+        //Q7
+        answers[0] = "Yes, I will private message you"
+        Questions.append(questionsDB(questionID: 4, groupID: 1, numOfAnswers: 1, Answers: answers, questionString:"Can someone help me calculate the area of a square?", date: "04/26/2018", name: "Jovon Johnson"))
+        
+        
+        //Q8
+        answers[0] = "No, but I could message you and We could try doing it together"
+        Questions.append(questionsDB(questionID: 4, groupID: 2, numOfAnswers: 1, Answers: answers, questionString:"Has anyone figured out problem 2?", date: "04/26/2018", name: "Jovon Johnson"))
+        //Q9
+        answers[0] = "I found this very useful link, I will send it to you later!"
+        answers[1] = "We are having a tutoring session for UML's in S&E2 321, come by!"
+        answers[2] = "Come to lecture hall now!"
+        Questions.append(questionsDB(questionID: 1, groupID: 3, numOfAnswers: 3, Answers: answers, questionString:"Can anyone help me with problem 3 for homework?", date: "04/28/2018", name: "Jovon Johnson"))
+        
+        
     }
 }

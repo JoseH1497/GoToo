@@ -14,6 +14,7 @@ class QuestionTableViewCell : UITableViewCell{
     @IBOutlet weak var userNameLabel: UILabel!
     @IBOutlet weak var QuestionLabel: UILabel!
     
+    @IBOutlet weak var fireEmoji: UIImageView!
     @IBOutlet weak var AnswerButton: UIButton!
     @IBOutlet weak var DateLabel: UILabel!
 }
@@ -22,7 +23,7 @@ class QuestionsViewController : UIViewController, UITableViewDelegate, UITableVi
     
     //data transferred
     var currentGroup : Group! = Group()
-    
+    var QuestionForGroup = [questionsDB]()
     
    
     
@@ -47,25 +48,38 @@ class QuestionsViewController : UIViewController, UITableViewDelegate, UITableVi
         questionsTableView.dataSource = self
         
         questionsTableView.separatorStyle = .none
-        
+        var size: Int = 0
+        for i in 0..<DATA.Questions.count{
+            if(DATA.Questions[i].groupID == currentGroup.groupID){
+                size = size + 1
+                QuestionForGroup.append(DATA.Questions[i])
+            }
+        }
         
         
     }
     
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        return currentGroup.QuestionsArray.count
+        
+        
+        
+        return QuestionForGroup.count
     }
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell = questionsTableView.dequeueReusableCell(withIdentifier: "PostCell")  as! QuestionTableViewCell
-        cell.userNameLabel?.text = "Jose"
+        
+        cell.userNameLabel?.text = QuestionForGroup[indexPath.row].name
         
        // cell.UserNameLabel.text = String( currentGroup.QuestionsArray[indexPath.row].questionID)
        cell.AnswerButton?.tag = indexPath.row
       // cell.NumOfAnswersLabel?.text = String(4)
-       cell.QuestionLabel.text = currentGroup.QuestionsArray[indexPath.row].question
-       cell.DateLabel.text = "05/12/18"
-        
+       cell.QuestionLabel.text = QuestionForGroup[indexPath.row].questionString
+       cell.DateLabel.text = QuestionForGroup[indexPath.row].date
+        cell.fireEmoji.isHidden = true
+        if(QuestionForGroup[indexPath.row].numOfAnswers>2){
+            cell.fireEmoji.isHidden = false
+        }
         return cell
     }
     @IBAction func ToAnswersAction(_ sender: UIButton) {
@@ -98,6 +112,7 @@ class QuestionsViewController : UIViewController, UITableViewDelegate, UITableVi
             
             
         }
+        DATA.setQuestionSelected(selected: sender.tag)
         currentGroup.setQuestionSelected(selected: sender.tag)
         self.performSegue(withIdentifier: "QuestionsToAnswers", sender: self)
     }

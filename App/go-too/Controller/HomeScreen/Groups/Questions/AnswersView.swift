@@ -17,6 +17,8 @@ class AnswersViewController : UIViewController, UITableViewDelegate, UITableView
     
     @IBOutlet weak var userAnswer: UITextField!
     
+    @IBOutlet weak var AnswerViewText: UITextView!
+    @IBOutlet weak var textView: UITextView!
     @IBOutlet weak var answerTableView: UITableView!
     @IBOutlet weak var QuestionText: UITextField!
     override func viewDidLoad() {
@@ -27,24 +29,26 @@ class AnswersViewController : UIViewController, UITableViewDelegate, UITableView
         print(currentGroup.getGroupID())
         
         setQuestionText()
+        AnswerViewText.insertDictationResultPlaceholder
         answerTableView.delegate = self
         answerTableView.dataSource = self
         
     }
     fileprivate func setQuestionText(){
-        QuestionText.text = currentGroup.QuestionsArray[currentGroup.getQuestionSelected()].question
-      
+        //QuestionText.text = DATA.Questions[DATA.questionSelected].questionString
+      textView.text =
+        DATA.Questions[DATA.questionSelected].questionString
         
     }
     
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        return currentGroup.QuestionsArray[currentGroup.getQuestionSelected()].numOfAnswers
+        return DATA.Questions[DATA.questionSelected].numOfAnswers
     }
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell = answerTableView.dequeueReusableCell(withIdentifier: "AnswerCell")
         
-        cell?.textLabel?.text = currentGroup.QuestionsArray[currentGroup.getQuestionSelected()].Answers[indexPath.row]
+        cell?.textLabel?.text = DATA.Questions[DATA.questionSelected].Answers[indexPath.row]
        // cell?.detailTextLabel?.text = String(currentGroup.groupMembers[indexPath.row].score)
         
         
