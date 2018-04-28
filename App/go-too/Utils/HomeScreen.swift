@@ -64,9 +64,10 @@ class HomeScreen {
         /**TODO:
             Get number of courses for userID and put into numOfCourses var
         **/
-        
+        //database stuff
+        numOfCourses = DATA.Users[userID].numOfGroups
         //testing purposes
-        numOfCourses = 6
+        //numOfCourses = 6
         
         setNumOfCourses(num: numOfCourses)//set num of courses var
         return numOfCourses
@@ -114,28 +115,28 @@ class HomeScreen {
             switch(i){
                 
             case 0:
-                courseNames[0].groupID = 23
-                courseNames[0].groupName = "CSE 120"
+                courseNames[0].groupID = DATA.Users[userID].groups[i].groupID
+                courseNames[0].groupName = DATA.Users[userID].groups[i].groupName
                 break
             case 1:
-                courseNames[1].groupID = 24
-                courseNames[1].groupName = "CSE 150"
+                courseNames[i].groupID = DATA.Users[userID].groups[i].groupID
+                courseNames[i].groupName = DATA.Users[userID].groups[i].groupName
                 break
             case 2:
-                courseNames[2].groupID = 25
-                courseNames[2].groupName = "CSE 165"
+                courseNames[i].groupID = DATA.Users[userID].groups[i].groupID
+                courseNames[i].groupName = DATA.Users[userID].groups[i].groupName
                 break
             case 3:
-                courseNames[3].groupID = 26
-                courseNames[3].groupName = "CSE 65"
+                courseNames[i].groupID = DATA.Users[userID].groups[i].groupID
+                courseNames[i].groupName = DATA.Users[userID].groups[i].groupName
                 break
             case 4:
-                courseNames[4].groupID = 27
-                courseNames[4].groupName = "CSE 175"
+                courseNames[i].groupID = DATA.Users[userID].groups[i].groupID
+                courseNames[i].groupName = DATA.Users[userID].groups[i].groupName
                 break
             case 5:
-                courseNames[5].groupID = 28
-                courseNames[5].groupName = "CSE 111"
+                courseNames[i].groupID = DATA.Users[userID].groups[i].groupID
+                courseNames[i].groupName = DATA.Users[userID].groups[i].groupName
                 break
             default:
                 break

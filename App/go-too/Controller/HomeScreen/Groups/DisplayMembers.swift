@@ -53,8 +53,8 @@ class DisplayMembersViewController : UIViewController,UITableViewDataSource, UIT
         //function of table view
         let cell = onlineTableView.dequeueReusableCell(withIdentifier: "cell")
         
-        cell?.textLabel?.text = String(currentGroup.onlineMembers[indexPath.row].userID)
-        cell?.detailTextLabel?.text = String(currentGroup.onlineMembers[indexPath.row].score)
+        cell?.textLabel?.text = String(currentGroup.onlineMembers[indexPath.row].userName)
+        //cell?.detailTextLabel?.text = String(currentGroup.onlineMembers[indexPath.row].score)
         
         
         

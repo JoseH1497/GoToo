@@ -102,7 +102,9 @@ class Group {
         //groupSize so we can use it
         
         //testing:
-        groupSize = 16
+        //groupSize = 16
+        //from database
+        groupSize = DATA.Groups[groupID].getGroupSize()
     }
     func setQuestionSelected(selected: Int){
         questionSelected = selected
@@ -113,8 +115,8 @@ class Group {
         
         //testing
         
-        onlineSize = 3
-        
+        //onlineSize = 3
+        onlineSize = DATA.getOnlineSize()
         
         
     }
@@ -185,7 +187,7 @@ class Group {
         //allocate space
         for i in 0..<onlineSize{
             var alloc = GroupTable()
-            onlineMembers.append(alloc)
+            //onlineMembers.append(alloc)
         }
         
         
@@ -199,10 +201,24 @@ class Group {
          
         
          **/
-        
+        //check if online
+        for i in 0..<DATA.userCount{
+            for j in 0..<DATA.Users[i].numOfGroups{
+                if(DATA.Users[i].groups[j].groupID == self.groupID){
+                    if(DATA.Users[i].isOnline){
+                        var newUser = GroupTable()
+                        newUser.groupName = self.groupName
+                        newUser.groupID = self.groupID
+                        newUser.userID = DATA.Users[i].UserID
+                        newUser.userName = DATA.Users[i].name
+                        onlineMembers.append(newUser)
+                    }
+                }
+            }
+        }
         
         //testing purposes: populating with random data
-        for i in 0..<onlineSize{
+        /**for i in 0..<onlineSize{
             switch(i){
             case 0:
                 onlineMembers[i].userID = 1
@@ -235,7 +251,7 @@ class Group {
                 
                 
             }
-        }
+        }**/
         
     }
     func setGroupMembers(){
@@ -269,86 +285,137 @@ class Group {
                 groupMembers[i].userID = 1
                 groupMembers[i].score = 25
                 groupMembers[i].groupID = self.getGroupID()
+                groupMembers[i].groupName = self.getGroupName()
+                groupMembers[i].userName =  DATA.Groups[groupID].groupMembers[i]
+               
                 break
             case 1:
                 groupMembers[i].userID = 2
                 groupMembers[i].score = 37
                 groupMembers[i].groupID = self.getGroupID()
+                groupMembers[i].groupName = DATA.Groups[groupID].groupMembers[i]
+                groupMembers[i].userName =  DATA.Groups[groupID].groupMembers[i]
+               
                 break
             case 2:
-                groupMembers[2].userID = 3
-                groupMembers[2].score = 2
-                groupMembers[2].groupID = self.getGroupID()
+                groupMembers[i].userID = 3
+                groupMembers[i].score = 2
+                groupMembers[i].groupID = self.getGroupID()
+                groupMembers[i].groupName = DATA.Groups[groupID].groupMembers[i]
+                groupMembers[i].userName =  DATA.Groups[groupID].groupMembers[i]
+                
                 break
             case 3:
                 groupMembers[3].userID = 4
                 groupMembers[3].score = 9
                 groupMembers[3].groupID = self.getGroupID()
+                groupMembers[i].groupName = DATA.Groups[groupID].groupMembers[i]
+                groupMembers[i].userName =  DATA.Groups[groupID].groupMembers[i]
+                
                 break
             case 4:
                 groupMembers[4].userID = 5
                 groupMembers[4].score = 152
                 groupMembers[4].groupID = self.getGroupID()
+                groupMembers[i].groupName = DATA.Groups[groupID].groupMembers[i]
+                groupMembers[i].userName =  DATA.Groups[groupID].groupMembers[i]
+               
                 break
             case 5:
                 groupMembers[5].userID = 6
                 groupMembers[5].score = 192
                 groupMembers[5].groupID = self.getGroupID()
+                groupMembers[i].groupName = DATA.Groups[groupID].groupMembers[i]
+                groupMembers[i].userName =  DATA.Groups[groupID].groupMembers[i]
+                
                 break
             case 6:
                 groupMembers[6].userID = 7
                 groupMembers[6].score = 162
                 groupMembers[6].groupID = self.getGroupID()
+                groupMembers[i].groupName = DATA.Groups[groupID].groupMembers[i]
+                groupMembers[i].userName =  DATA.Groups[groupID].groupMembers[i]
+               
                 break
             case 7:
                 groupMembers[i].userID = 8
                 groupMembers[i].score = 152
                 groupMembers[i].groupID = self.getGroupID()
+                groupMembers[i].groupName = DATA.Groups[groupID].groupMembers[i]
+                groupMembers[i].userName =  DATA.Groups[groupID].groupMembers[i]
+                
                 break
             case 8:
                 groupMembers[i].userID = 9
                 groupMembers[i].score = 11
                 groupMembers[i].groupID = self.getGroupID()
+                groupMembers[i].groupName = DATA.Groups[groupID].groupMembers[i]
+                groupMembers[i].userName =  DATA.Groups[groupID].groupMembers[i]
+                groupMembers[i].isOnline = false
+                
                 break
             case 9:
                 groupMembers[i].userID = 10
                 groupMembers[i].score = 142
                 groupMembers[i].groupID = self.getGroupID()
+               groupMembers[i].groupName = DATA.Groups[groupID].groupMembers[i]
+                groupMembers[i].userName =  DATA.Groups[groupID].groupMembers[i]
+                groupMembers[i].isOnline = false
+               
                 break
             case 10:
                 groupMembers[i].userID = 11
                 groupMembers[i].score = 45
                 groupMembers[i].groupID = self.getGroupID()
+                groupMembers[i].groupName = DATA.Groups[groupID].groupMembers[i]
+                groupMembers[i].userName =  DATA.Groups[groupID].groupMembers[i]
+                
                 break
             case 11:
                 groupMembers[i].userID = 12
                 groupMembers[i].score = 90
                 groupMembers[i].groupID = self.getGroupID()
+                groupMembers[i].groupName = DATA.Groups[groupID].groupMembers[i]
+                groupMembers[i].userName =  DATA.Groups[groupID].groupMembers[i]
+                
                 break
             case 12:
                 groupMembers[i].userID = 13
                 groupMembers[i].score = 10
                 groupMembers[i].groupID = self.getGroupID()
+                groupMembers[i].groupName = DATA.Groups[groupID].groupMembers[i]
+                groupMembers[i].userName =  DATA.Groups[groupID].groupMembers[i]
+                
                 break
             case 13:
                 groupMembers[i].userID = 14
                 groupMembers[i].score = 100
                 groupMembers[i].groupID = self.getGroupID()
+               groupMembers[i].groupName = DATA.Groups[groupID].groupMembers[i]
+                groupMembers[i].userName =  DATA.Groups[groupID].groupMembers[i]
+                groupMembers[i].isOnline = false
+               
                 break
             case 14:
                 groupMembers[i].userID = 15
                 groupMembers[i].score = 109
                 groupMembers[i].groupID = self.getGroupID()
+                groupMembers[i].groupName = DATA.Groups[groupID].groupMembers[i]
+                groupMembers[i].userName =  DATA.Groups[groupID].groupMembers[i]
                 break
             case 15:
                 groupMembers[i].userID = 16
                 groupMembers[i].score = 103
                 groupMembers[i].groupID = self.getGroupID()
+                groupMembers[i].groupName = DATA.Groups[groupID].groupMembers[i]
+                groupMembers[i].userName =  DATA.Groups[groupID].groupMembers[i]
                 break
             case 16:
                 groupMembers[i].userID = 17
                 groupMembers[i].score = 135
                 groupMembers[i].groupID = self.getGroupID()
+                groupMembers[i].groupName = DATA.Groups[groupID].groupMembers[i]
+                groupMembers[i].userName =  DATA.Groups[groupID].groupMembers[i]
                 break
             default:
                 break

@@ -20,6 +20,7 @@
 		24E8D1F320938BBA0095AE43 /* QuestionsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 24E8D1F220938BBA0095AE43 /* QuestionsView.swift */; };
 		24E8D1F5209393A40095AE43 /* Questions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 24E8D1F4209393A40095AE43 /* Questions.swift */; };
 		24E8D1F72093A27A0095AE43 /* AnswersView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 24E8D1F62093A27A0095AE43 /* AnswersView.swift */; };
+		24E8D1FB209489A20095AE43 /* database.swift in Sources */ = {isa = PBXBuildFile; fileRef = 24E8D1FA209489A20095AE43 /* database.swift */; };
 		5275BF80206DC52A000EA1F1 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 5275BF7F206DC529000EA1F1 /* Assets.xcassets */; };
 		52E9695B206C70AF00538307 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 52E9695A206C70AF00538307 /* AppDelegate.swift */; };
 		52E96960206C70AF00538307 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 52E9695E206C70AF00538307 /* Main.storyboard */; };
@@ -46,6 +47,7 @@
 		24E8D1F220938BBA0095AE43 /* QuestionsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = QuestionsView.swift; sourceTree = "<group>"; };
 		24E8D1F4209393A40095AE43 /* Questions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Questions.swift; sourceTree = "<group>"; };
 		24E8D1F62093A27A0095AE43 /* AnswersView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AnswersView.swift; sourceTree = "<group>"; };
+		24E8D1FA209489A20095AE43 /* database.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = database.swift; sourceTree = "<group>"; };
 		5275BF7F206DC529000EA1F1 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		52E96957206C70AF00538307 /* go-too.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "go-too.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		52E9695A206C70AF00538307 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
@@ -86,6 +88,7 @@
 				241CA167208541610081FAA3 /* Groups.swift */,
 				24E8D1E5209065D40095AE43 /* HomeScreen.swift */,
 				24E8D1F4209393A40095AE43 /* Questions.swift */,
+				24E8D1FA209489A20095AE43 /* database.swift */,
 			);
 			path = Utils;
 			sourceTree = "<group>";
@@ -303,6 +306,7 @@
 				2484AE8C2075B08E00C035AA /* Extensions.swift in Sources */,
 				24E8D1EE2092092F0095AE43 /* GroupMembersView.swift in Sources */,
 				2484AE952075BF0300C035AA /* Constants.swift in Sources */,
+				24E8D1FB209489A20095AE43 /* database.swift in Sources */,
 				24E8D1EB209204D30095AE43 /* myPointsView.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

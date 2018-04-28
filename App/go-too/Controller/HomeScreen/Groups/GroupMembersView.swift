@@ -54,8 +54,8 @@ class GroupMembersViewController : UIViewController, UITableViewDataSource, UITa
         
         let cell = groupTableView.dequeueReusableCell(withIdentifier: "cell")
         
-        cell?.textLabel?.text = String(currentGroup.groupMembers[indexPath.row].userID)
-        cell?.detailTextLabel?.text = String(currentGroup.groupMembers[indexPath.row].score)
+        cell?.textLabel?.text = currentGroup.groupMembers[indexPath.row].userName
+        //cell?.detailTextLabel?.text = String(currentGroup.groupMembers[indexPath.row].score)
         
         
         

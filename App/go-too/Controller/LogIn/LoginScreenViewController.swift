@@ -22,7 +22,7 @@ class LoginScreenViewController: UIViewController {
     //text field that will pop up when a wrong password is entered
     let wrongPassword: UITextField = {
         let wp = UITextField()
-            wp.text = "Incorrect Password, Try Again"
+            wp.text = "Incorrect Email/Password, Try Again"
             wp.textColor = .red
         return wp
     }()
@@ -32,7 +32,7 @@ class LoginScreenViewController: UIViewController {
     
     let noAccountFound: UITextField = {
         let wp = UITextField()
-        wp.text = "Incorrect Email, No Account Found"
+        wp.text = "Incorrect Email/Password, No Account Found"
         wp.textColor = .red
         return wp
     }()
@@ -48,6 +48,7 @@ class LoginScreenViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         hideWrongText()
+       
         // Do any additional setup after loading the view.
     }
 
@@ -125,7 +126,7 @@ class LoginScreenViewController: UIViewController {
             
             //displaye
             displayPromptUserToEnterEandP()
-            return true //MARK: CHANGE BACK TO FALSE
+            return false //MARK: CHANGE BACK TO FALSE
         }
         if self.emailText.text == "" {
             //if(emailText.isEmpty || passwordText.isEmpty){
@@ -134,7 +135,7 @@ class LoginScreenViewController: UIViewController {
             
             //display
             displayPromptUserToEnterEandP()
-            return true //MARK: CHANGE BACK TO FALSE
+            return false //MARK: CHANGE BACK TO FALSE
             //}
         }
         return true
@@ -146,7 +147,11 @@ class LoginScreenViewController: UIViewController {
         let credentials = true
         let emailCorrect = false
         let passwordCorrect = true
-        if(credentials == true){
+       
+        //check for user
+        self.userID = DATA.findUser(email: displayEmail, passWord: displayPassword)
+        
+        if(self.userID != -1){
             //if credentials correct, then send to view to homescreen
             print(displayEmail)
             self.performSegue(withIdentifier: "LoginToHomeScreen", sender: self)
@@ -179,7 +184,7 @@ class LoginScreenViewController: UIViewController {
         // Get the new view controller using segue.destinationViewController.
         // Pass the selected object to the new view controller.
         if let destinationViewController = segue.destination as? HomeScreenViewController {
-            destinationViewController.uID = userID
+            destinationViewController.uID = self.userID
             
         }
     }
