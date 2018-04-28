@@ -33,7 +33,7 @@ class Group {
     //Questions:
     var numOfQuestions: Int
     var QuestionsArray = [Questions]()
-    
+    var questionSelected: Int
     var newPosts = [String]()
     var allPosts = [String]()
     var newQuestions = [String]()
@@ -63,6 +63,7 @@ class Group {
         self.userScore = 0
         self.onlineSize = 0
         self.numOfQuestions = 0
+        self.questionSelected = -1
         
         
     }
@@ -75,6 +76,7 @@ class Group {
         self.userScore = 0
         self.onlineSize = 0
         self.numOfQuestions = 0
+        self.questionSelected = -1
        
     }
     
@@ -101,6 +103,10 @@ class Group {
         
         //testing:
         groupSize = 16
+    }
+    func setQuestionSelected(selected: Int){
+        questionSelected = selected
+        
     }
     func setOnlineSize(){
         //TODO: Set online Size for current group using groupID and seeing what Members online bit is on or off
@@ -144,18 +150,23 @@ class Group {
             case 0:
                 QuestionsArray[i].questionID = i
                 QuestionsArray[i].question = "What is square root of 2?"
+                QuestionsArray[i].setAnswersArray()
             case 1:
                 QuestionsArray[i].questionID = i
                 QuestionsArray[i].question = "What is 2+2?"
+                QuestionsArray[i].setAnswersArray()
             case 2:
                 QuestionsArray[i].questionID = i
                 QuestionsArray[i].question = "What is pi?"
+                QuestionsArray[i].setAnswersArray()
             case 3:
                 QuestionsArray[i].questionID = i
                 QuestionsArray[i].question = "Where can I find Phi?"
+                QuestionsArray[i].setAnswersArray()
             case 4:
                 QuestionsArray[i].questionID = i
                 QuestionsArray[i].question = "Has anyone figured out problem 3?"
+                QuestionsArray[i].setAnswersArray()
                 
                 
             default:
@@ -366,7 +377,9 @@ class Group {
     func getGroupName() -> String {
         return groupName
     }
-    
+    func getQuestionSelected() -> Int{
+        return questionSelected
+    }
     func getGroupID() ->Int{
         return groupID
     }

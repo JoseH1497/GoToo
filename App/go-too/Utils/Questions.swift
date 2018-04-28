@@ -23,11 +23,11 @@ class Questions{
         numOfAnswers = 0
         flag = 0
     }
-    func setAnswerSize(){
+    fileprivate func setAnswerSize(){
         //TODO: Use question ID to get the number of answers for this question
         
         //testing:
-        numOfAnswers = 0
+        numOfAnswers = 4
     }
     func setAnswersArray(){
         
@@ -49,6 +49,28 @@ class Questions{
          
          }
         **/
+        
+        for i in 0..<numOfAnswers{
+            switch(i){
+            case 0:
+                Answers[i] = "1.414"
+                break
+            case 1:
+                Answers[i] = "4"
+                break
+                
+            case 2:
+                Answers[i] = "3.14"
+                break
+                
+            case 3:
+                Answers[i] = "oN PAGE 10"
+                break
+                
+            default:
+                break
+            }
+        }
         
         
         

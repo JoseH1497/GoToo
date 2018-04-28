@@ -72,6 +72,7 @@ class QuestionsViewController : UIViewController, UITableViewDelegate, UITableVi
         
         switch(sender.tag){
         case 0:
+            //currentGroup.setQuestionSelected(selected: sender.tag)
             print("Answer1 choosen")
             break
         case 1:
@@ -97,6 +98,7 @@ class QuestionsViewController : UIViewController, UITableViewDelegate, UITableVi
             
             
         }
+        currentGroup.setQuestionSelected(selected: sender.tag)
         self.performSegue(withIdentifier: "QuestionsToAnswers", sender: self)
     }
     
