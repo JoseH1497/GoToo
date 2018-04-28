@@ -328,17 +328,17 @@ class Database{
          Questions.append(questionsDB(questionID: 3, groupID: 0, numOfAnswers: 3, Answers: answers, questionString:"Does anyone know the best method to create UML's?", date: "04/27/2018", name: "Hunter Brown"))
         //Q5
         answers[0] = "Yes, I will private message you"
-        Questions.append(questionsDB(questionID: 4, groupID: 0, numOfAnswers: 1, Answers: answers, questionString:"Can someone help me calculate the radius of a circle?", date: "04/26/2018", name: "Jovon Johnson"))
+        Questions.append(questionsDB(questionID: 4, groupID: 0, numOfAnswers: 1, Answers: answers, questionString:"Can someone help me calculate the radius of a circle?", date: "04/26/18", name: "Jovon Johnson"))
         
         
         //Q6
         answers[0] = "I found this very useful link, I will send it to you later!"
         answers[1] = "We are having a tutoring session for UML's in S&E2 321, come by!"
         answers[2] = "Come to lecture tomorrow, this will be the topic!"
-        Questions.append(questionsDB(questionID: 3, groupID: 1, numOfAnswers: 3, Answers: answers, questionString:"Does anyone know the best method to create UML's?", date: "04/27/2018", name: "Jose Herrera"))
+        Questions.append(questionsDB(questionID: 3, groupID: 1, numOfAnswers: 3, Answers: answers, questionString:"Does anyone know the best method to create UML's?", date: "04/27/18", name: "Jose Herrera"))
         //Q7
         answers[0] = "Yes, I will private message you"
-        Questions.append(questionsDB(questionID: 4, groupID: 1, numOfAnswers: 1, Answers: answers, questionString:"Can someone help me calculate the area of a square?", date: "04/26/2018", name: "Jovon Johnson"))
+        Questions.append(questionsDB(questionID: 4, groupID: 1, numOfAnswers: 1, Answers: answers, questionString:"Can someone help me calculate the area of a square?", date: "04/26/18", name: "Jovon Johnson"))
         
         
         //Q8
