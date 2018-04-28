@@ -15,12 +15,13 @@ class Questions{
     var question: String
     var Answers = [String]()
     var numOfAnswers: Int
-    
+    var flag: Int
     
     init(){
         questionID = -1
         question = ""
         numOfAnswers = 0
+        flag = 0
     }
     func setAnswerSize(){
         //TODO: Use question ID to get the number of answers for this question

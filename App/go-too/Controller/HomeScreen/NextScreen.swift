@@ -75,6 +75,8 @@ class NextScreenController : UIViewController {
         //display top 3 scores in current group
         //displayRanking()
         
+        //set Questions array so we can display info
+        currentGroup.setQuestionsArray()
         
     }
     

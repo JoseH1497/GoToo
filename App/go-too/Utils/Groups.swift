@@ -115,7 +115,7 @@ class Group {
     func setQuestionSize(){
         //TODO: Get question size from database using groupID to get all questions for this group
         //testing
-        numOfQuestions = 3
+        numOfQuestions = 5
     }
     //set questions from database
     func setQuestionsArray(){

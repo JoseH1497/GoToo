@@ -66,7 +66,7 @@ class HomeScreen {
         **/
         
         //testing purposes
-        numOfCourses = 3
+        numOfCourses = 6
         
         setNumOfCourses(num: numOfCourses)//set num of courses var
         return numOfCourses

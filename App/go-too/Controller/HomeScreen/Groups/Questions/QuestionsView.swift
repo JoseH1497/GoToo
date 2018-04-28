@@ -9,14 +9,26 @@
 import Foundation
 import UIKit
 
+class QuestionTableViewCell : UITableViewCell{
+    
+    @IBOutlet weak var userNameLabel: UILabel!
+    @IBOutlet weak var QuestionLabel: UILabel!
+    
+    @IBOutlet weak var AnswerButton: UIButton!
+    @IBOutlet weak var DateLabel: UILabel!
+}
 
 class QuestionsViewController : UIViewController, UITableViewDelegate, UITableViewDataSource{
     
-    
+    //data transferred
     var currentGroup : Group! = Group()
     
     
+   
+    
     @IBOutlet weak var questionsTableView: UITableView!
+    
+
     override func viewDidLoad() {
         super.viewDidLoad()
         
@@ -27,12 +39,15 @@ class QuestionsViewController : UIViewController, UITableViewDelegate, UITableVi
         //
         
         //set Questions array so we can display info
-        currentGroup.setQuestionsArray()
+       // currentGroup.setQuestionsArray()
         
         
         //setUp table
         questionsTableView.delegate = self
         questionsTableView.dataSource = self
+        
+        questionsTableView.separatorStyle = .none
+        
         
         
     }
@@ -42,10 +57,47 @@ class QuestionsViewController : UIViewController, UITableViewDelegate, UITableVi
     }
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        let cell = questionsTableView.dequeueReusableCell(withIdentifier: "basicCell")
-        cell?.textLabel?.text = currentGroup.QuestionsArray[indexPath.row].question
+        let cell = questionsTableView.dequeueReusableCell(withIdentifier: "PostCell")  as! QuestionTableViewCell
+        cell.userNameLabel?.text = "Jose"
         
-        return cell!
+       // cell.UserNameLabel.text = String( currentGroup.QuestionsArray[indexPath.row].questionID)
+       cell.AnswerButton?.tag = indexPath.row
+      // cell.NumOfAnswersLabel?.text = String(4)
+       cell.QuestionLabel.text = currentGroup.QuestionsArray[indexPath.row].question
+       cell.DateLabel.text = "05/12/18"
+        
+        return cell
+    }
+    @IBAction func ToAnswersAction(_ sender: UIButton) {
+        
+        switch(sender.tag){
+        case 0:
+            print("Answer1 choosen")
+            break
+        case 1:
+            print("Answer2 choosen")
+            break
+        case 2:
+            print("Answer3 choosen")
+            break
+        case 3:
+            print("Answer4 choosen")
+            break
+        case 4:
+            print("Answer5 choosen")
+            break
+        case 5:
+            print("Answer6 choosen")
+            break
+            
+            
+            
+        default:
+            break
+            
+            
+        }
+        self.performSegue(withIdentifier: "QuestionsToAnswers", sender: self)
     }
     
     @IBAction func BackToCourseAction(_ sender: Any) {
@@ -61,6 +113,11 @@ class QuestionsViewController : UIViewController, UITableViewDelegate, UITableVi
             destinationViewController.groupSelected.userID = self.currentGroup.getUserID()
             destinationViewController.groupSelected.score =  self.currentGroup.getUserScore()
             destinationViewController.groupSelected.groupName = self.currentGroup.getGroupName()
+            
+        }
+        if let destinationViewController = segue.destination as? AnswersViewController {
+            // destinationViewController.currentGroup = self.currentGroup
+            destinationViewController.currentGroup = self.currentGroup
             
         }
     }
