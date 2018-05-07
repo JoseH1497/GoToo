@@ -1110,7 +1110,7 @@
                                 </prototypes>
                             </tableView>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="n4v-sn-b0U">
-                                <rect key="frame" x="199" y="699" width="16" height="22"/>
+                                <rect key="frame" x="182" y="671" width="50" height="50"/>
                                 <state key="normal" image="icons8-group-leader">
                                     <color key="titleColor" red="0.91624603439999996" green="1" blue="0.9234789887" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 </state>
@@ -1705,13 +1705,13 @@
         <image name="Titlte_Group_Creation" width="115" height="16"/>
         <image name="Top Bar" width="414" height="80"/>
         <image name="Username_Field" width="334" height="62"/>
-        <image name="fire_1f525" width="16" height="16"/>
-        <image name="icons8-comments" width="16" height="16"/>
-        <image name="icons8-group-4" width="16" height="16"/>
-        <image name="icons8-group-leader" width="16" height="16"/>
-        <image name="icons8-news-2" width="16" height="16"/>
-        <image name="icons8-poll" width="16" height="16"/>
-        <image name="icons8-submit-for-approval-filled" width="16" height="16"/>
+        <image name="fire_1f525" width="160" height="160"/>
+        <image name="icons8-comments" width="50" height="50"/>
+        <image name="icons8-group-4" width="50" height="50"/>
+        <image name="icons8-group-leader" width="50" height="50"/>
+        <image name="icons8-news-2" width="50" height="50"/>
+        <image name="icons8-poll" width="50" height="50"/>
+        <image name="icons8-submit-for-approval-filled" width="50" height="50"/>
         <image name="x" width="13" height="13"/>
     </resources>
     <inferredMetricsTieBreakers>
