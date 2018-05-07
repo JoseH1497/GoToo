@@ -19,6 +19,19 @@
 		52956D3120871C480006EDAA /* Login_Verification.swift in Sources */ = {isa = PBXBuildFile; fileRef = 52956D3020871C470006EDAA /* Login_Verification.swift */; };
 		52ACF9712087B08300A675B9 /* User_Profile.swift in Sources */ = {isa = PBXBuildFile; fileRef = 52ACF9702087B08300A675B9 /* User_Profile.swift */; };
 		52AE23FD20A0078F000C4429 /* TopicsListViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 52AE23FC20A0078F000C4429 /* TopicsListViewController.swift */; };
+		52DDCCB320A0E75E005F91EB /* Questions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 52DDCCAD20A0E75E005F91EB /* Questions.swift */; };
+		52DDCCB420A0E75E005F91EB /* Constants.swift in Sources */ = {isa = PBXBuildFile; fileRef = 52DDCCAE20A0E75E005F91EB /* Constants.swift */; };
+		52DDCCB620A0E75E005F91EB /* Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 52DDCCB020A0E75E005F91EB /* Extensions.swift */; };
+		52DDCCB720A0E75E005F91EB /* database.swift in Sources */ = {isa = PBXBuildFile; fileRef = 52DDCCB120A0E75E005F91EB /* database.swift */; };
+		52DDCCB820A0E75E005F91EB /* Groups.swift in Sources */ = {isa = PBXBuildFile; fileRef = 52DDCCB220A0E75E005F91EB /* Groups.swift */; };
+		52DDCCBA20A0E78D005F91EB /* NextScreen.swift in Sources */ = {isa = PBXBuildFile; fileRef = 52DDCCB920A0E78D005F91EB /* NextScreen.swift */; };
+		52DDCCC020A0E7AF005F91EB /* GroupMembersView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 52DDCCBC20A0E7AF005F91EB /* GroupMembersView.swift */; };
+		52DDCCC120A0E7AF005F91EB /* myPointsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 52DDCCBD20A0E7AF005F91EB /* myPointsView.swift */; };
+		52DDCCC220A0E7AF005F91EB /* DisplayMembers.swift in Sources */ = {isa = PBXBuildFile; fileRef = 52DDCCBE20A0E7AF005F91EB /* DisplayMembers.swift */; };
+		52DDCCC720A0E7B7005F91EB /* NewQuestion.swift in Sources */ = {isa = PBXBuildFile; fileRef = 52DDCCC320A0E7B7005F91EB /* NewQuestion.swift */; };
+		52DDCCC820A0E7B7005F91EB /* AnswersView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 52DDCCC420A0E7B7005F91EB /* AnswersView.swift */; };
+		52DDCCC920A0E7B7005F91EB /* QuestionsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 52DDCCC520A0E7B7005F91EB /* QuestionsView.swift */; };
+		52DDCCCA20A0E7B7005F91EB /* UserAnswer.swift in Sources */ = {isa = PBXBuildFile; fileRef = 52DDCCC620A0E7B7005F91EB /* UserAnswer.swift */; };
 		52E9695B206C70AF00538307 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 52E9695A206C70AF00538307 /* AppDelegate.swift */; };
 		52E96960206C70AF00538307 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 52E9695E206C70AF00538307 /* Main.storyboard */; };
 		52E96965206C70AF00538307 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 52E96963206C70AF00538307 /* LaunchScreen.storyboard */; };
@@ -49,6 +62,19 @@
 		52956D3020871C470006EDAA /* Login_Verification.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Login_Verification.swift; sourceTree = "<group>"; };
 		52ACF9702087B08300A675B9 /* User_Profile.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = User_Profile.swift; sourceTree = "<group>"; };
 		52AE23FC20A0078F000C4429 /* TopicsListViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TopicsListViewController.swift; sourceTree = "<group>"; };
+		52DDCCAD20A0E75E005F91EB /* Questions.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Questions.swift; sourceTree = "<group>"; };
+		52DDCCAE20A0E75E005F91EB /* Constants.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Constants.swift; sourceTree = "<group>"; };
+		52DDCCB020A0E75E005F91EB /* Extensions.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Extensions.swift; sourceTree = "<group>"; };
+		52DDCCB120A0E75E005F91EB /* database.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = database.swift; sourceTree = "<group>"; };
+		52DDCCB220A0E75E005F91EB /* Groups.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Groups.swift; sourceTree = "<group>"; };
+		52DDCCB920A0E78D005F91EB /* NextScreen.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NextScreen.swift; sourceTree = "<group>"; };
+		52DDCCBC20A0E7AF005F91EB /* GroupMembersView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = GroupMembersView.swift; sourceTree = "<group>"; };
+		52DDCCBD20A0E7AF005F91EB /* myPointsView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = myPointsView.swift; sourceTree = "<group>"; };
+		52DDCCBE20A0E7AF005F91EB /* DisplayMembers.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DisplayMembers.swift; sourceTree = "<group>"; };
+		52DDCCC320A0E7B7005F91EB /* NewQuestion.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NewQuestion.swift; sourceTree = "<group>"; };
+		52DDCCC420A0E7B7005F91EB /* AnswersView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AnswersView.swift; sourceTree = "<group>"; };
+		52DDCCC520A0E7B7005F91EB /* QuestionsView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = QuestionsView.swift; sourceTree = "<group>"; };
+		52DDCCC620A0E7B7005F91EB /* UserAnswer.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UserAnswer.swift; sourceTree = "<group>"; };
 		52E96957206C70AF00538307 /* go-too.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "go-too.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		52E9695A206C70AF00538307 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		52E9695F206C70AF00538307 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
@@ -113,6 +139,26 @@
 			path = User;
 			sourceTree = "<group>";
 		};
+		52DDCCAC20A0E747005F91EB /* Jose Branch */ = {
+			isa = PBXGroup;
+			children = (
+				52DDCCC420A0E7B7005F91EB /* AnswersView.swift */,
+				52DDCCC320A0E7B7005F91EB /* NewQuestion.swift */,
+				52DDCCC520A0E7B7005F91EB /* QuestionsView.swift */,
+				52DDCCC620A0E7B7005F91EB /* UserAnswer.swift */,
+				52DDCCBE20A0E7AF005F91EB /* DisplayMembers.swift */,
+				52DDCCBC20A0E7AF005F91EB /* GroupMembersView.swift */,
+				52DDCCBD20A0E7AF005F91EB /* myPointsView.swift */,
+				52DDCCB920A0E78D005F91EB /* NextScreen.swift */,
+				52DDCCAE20A0E75E005F91EB /* Constants.swift */,
+				52DDCCB120A0E75E005F91EB /* database.swift */,
+				52DDCCB020A0E75E005F91EB /* Extensions.swift */,
+				52DDCCB220A0E75E005F91EB /* Groups.swift */,
+				52DDCCAD20A0E75E005F91EB /* Questions.swift */,
+			);
+			path = "Jose Branch";
+			sourceTree = "<group>";
+		};
 		52E9694E206C70AF00538307 = {
 			isa = PBXGroup;
 			children = (
@@ -134,6 +180,7 @@
 		52E96959206C70AF00538307 /* go-too */ = {
 			isa = PBXGroup;
 			children = (
+				52DDCCAC20A0E747005F91EB /* Jose Branch */,
 				52E9696E206C70EC00538307 /* Model */,
 				52E9696D206C70E500538307 /* View */,
 				52E9696C206C70DA00538307 /* Controller */,
@@ -314,23 +361,36 @@
 				52F4C38D2072C03400F46DF2 /* LoginScreenViewController.swift in Sources */,
 				52956D3120871C480006EDAA /* Login_Verification.swift in Sources */,
 				52644209208C4E3200D0DDC4 /* RecoveryScreenQuestionViewController.swift in Sources */,
+				52DDCCB720A0E75E005F91EB /* database.swift in Sources */,
 				52F4C3852072BF4100F46DF2 /* SignUpScreenViewController.swift in Sources */,
+				52DDCCC920A0E7B7005F91EB /* QuestionsView.swift in Sources */,
 				52F93BE620A0C9DE0045CF14 /* Group_Creation_View_Controller.swift in Sources */,
 				52EE4B88208D0F6400771CE3 /* PasswordResetScreenViewController.swift in Sources */,
 				5263200D209F78690077429B /* Home.swift in Sources */,
+				52DDCCC120A0E7AF005F91EB /* myPointsView.swift in Sources */,
 				52F93BE820A0C9FA0045CF14 /* Group_Joining_View_Controller.swift in Sources */,
 				52E9695B206C70AF00538307 /* AppDelegate.swift in Sources */,
+				52DDCCC720A0E7B7005F91EB /* NewQuestion.swift in Sources */,
 				5257D832209BE4A800D8D0CC /* Group_Cell.swift in Sources */,
 				52F93BE420A0C3FF0045CF14 /* Group_Creator.swift in Sources */,
 				528A3FF1209BACA200EB0C5A /* Profile_Pop_Up_Screen.swift in Sources */,
+				52DDCCCA20A0E7B7005F91EB /* UserAnswer.swift in Sources */,
+				52DDCCC220A0E7AF005F91EB /* DisplayMembers.swift in Sources */,
 				52644205208BC42200D0DDC4 /* SecuritySetupStageTwoViewController.swift in Sources */,
 				52F4C3872072BF7600F46DF2 /* RecoveryScreenViewController.swift in Sources */,
 				52F93BE220A0C36D0045CF14 /* Add_Groups_View_Controller.swift in Sources */,
 				52F4C38B2072BFA300F46DF2 /* RecoveredScreenViewController.swift in Sources */,
 				52ACF9712087B08300A675B9 /* User_Profile.swift in Sources */,
+				52DDCCBA20A0E78D005F91EB /* NextScreen.swift in Sources */,
 				5268871C20858B200087BE94 /* Registration.swift in Sources */,
+				52DDCCB620A0E75E005F91EB /* Extensions.swift in Sources */,
 				52872627208BAADE00EDBA57 /* SecuritySetupStageOneViewController.swift in Sources */,
 				52F4C3892072BF8800F46DF2 /* HomeScreenViewController.swift in Sources */,
+				52DDCCC020A0E7AF005F91EB /* GroupMembersView.swift in Sources */,
+				52DDCCB320A0E75E005F91EB /* Questions.swift in Sources */,
+				52DDCCB420A0E75E005F91EB /* Constants.swift in Sources */,
+				52DDCCB820A0E75E005F91EB /* Groups.swift in Sources */,
+				52DDCCC820A0E7B7005F91EB /* AnswersView.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

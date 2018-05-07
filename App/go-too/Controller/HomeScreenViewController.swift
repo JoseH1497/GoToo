@@ -36,9 +36,9 @@ class HomeScreenViewController: UIViewController {
                 
             case "Topics_Segue":
                 // Transfering data
-                let destination : TopicsListViewController = segue.destination as! TopicsListViewController
-                // FIXME: Create object in topic lis tview controller
-                destination.group_id = selected_group_id
+                let destination : NextScreenController = segue.destination as! NextScreenController
+                destination.groupSelected.groupID = home.get_group_id(row_num: self.selected_group_id)
+                destination.groupSelected.userID  = home.get_user_id()
                 
             case "Add_Groups_Segue":
                 // Transfering data
