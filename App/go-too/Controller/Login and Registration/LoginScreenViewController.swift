@@ -40,9 +40,9 @@ class LoginScreenViewController: UIViewController {
     
     @IBAction func login_button_pressed(_ sender: UIButton) {
         // Verify provided user information
-        let id = verification.verify_login_info()
+        let valid = verification.verify_login_info()
         
-        if id > 0 {
+        if valid {
             performSegue(withIdentifier: "login_home_segue", sender: nil)
             //:FIXME: PASS USER ID TO NEXT VIEW CONTROLLER
             
@@ -69,5 +69,13 @@ class LoginScreenViewController: UIViewController {
         alert.addAction(action)
         
         present(alert, animated: true, completion: nil)
+    }
+    
+    // The following function override allows us to transfer data between view controllers
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        let destination : HomeScreenViewController = segue.destination as! HomeScreenViewController
+        
+        // Transfering data
+        destination.home = Home(user_id: verification.get_user_id())
     }
 }
