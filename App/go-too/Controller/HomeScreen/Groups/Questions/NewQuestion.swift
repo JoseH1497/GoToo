@@ -36,7 +36,7 @@ class newQuestionsViewController : UIViewController{
         if let destinationViewController = segue.destination as? QuestionsViewController {
             // destinationViewController.currentGroup = self.currentGroup
             destinationViewController.currentGroup = self.currentGroup
-            
+        
         }
     }
 }

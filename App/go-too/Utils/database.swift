@@ -321,7 +321,7 @@ class Database{
         answers.append("Always in COB 132!")
         answers.append("Go Now! Professor is there!")
         //Q1
-        Questions.append(questionsDB(questionID: 0, groupID: 0, numOfAnswers: 3, Answers: answers, questionString:"Where is the professors Room?", date: "04/28/18", name: "Jose Herrera"))
+        Questions.append(questionsDB(questionID: 0, groupID: 0, numOfAnswers: 3, Answers: answers, questionString:"Where is the professors Room?", date: "04/26/18", name: "Jose Herrera"))
         answers[0] = "Yes!, meet me in COB2!"
         answers[1] = "I am also in COB2"
         
@@ -330,15 +330,15 @@ class Database{
         
         //Q3
         answers[0] = "It is about 3.14"
-        Questions.append(questionsDB(questionID: 2, groupID: 0, numOfAnswers: 1, Answers: answers, questionString:"How can we calculate Pi?", date: "04/27/18", name: "Karina Herrera"))
+        Questions.append(questionsDB(questionID: 2, groupID: 0, numOfAnswers: 1, Answers: answers, questionString:"How can we calculate Pi?", date: "04/28/18", name: "Karina Herrera"))
         //Q4
         answers[0] = "I found this very useful link, I will send it to you later!"
         answers[1] = "We are having a tutoring session for UML's in S&E2 321, come by!"
         answers[2] = "Come to lecture tomorrow, this will be the topic!"
-         Questions.append(questionsDB(questionID: 3, groupID: 0, numOfAnswers: 3, Answers: answers, questionString:"Does anyone know the best method to create UML's?", date: "04/27/18", name: "Hunter Brown"))
+         Questions.append(questionsDB(questionID: 7, groupID: 0, numOfAnswers: 3, Answers: answers, questionString:"Does anyone know the best method to create UML's?", date: "04/29/18", name: "Hunter Brown"))
         //Q5
         answers[0] = "Yes, I will private message you"
-        Questions.append(questionsDB(questionID: 4, groupID: 0, numOfAnswers: 1, Answers: answers, questionString:"Can someone help me calculate the radius of a circle?", date: "04/26/18", name: "Jovon Johnson"))
+        Questions.append(questionsDB(questionID: 4, groupID: 0, numOfAnswers: 1, Answers: answers, questionString:"Can someone help me calculate the radius of a circle?", date: "04/30/18", name: "Jovon Johnson"))
         
         
         //Q6
@@ -348,17 +348,17 @@ class Database{
         Questions.append(questionsDB(questionID: 3, groupID: 1, numOfAnswers: 3, Answers: answers, questionString:"Does anyone know the best method to create UML's?", date: "04/27/18", name: "Jose Herrera"))
         //Q7
         answers[0] = "Yes, I will private message you"
-        Questions.append(questionsDB(questionID: 4, groupID: 1, numOfAnswers: 1, Answers: answers, questionString:"Can someone help me calculate the area of a square?", date: "04/26/18", name: "Jovon Johnson"))
+        Questions.append(questionsDB(questionID: 5, groupID: 1, numOfAnswers: 1, Answers: answers, questionString:"Can someone help me calculate the area of a square?", date: "04/29/18", name: "Jovon Johnson"))
         
         
         //Q8
         answers[0] = "No, but I could message you and We could try doing it together"
-        Questions.append(questionsDB(questionID: 4, groupID: 2, numOfAnswers: 1, Answers: answers, questionString:"Has anyone figured out problem 2?", date: "04/26/18", name: "Jovon Johnson"))
+        Questions.append(questionsDB(questionID: 6, groupID: 2, numOfAnswers: 1, Answers: answers, questionString:"Has anyone figured out problem 2?", date: "04/26/18", name: "Jovon Johnson"))
         //Q9
         answers[0] = "I found this very useful link, I will send it to you later!"
         answers[1] = "We are having a tutoring session for UML's in S&E2 321, come by!"
         answers[2] = "Come to lecture hall now!"
-        Questions.append(questionsDB(questionID: 1, groupID: 3, numOfAnswers: 3, Answers: answers, questionString:"Can anyone help me with problem 3 for homework?", date: "04/28/18", name: "Jovon Johnson"))
+        Questions.append(questionsDB(questionID: 9, groupID: 3, numOfAnswers: 3, Answers: answers, questionString:"Can anyone help me with problem 3 for homework?", date: "04/28/18", name: "Jovon Johnson"))
         
         
     }

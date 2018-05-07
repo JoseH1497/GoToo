@@ -127,6 +127,18 @@ class Group {
         //testing
         numOfQuestions = 5
     }
+    func getQuestionIDFromDB(question : Int) ->Int{
+        return questionSelected
+        
+    }
+    func getQuestionIndexInDB(questionID: Int) -> Int{
+        for i in 0..<DATA.Questions.count{
+            if(DATA.Questions[i].questionID == questionID){
+                return i
+            }
+        }
+        return -1
+    }
     //set questions from database
     func setQuestionsArray(){
         self.setQuestionSize()
@@ -148,7 +160,7 @@ class Group {
          }
          
          **/
-        
+        //not USED
         for i in 0..<numOfQuestions{
             switch(i){
             case 0:
@@ -186,10 +198,23 @@ class Group {
     func addQuestion(groupID: Int, question:String, name:String){
         
         //TODO: generate new Question ID and get date
-        
-        let newQuestion = questionsDB(questionID: questionID, groupID: groupID, numOfAnswers: 0, Answers: [], questionString: question, date: "05/07/2018", name: name)
+        print("New quewstiond")
+        print(questionID)
+        let newQuestion = questionsDB(questionID: questionID, groupID: groupID, numOfAnswers: 0, Answers: [], questionString: question, date: "05/07/18", name: name)
         self.questionID =  self.questionID + 1
         DATA.Questions.append(newQuestion)
+    }
+    func addAnswer(questionID: Int, questionIndex: Int, answerString: String){
+        let numAnswers = DATA.Questions[questionIndex].numOfAnswers
+        if(numAnswers < 3){
+            DATA.Questions[questionIndex].Answers[numAnswers] = answerString
+        }else{
+            DATA.Questions[questionIndex].Answers.append(answerString)
+        }
+        
+        DATA.Questions[questionIndex].numOfAnswers =  numAnswers + 1
+        
+        
     }
     func setOnlineMembers(){
         //set size of online group

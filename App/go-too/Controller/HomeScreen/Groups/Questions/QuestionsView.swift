@@ -24,7 +24,7 @@ class QuestionsViewController : UIViewController, UITableViewDelegate, UITableVi
     //data transferred
     var currentGroup : Group! = Group()
     var QuestionForGroup = [questionsDB]()
-    
+    var questionSize = 0
    
     
     
@@ -56,6 +56,7 @@ class QuestionsViewController : UIViewController, UITableViewDelegate, UITableVi
                 QuestionForGroup.append(DATA.Questions[i])
             }
         }
+        questionSize = size
         
         
     }
@@ -69,16 +70,16 @@ class QuestionsViewController : UIViewController, UITableViewDelegate, UITableVi
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell = questionsTableView.dequeueReusableCell(withIdentifier: "PostCell")  as! QuestionTableViewCell
-        
-        cell.userNameLabel?.text = QuestionForGroup[indexPath.row].name
+        let index =  questionSize - indexPath.row - 1
+        cell.userNameLabel?.text = QuestionForGroup[index].name
         
        // cell.UserNameLabel.text = String( currentGroup.QuestionsArray[indexPath.row].questionID)
        cell.AnswerButton?.tag = indexPath.row
       // cell.NumOfAnswersLabel?.text = String(4)
-       cell.QuestionLabel.text = QuestionForGroup[indexPath.row].questionString
-       cell.DateLabel.text = QuestionForGroup[indexPath.row].date
+       cell.QuestionLabel.text = QuestionForGroup[index].questionString
+       cell.DateLabel.text = QuestionForGroup[index].date
         cell.fireEmoji.isHidden = true
-        if(QuestionForGroup[indexPath.row].numOfAnswers>2){
+        if(QuestionForGroup[index].numOfAnswers>2){
             cell.fireEmoji.isHidden = false
         }
         return cell
@@ -89,6 +90,7 @@ class QuestionsViewController : UIViewController, UITableViewDelegate, UITableVi
         case 0:
             //currentGroup.setQuestionSelected(selected: sender.tag)
             print("Answer1 choosen")
+            
             break
         case 1:
             print("Answer2 choosen")
@@ -113,8 +115,11 @@ class QuestionsViewController : UIViewController, UITableViewDelegate, UITableVi
             
             
         }
-        DATA.setQuestionSelected(selected: sender.tag)
-        currentGroup.setQuestionSelected(selected: sender.tag)
+        let questionID =  questionSize - sender.tag - 1
+        print("QUESTIOND ID -------")
+        print(QuestionForGroup[questionID].questionID)
+        DATA.setQuestionSelected(selected: QuestionForGroup[questionID].questionID)
+        currentGroup.setQuestionSelected(selected:QuestionForGroup[questionID].questionID)
         self.performSegue(withIdentifier: "QuestionsToAnswers", sender: self)
     }
     

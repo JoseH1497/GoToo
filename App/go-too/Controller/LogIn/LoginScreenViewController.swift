@@ -79,7 +79,7 @@ class LoginScreenViewController: UIViewController {
         
         if checkInput == false {
             //no input, so return
-            return
+            //return
         }
     
         
@@ -149,8 +149,8 @@ class LoginScreenViewController: UIViewController {
         let passwordCorrect = true
        
         //check for user
-        self.userID = DATA.findUser(email: displayEmail, passWord: displayPassword)
-        
+        //self.userID = DATA.findUser(email: displayEmail, passWord: displayPassword)
+        self.userID = 0;
         if(self.userID != -1){
             //if credentials correct, then send to view to homescreen
             print(displayEmail)
@@ -184,8 +184,8 @@ class LoginScreenViewController: UIViewController {
         // Get the new view controller using segue.destinationViewController.
         // Pass the selected object to the new view controller.
         if let destinationViewController = segue.destination as? HomeScreenViewController {
-            destinationViewController.uID = self.userID
-            
+            //destinationViewController.uID = self.userID
+            destinationViewController.uID = 0
         }
     }
  

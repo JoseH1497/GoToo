@@ -29,6 +29,7 @@ class Questions{
         //testing:
         numOfAnswers = 4
     }
+    
     func setAnswersArray(){
         
         //set Answers

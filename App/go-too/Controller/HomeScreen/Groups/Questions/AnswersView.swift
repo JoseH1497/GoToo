@@ -14,7 +14,8 @@ class AnswersViewController : UIViewController, UITableViewDelegate, UITableView
     
     //data transferred
     var currentGroup: Group! = Group()
-    
+    var questionID = -1
+    var questionIndex = -1
     @IBOutlet weak var userAnswer: UITextField!
     
     @IBOutlet weak var AnswerViewText: UITextView!
@@ -27,28 +28,34 @@ class AnswersViewController : UIViewController, UITableViewDelegate, UITableView
         print(currentGroup.getUserID())
         print("GroupID in Answers")
         print(currentGroup.getGroupID())
-        
+        questionID = currentGroup.getQuestionIDFromDB(question : currentGroup.questionSelected)
+        questionIndex =  currentGroup.getQuestionIndexInDB(questionID: questionID)
+        print("question ID = ")
+        print(questionID)
+        print("question InDex = ")
+        print(questionIndex)
         setQuestionText()
-        AnswerViewText.insertDictationResultPlaceholder
+    //AnswerViewText.insertDictationResultPlaceholder
         answerTableView.delegate = self
         answerTableView.dataSource = self
         
     }
+    
     fileprivate func setQuestionText(){
         //QuestionText.text = DATA.Questions[DATA.questionSelected].questionString
       textView.text =
-        DATA.Questions[DATA.questionSelected].questionString
+        DATA.Questions[questionIndex].questionString
         
     }
     
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        return DATA.Questions[DATA.questionSelected].numOfAnswers
+        return DATA.Questions[questionIndex].numOfAnswers
     }
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell = answerTableView.dequeueReusableCell(withIdentifier: "AnswerCell")
         
-        cell?.textLabel?.text = DATA.Questions[DATA.questionSelected].Answers[indexPath.row]
+        cell?.textLabel?.text = DATA.Questions[questionIndex].Answers[indexPath.row]
        // cell?.detailTextLabel?.text = String(currentGroup.groupMembers[indexPath.row].score)
         
         
@@ -60,12 +67,22 @@ class AnswersViewController : UIViewController, UITableViewDelegate, UITableView
         self.performSegue(withIdentifier: "AnswersToQuestions", sender: self)
     }
     
+    @IBAction func ToUserAnswerAction(_ sender: Any) {
+        self.performSegue(withIdentifier: "CommentsToAnswer", sender: self)
+    }
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
         if let destinationViewController = segue.destination as? QuestionsViewController {
             // destinationViewController.currentGroup = self.currentGroup
             destinationViewController.currentGroup = self.currentGroup
             
         }
-    }
+        
+        
+        if let destinationViewController = segue.destination as? UserAnswerViewController {
+            // destinationViewController.currentGroup = self.currentGroup
+            destinationViewController.currentGroup = self.currentGroup
+            destinationViewController.questionIndex = self.questionIndex
+            destinationViewController.questionID = self.questionIndex
+        }    }
     
 }
