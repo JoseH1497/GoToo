@@ -18,6 +18,7 @@
 		528A3FF1209BACA200EB0C5A /* Profile_Pop_Up_Screen.swift in Sources */ = {isa = PBXBuildFile; fileRef = 528A3FF0209BACA200EB0C5A /* Profile_Pop_Up_Screen.swift */; };
 		52956D3120871C480006EDAA /* Login_Verification.swift in Sources */ = {isa = PBXBuildFile; fileRef = 52956D3020871C470006EDAA /* Login_Verification.swift */; };
 		52ACF9712087B08300A675B9 /* User_Profile.swift in Sources */ = {isa = PBXBuildFile; fileRef = 52ACF9702087B08300A675B9 /* User_Profile.swift */; };
+		52AE23FD20A0078F000C4429 /* TopicsListViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 52AE23FC20A0078F000C4429 /* TopicsListViewController.swift */; };
 		52E9695B206C70AF00538307 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 52E9695A206C70AF00538307 /* AppDelegate.swift */; };
 		52E96960206C70AF00538307 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 52E9695E206C70AF00538307 /* Main.storyboard */; };
 		52E96965206C70AF00538307 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 52E96963206C70AF00538307 /* LaunchScreen.storyboard */; };
@@ -27,6 +28,10 @@
 		52F4C3892072BF8800F46DF2 /* HomeScreenViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 52F4C3882072BF8800F46DF2 /* HomeScreenViewController.swift */; };
 		52F4C38B2072BFA300F46DF2 /* RecoveredScreenViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 52F4C38A2072BFA300F46DF2 /* RecoveredScreenViewController.swift */; };
 		52F4C38D2072C03400F46DF2 /* LoginScreenViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 52F4C38C2072C03400F46DF2 /* LoginScreenViewController.swift */; };
+		52F93BE220A0C36D0045CF14 /* Add_Groups_View_Controller.swift in Sources */ = {isa = PBXBuildFile; fileRef = 52F93BE120A0C36D0045CF14 /* Add_Groups_View_Controller.swift */; };
+		52F93BE420A0C3FF0045CF14 /* Group_Creator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 52F93BE320A0C3FF0045CF14 /* Group_Creator.swift */; };
+		52F93BE620A0C9DE0045CF14 /* Group_Creation_View_Controller.swift in Sources */ = {isa = PBXBuildFile; fileRef = 52F93BE520A0C9DE0045CF14 /* Group_Creation_View_Controller.swift */; };
+		52F93BE820A0C9FA0045CF14 /* Group_Joining_View_Controller.swift in Sources */ = {isa = PBXBuildFile; fileRef = 52F93BE720A0C9FA0045CF14 /* Group_Joining_View_Controller.swift */; };
 		F2A5F1EA7A2A1E2825781964 /* Pods_go_too.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 284B42E59D6A4856A2FF2991 /* Pods_go_too.framework */; };
 /* End PBXBuildFile section */
 
@@ -43,6 +48,7 @@
 		528A3FF0209BACA200EB0C5A /* Profile_Pop_Up_Screen.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Profile_Pop_Up_Screen.swift; sourceTree = "<group>"; };
 		52956D3020871C470006EDAA /* Login_Verification.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Login_Verification.swift; sourceTree = "<group>"; };
 		52ACF9702087B08300A675B9 /* User_Profile.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = User_Profile.swift; sourceTree = "<group>"; };
+		52AE23FC20A0078F000C4429 /* TopicsListViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TopicsListViewController.swift; sourceTree = "<group>"; };
 		52E96957206C70AF00538307 /* go-too.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "go-too.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		52E9695A206C70AF00538307 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		52E9695F206C70AF00538307 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
@@ -54,6 +60,10 @@
 		52F4C3882072BF8800F46DF2 /* HomeScreenViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeScreenViewController.swift; sourceTree = "<group>"; };
 		52F4C38A2072BFA300F46DF2 /* RecoveredScreenViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RecoveredScreenViewController.swift; sourceTree = "<group>"; };
 		52F4C38C2072C03400F46DF2 /* LoginScreenViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginScreenViewController.swift; sourceTree = "<group>"; };
+		52F93BE120A0C36D0045CF14 /* Add_Groups_View_Controller.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Add_Groups_View_Controller.swift; sourceTree = "<group>"; };
+		52F93BE320A0C3FF0045CF14 /* Group_Creator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Group_Creator.swift; sourceTree = "<group>"; };
+		52F93BE520A0C9DE0045CF14 /* Group_Creation_View_Controller.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Group_Creation_View_Controller.swift; sourceTree = "<group>"; };
+		52F93BE720A0C9FA0045CF14 /* Group_Joining_View_Controller.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Group_Joining_View_Controller.swift; sourceTree = "<group>"; };
 		A65439789F8FD36459F2DE89 /* Pods-go-too.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-go-too.release.xcconfig"; path = "Pods/Target Support Files/Pods-go-too/Pods-go-too.release.xcconfig"; sourceTree = "<group>"; };
 		C7BC5D66418D14E8CAD47EE1 /* Pods-go-too.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-go-too.debug.xcconfig"; path = "Pods/Target Support Files/Pods-go-too/Pods-go-too.debug.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -137,9 +147,13 @@
 			children = (
 				52F4C3882072BF8800F46DF2 /* HomeScreenViewController.swift */,
 				528A3FF0209BACA200EB0C5A /* Profile_Pop_Up_Screen.swift */,
+				52AE23FC20A0078F000C4429 /* TopicsListViewController.swift */,
+				52F93BE120A0C36D0045CF14 /* Add_Groups_View_Controller.swift */,
 				5257D831209BE4A800D8D0CC /* Group_Cell.swift */,
+				52F93BE520A0C9DE0045CF14 /* Group_Creation_View_Controller.swift */,
 				52E9695A206C70AF00538307 /* AppDelegate.swift */,
 				5257D830209BE44200D8D0CC /* Login and Registration */,
+				52F93BE720A0C9FA0045CF14 /* Group_Joining_View_Controller.swift */,
 			);
 			path = Controller;
 			sourceTree = "<group>";
@@ -160,6 +174,7 @@
 				5263200C209F78690077429B /* Home.swift */,
 				52ACF96F2087B06600A675B9 /* User */,
 				52956D3220871E0A0006EDAA /* Registration_And_Verification */,
+				52F93BE320A0C3FF0045CF14 /* Group_Creator.swift */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -294,18 +309,23 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				52AE23FD20A0078F000C4429 /* TopicsListViewController.swift in Sources */,
 				52644207208C363900D0DDC4 /* Account_Recovery.swift in Sources */,
 				52F4C38D2072C03400F46DF2 /* LoginScreenViewController.swift in Sources */,
 				52956D3120871C480006EDAA /* Login_Verification.swift in Sources */,
 				52644209208C4E3200D0DDC4 /* RecoveryScreenQuestionViewController.swift in Sources */,
 				52F4C3852072BF4100F46DF2 /* SignUpScreenViewController.swift in Sources */,
+				52F93BE620A0C9DE0045CF14 /* Group_Creation_View_Controller.swift in Sources */,
 				52EE4B88208D0F6400771CE3 /* PasswordResetScreenViewController.swift in Sources */,
 				5263200D209F78690077429B /* Home.swift in Sources */,
+				52F93BE820A0C9FA0045CF14 /* Group_Joining_View_Controller.swift in Sources */,
 				52E9695B206C70AF00538307 /* AppDelegate.swift in Sources */,
 				5257D832209BE4A800D8D0CC /* Group_Cell.swift in Sources */,
+				52F93BE420A0C3FF0045CF14 /* Group_Creator.swift in Sources */,
 				528A3FF1209BACA200EB0C5A /* Profile_Pop_Up_Screen.swift in Sources */,
 				52644205208BC42200D0DDC4 /* SecuritySetupStageTwoViewController.swift in Sources */,
 				52F4C3872072BF7600F46DF2 /* RecoveryScreenViewController.swift in Sources */,
+				52F93BE220A0C36D0045CF14 /* Add_Groups_View_Controller.swift in Sources */,
 				52F4C38B2072BFA300F46DF2 /* RecoveredScreenViewController.swift in Sources */,
 				52ACF9712087B08300A675B9 /* User_Profile.swift in Sources */,
 				5268871C20858B200087BE94 /* Registration.swift in Sources */,

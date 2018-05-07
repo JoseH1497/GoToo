@@ -63,4 +63,26 @@ class Home{
             print("Error: Query failure --- convenience init()")
         }
     }
+    
+    // MARK: Information Getters
+    
+    // Function will return the user id ...
+    // Function will only be called when transfering data to other view controllers
+    func get_user_id() -> Int{
+        return self.user_id
+    }
+    
+    // Function receives an integer corresponding to the row number of a group cell
+    // Function returns the group name corresponding to that group cell
+    func get_group_name(row_num : Int) -> String{
+        return groups_list[row_num].group_name
+    }
+    
+    // Function receives an integer corresponding to the row number of a group cell
+    // Function returns the group id corresponding to that group cell
+    func get_group_id(row_num : Int) -> Int{
+        return groups_list[row_num].group_id
+    }
+    
+    
 }
