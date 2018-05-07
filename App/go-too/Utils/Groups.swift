@@ -200,7 +200,8 @@ class Group {
         //TODO: generate new Question ID and get date
         print("New quewstiond")
         print(questionID)
-        let newQuestion = questionsDB(questionID: questionID, groupID: groupID, numOfAnswers: 0, Answers: [], questionString: question, date: "05/07/18", name: name)
+        
+        let newQuestion = questionsDB(questionID: questionID, groupID: groupID, numOfAnswers: 0, Answers: ["","",""], questionString: question, date: "05/07/18", name: name)
         self.questionID =  self.questionID + 1
         DATA.Questions.append(newQuestion)
     }

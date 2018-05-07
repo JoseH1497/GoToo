@@ -9,8 +9,12 @@
 import Foundation
 import UIKit
 
+
+class AnswerTableCell: UITableViewCell{
+    
+    }
 class AnswersViewController : UIViewController, UITableViewDelegate, UITableViewDataSource{
-   
+    
     
     //data transferred
     var currentGroup: Group! = Group()

@@ -598,7 +598,7 @@
                             </button>
                             <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="none" rowHeight="150" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="zhW-hZ-wbe">
                                 <rect key="frame" x="0.0" y="80" width="414" height="580"/>
-                                <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <color key="backgroundColor" red="0.20832176080000001" green="0.48529254509999997" blue="1" alpha="1" colorSpace="calibratedRGB"/>
                                 <prototypes>
                                     <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="PostCell" rowHeight="139" id="RG6-OI-f3U" customClass="QuestionTableViewCell" customModule="go_too">
                                         <rect key="frame" x="0.0" y="28" width="414" height="139"/>
@@ -1211,9 +1211,8 @@
         <image name="icons8-submit-for-approval-filled" width="50" height="50"/>
     </resources>
     <inferredMetricsTieBreakers>
-        <segue reference="GYv-be-Eoh"/>
         <segue reference="uGa-oM-YuT"/>
-        <segue reference="HRX-3F-568"/>
+        <segue reference="SC9-Jt-wvT"/>
         <segue reference="gb3-cB-2Vb"/>
         <segue reference="xDb-gk-77g"/>
         <segue reference="n03-03-s1Q"/>
