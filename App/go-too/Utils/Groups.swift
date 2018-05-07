@@ -204,6 +204,7 @@ class Group {
         let newQuestion = questionsDB(questionID: questionID, groupID: groupID, numOfAnswers: 0, Answers: ["","",""], questionString: question, date: "05/07/18", name: name)
         self.questionID =  self.questionID + 1
         DATA.Questions.append(newQuestion)
+        DATA.writeQuestionToDatabase(newQuestion: newQuestion, uID: self.userID)
     }
     func addAnswer(questionID: Int, questionIndex: Int, answerString: String){
         let numAnswers = DATA.Questions[questionIndex].numOfAnswers
@@ -214,7 +215,7 @@ class Group {
         }
         
         DATA.Questions[questionIndex].numOfAnswers =  numAnswers + 1
-        
+    DATA.writeAnswerToDatabase(questionID: questionID, answerText: answerString)
         
     }
     func setOnlineMembers(){

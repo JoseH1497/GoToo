@@ -123,6 +123,17 @@ class Database{
     var onlineSize: Int
     
     init(){
+        //TODO: Connect to database
+        // Attempting to connect database
+        // Successful connection ---> initialization continues
+        // Failed connection     ---> initialization stops and nil is returned
+        /** do{
+         database = try Connection("/Users/serj/Desktop/Clone/SQLite_Database/backend_db.db")
+         }catch{
+         print("Location: User_Verfication (CLASS)")
+         print("Error: Failed to connect to database")
+         return nil
+         }**/
         onlineSize = 0
         userCount = 2
         groupCount = 7//current group count
@@ -362,4 +373,22 @@ class Database{
         
         
     }
+    
+    
+    //write to database functions
+    
+    func writeQuestionToDatabase(newQuestion: questionsDB, uID: Int){
+        var groupID = newQuestion.groupID
+        var userID = uID
+        var newContent = newQuestion.questionString
+        
+    }
+    func writeAnswerToDatabase(questionID: Int, answerText: String){
+        
+    }
+    
+    
+    
+    
+    
 }
