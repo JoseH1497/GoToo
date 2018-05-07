@@ -96,7 +96,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="CNE-oy-9yx" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="877" y="887"/>
+            <point key="canvasLocation" x="793" y="1555"/>
         </scene>
         <!--Security Setup Stage One View Controller-->
         <scene sceneID="ztX-rC-NIt">
@@ -156,7 +156,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="oZ4-Ex-RYg" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1638" y="887"/>
+            <point key="canvasLocation" x="1529" y="1555"/>
         </scene>
         <!--Recovery Screen View Controller-->
         <scene sceneID="ovo-gl-4WV">
@@ -206,7 +206,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="GH4-2T-xct" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="901" y="-704"/>
+            <point key="canvasLocation" x="877" y="-1404"/>
         </scene>
         <!--Recovery Screen Question View Controller-->
         <scene sceneID="DOL-Xb-l5X">
@@ -269,7 +269,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="b6d-9D-s7n" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1688" y="-704"/>
+            <point key="canvasLocation" x="1638" y="-1405"/>
         </scene>
         <!--Recovered Screen View Controller-->
         <scene sceneID="WPs-Fe-Uqs">
@@ -313,7 +313,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="lP9-Pw-EdM" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="3233" y="-704"/>
+            <point key="canvasLocation" x="3109" y="-1405"/>
         </scene>
         <!--Home Screen View Controller-->
         <scene sceneID="o56-7O-Vqs">
@@ -335,6 +335,9 @@
                                 <rect key="frame" x="14" y="29" width="42" height="42"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <state key="normal" image="Profile Button"/>
+                                <connections>
+                                    <action selector="profile_button_pressed:" destination="1ve-G8-AG0" eventType="touchUpInside" id="q7t-2u-4ac"/>
+                                </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleAspectFit" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="wOp-Y5-3b5">
                                 <rect key="frame" x="208" y="30" width="90" height="40"/>
@@ -360,6 +363,9 @@
                                 <rect key="frame" x="197" y="685" width="20" height="22"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <state key="normal" image="Add Courses_Group Button"/>
+                                <connections>
+                                    <action selector="add_group_button_pressed:" destination="1ve-G8-AG0" eventType="touchUpInside" id="TiB-Ms-eSh"/>
+                                </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleAspectFit" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="J7f-Og-blw">
                                 <rect key="frame" x="276" y="687" width="28" height="36"/>
@@ -374,16 +380,344 @@
                             <button opaque="NO" contentMode="scaleAspectFit" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="UHK-Cr-1V0">
                                 <rect key="frame" x="117" y="30" width="90" height="40"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <state key="normal" image="Groups Tab"/>
+                                <state key="normal" image="Courses Tab"/>
                             </button>
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" fixedFrame="YES" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="51" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="g6T-gd-Wpu">
+                                <rect key="frame" x="0.0" y="80" width="414" height="576"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <prototypes>
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="Group_Cell" rowHeight="51" id="FpS-D0-22c" customClass="Group_Cell" customModule="go_too" customModuleProvider="target">
+                                        <rect key="frame" x="0.0" y="28" width="414" height="51"/>
+                                        <autoresizingMask key="autoresizingMask"/>
+                                        <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="FpS-D0-22c" id="Iub-OV-dyg">
+                                            <rect key="frame" x="0.0" y="0.0" width="414" height="50.666666666666664"/>
+                                            <autoresizingMask key="autoresizingMask"/>
+                                            <subviews>
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="tEk-4q-z5L" userLabel="Group Name">
+                                                    <rect key="frame" x="17" y="15" width="387" height="21"/>
+                                                    <constraints>
+                                                        <constraint firstAttribute="height" constant="21" id="QP9-Gt-uC1"/>
+                                                    </constraints>
+                                                    <fontDescription key="fontDescription" name="ArialMT" family="Arial" pointSize="18"/>
+                                                    <nil key="textColor"/>
+                                                    <nil key="highlightedColor"/>
+                                                </label>
+                                                <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="hFG-Kf-U64" userLabel="Group Color">
+                                                    <rect key="frame" x="0.0" y="0.0" width="7" height="51"/>
+                                                    <constraints>
+                                                        <constraint firstAttribute="width" constant="7" id="hIT-sz-feZ"/>
+                                                        <constraint firstAttribute="height" constant="51" id="hjS-Ln-CuV"/>
+                                                    </constraints>
+                                                </imageView>
+                                            </subviews>
+                                            <constraints>
+                                                <constraint firstItem="tEk-4q-z5L" firstAttribute="centerY" secondItem="Iub-OV-dyg" secondAttribute="centerY" id="8dD-cG-KGo"/>
+                                                <constraint firstAttribute="trailing" secondItem="tEk-4q-z5L" secondAttribute="trailing" constant="10" id="E1f-d3-3oX"/>
+                                                <constraint firstItem="hFG-Kf-U64" firstAttribute="leading" secondItem="Iub-OV-dyg" secondAttribute="leading" id="RTb-zU-ReO"/>
+                                                <constraint firstItem="hFG-Kf-U64" firstAttribute="top" secondItem="Iub-OV-dyg" secondAttribute="top" id="Uug-hn-OGz"/>
+                                                <constraint firstItem="tEk-4q-z5L" firstAttribute="leading" secondItem="hFG-Kf-U64" secondAttribute="trailing" constant="10" id="dYJ-ju-xIl"/>
+                                                <constraint firstItem="hFG-Kf-U64" firstAttribute="centerY" secondItem="Iub-OV-dyg" secondAttribute="centerY" id="hg4-hU-Xs5"/>
+                                                <constraint firstAttribute="bottom" secondItem="hFG-Kf-U64" secondAttribute="bottom" id="zIG-uW-wmy"/>
+                                            </constraints>
+                                        </tableViewCellContentView>
+                                        <connections>
+                                            <outlet property="group_color_image" destination="hFG-Kf-U64" id="bLM-aW-kwr"/>
+                                            <outlet property="group_name_label" destination="tEk-4q-z5L" id="7j6-4h-xDQ"/>
+                                        </connections>
+                                    </tableViewCell>
+                                </prototypes>
+                                <connections>
+                                    <outlet property="dataSource" destination="1ve-G8-AG0" id="qsX-GQ-TEn"/>
+                                    <outlet property="delegate" destination="1ve-G8-AG0" id="p3L-bB-nsD"/>
+                                </connections>
+                            </tableView>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <viewLayoutGuide key="safeArea" id="jHM-gB-8g5"/>
                     </view>
+                    <connections>
+                        <segue destination="P3G-kS-eta" kind="presentation" identifier="Profile_Pop_Up_Segue" id="kHH-Cw-LZU"/>
+                        <segue destination="lhn-Gr-ra6" kind="presentation" identifier="Topics_Segue" id="w30-ki-Vha"/>
+                        <segue destination="y2h-Lr-ctn" kind="presentation" identifier="Add_Groups_Segue" id="Nii-U5-6ZL"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="TLe-bf-FR0" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1638" y="133"/>
+            <point key="canvasLocation" x="1637.68115942029" y="132.88043478260872"/>
+        </scene>
+        <!--Topics List View Controller-->
+        <scene sceneID="QoM-f0-DyW">
+            <objects>
+                <viewController id="lhn-Gr-ra6" customClass="TopicsListViewController" customModule="go_too" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="Eur-fS-iBV">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="736"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <viewLayoutGuide key="safeArea" id="vdd-QX-wkj"/>
+                    </view>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="YqU-5b-LfA" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="2436" y="133"/>
+        </scene>
+        <!--Add Groups View Controller-->
+        <scene sceneID="R4g-hq-Dce">
+            <objects>
+                <viewController modalTransitionStyle="crossDissolve" modalPresentationStyle="overCurrentContext" id="y2h-Lr-ctn" customClass="Add_Groups_View_Controller" customModule="go_too" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="6OG-GN-uBF">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="736"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <view contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="Dew-0N-aKZ">
+                                <rect key="frame" x="60" y="140" width="294" height="457"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <subviews>
+                                    <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="Background_Group_Creation" translatesAutoresizingMaskIntoConstraints="NO" id="Cfo-bM-WcJ">
+                                        <rect key="frame" x="0.0" y="0.0" width="294" height="457"/>
+                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                    </imageView>
+                                    <button opaque="NO" contentMode="scaleAspectFit" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Pun-gH-lVb">
+                                        <rect key="frame" x="28" y="168" width="239" height="38"/>
+                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                        <state key="normal" backgroundImage="Create_Group_Button"/>
+                                        <connections>
+                                            <action selector="create_group_button_pressed:" destination="y2h-Lr-ctn" eventType="touchUpInside" id="Fsn-p4-RXi"/>
+                                        </connections>
+                                    </button>
+                                    <button opaque="NO" contentMode="scaleAspectFit" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Mu9-hZ-q6j">
+                                        <rect key="frame" x="28" y="226" width="239" height="38"/>
+                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                        <state key="normal" backgroundImage="Join_Group_Button"/>
+                                        <connections>
+                                            <action selector="join_group_button_pressed:" destination="y2h-Lr-ctn" eventType="touchUpInside" id="Q5Z-Z0-tPn"/>
+                                        </connections>
+                                    </button>
+                                    <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="Titlte_Group_Creation" translatesAutoresizingMaskIntoConstraints="NO" id="TaA-Ml-HcZ">
+                                        <rect key="frame" x="89" y="120" width="116" height="18"/>
+                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                    </imageView>
+                                    <button opaque="NO" contentMode="scaleAspectFit" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="PUb-fK-Z0a">
+                                        <rect key="frame" x="10" y="10" width="12" height="12"/>
+                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                        <state key="normal" backgroundImage="Exit_Button_Grouo_Creation"/>
+                                        <connections>
+                                            <action selector="add_group_menu_exit_button_pressed:" destination="y2h-Lr-ctn" eventType="touchUpInside" id="jnP-2a-eWK"/>
+                                        </connections>
+                                    </button>
+                                </subviews>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                            </view>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="0.5" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <viewLayoutGuide key="safeArea" id="FZX-CP-8qy"/>
+                    </view>
+                    <connections>
+                        <segue destination="rHh-Yg-Tu6" kind="presentation" identifier="Group_Creation_Segue" id="IsE-9J-zXW"/>
+                        <segue destination="z49-KH-ZyN" kind="presentation" identifier="Group_Joining_Segue" id="6z0-bb-b8k"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="G96-PN-d8x" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="2386.9565217391305" y="888.58695652173924"/>
+        </scene>
+        <!--Group Creation View Controller-->
+        <scene sceneID="HAg-Pf-eUh">
+            <objects>
+                <viewController modalTransitionStyle="crossDissolve" modalPresentationStyle="overCurrentContext" id="rHh-Yg-Tu6" customClass="Group_Creation_View_Controller" customModule="go_too" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="Bs1-8W-mM4">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="736"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="Background_Create_Grouo" translatesAutoresizingMaskIntoConstraints="NO" id="xXO-56-20c">
+                                <rect key="frame" x="60" y="140" width="294" height="457"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            </imageView>
+                            <button opaque="NO" contentMode="scaleAspectFit" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="kzg-SO-dar">
+                                <rect key="frame" x="70" y="150" width="10" height="10"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <state key="normal" backgroundImage="Exit_Button_Grouo_Creation"/>
+                                <connections>
+                                    <action selector="exit_group_creation_button_pressed:" destination="rHh-Yg-Tu6" eventType="touchUpInside" id="AGb-tG-OLD"/>
+                                </connections>
+                            </button>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="Icon_Create_Group" translatesAutoresizingMaskIntoConstraints="NO" id="ItJ-MG-dER">
+                                <rect key="frame" x="187" y="200" width="40" height="40"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            </imageView>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="Title_Create_Group" translatesAutoresizingMaskIntoConstraints="NO" id="NdO-3i-YZ4">
+                                <rect key="frame" x="170" y="260" width="75" height="18"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            </imageView>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="Group_Name_Field" translatesAutoresizingMaskIntoConstraints="NO" id="0ux-tK-9UU">
+                                <rect key="frame" x="88" y="308" width="239" height="38"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            </imageView>
+                            <button opaque="NO" contentMode="scaleAspectFit" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="uk6-Vy-zqe">
+                                <rect key="frame" x="88" y="366" width="239" height="38"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <state key="normal" backgroundImage="Create_Group_Button"/>
+                            </button>
+                            <textField opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Enter Group Name" textAlignment="center" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="0Aw-14-qXl">
+                                <rect key="frame" x="98" y="312" width="219" height="30"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <nil key="textColor"/>
+                                <fontDescription key="fontDescription" name="AppleSDGothicNeo-Regular" family="Apple SD Gothic Neo" pointSize="14"/>
+                                <textInputTraits key="textInputTraits"/>
+                            </textField>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="0.5" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <viewLayoutGuide key="safeArea" id="qok-x2-N8I"/>
+                    </view>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="6wl-UY-Ihb" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="3494" y="535"/>
+        </scene>
+        <!--Profile Pop Up Screen-->
+        <scene sceneID="du8-Mo-SWG">
+            <objects>
+                <viewController modalTransitionStyle="crossDissolve" modalPresentationStyle="overCurrentContext" id="P3G-kS-eta" customClass="Profile_Pop_Up_Screen" customModule="go_too" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="O5l-3F-7wW">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="736"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <view contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="Dwh-uq-IL3">
+                                <rect key="frame" x="60" y="140" width="294" height="457"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <subviews>
+                                    <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="Pop Up Background" translatesAutoresizingMaskIntoConstraints="NO" id="KDP-d3-Uv9">
+                                        <rect key="frame" x="0.0" y="0.0" width="294" height="457"/>
+                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                    </imageView>
+                                    <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="Pop Up Top Frame" translatesAutoresizingMaskIntoConstraints="NO" id="hUZ-r7-Gct">
+                                        <rect key="frame" x="0.0" y="0.0" width="294" height="119"/>
+                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                    </imageView>
+                                    <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ulx-G5-FdH">
+                                        <rect key="frame" x="97" y="67" width="100" height="100"/>
+                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                        <state key="normal" backgroundImage="Default Profile Phot"/>
+                                    </button>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="username" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="DEX-Rt-wVG">
+                                        <rect key="frame" x="47" y="177" width="200" height="17"/>
+                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                        <fontDescription key="fontDescription" name="Symbol" family="Symbol" pointSize="14"/>
+                                        <color key="textColor" red="0.29019607843137252" green="0.29019607843137252" blue="0.29019607843137252" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                    <button opaque="NO" contentMode="scaleAspectFit" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="5bz-1f-FLa">
+                                        <rect key="frame" x="28" y="246" width="239" height="38"/>
+                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                        <color key="backgroundColor" red="0.46202266219999999" green="0.83828371759999998" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                        <state key="normal" backgroundImage="Change Username Button"/>
+                                        <connections>
+                                            <action selector="change_username_button_pressed:" destination="P3G-kS-eta" eventType="touchUpInside" id="Dwz-xb-NaX"/>
+                                        </connections>
+                                    </button>
+                                    <button opaque="NO" contentMode="scaleAspectFit" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="5vk-W9-9bx">
+                                        <rect key="frame" x="28" y="304" width="239" height="38"/>
+                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                        <color key="backgroundColor" red="0.46202266219999999" green="0.83828371759999998" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                        <state key="normal" backgroundImage="Change Password Button"/>
+                                        <connections>
+                                            <action selector="change_password_button_pressed:" destination="P3G-kS-eta" eventType="touchUpInside" id="JTG-CS-4Ba"/>
+                                        </connections>
+                                    </button>
+                                    <button opaque="NO" contentMode="scaleAspectFit" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="tL6-Gq-pmW">
+                                        <rect key="frame" x="26" y="362" width="239" height="38"/>
+                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                        <color key="backgroundColor" red="0.46202266219999999" green="0.83828371759999998" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                        <state key="normal" backgroundImage="Change Security Question Button "/>
+                                        <connections>
+                                            <action selector="change_security_questions_button_pressed:" destination="P3G-kS-eta" eventType="touchUpInside" id="3mW-lq-UR2"/>
+                                        </connections>
+                                    </button>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="email" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="aAl-zS-Lta">
+                                        <rect key="frame" x="47" y="199" width="200" height="17"/>
+                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                        <fontDescription key="fontDescription" name="Symbol" family="Symbol" pointSize="14"/>
+                                        <color key="textColor" red="0.29019607843137252" green="0.29019607843137252" blue="0.29019607843137252" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                    <button opaque="NO" contentMode="scaleAspectFit" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="f0o-Ks-rRp">
+                                        <rect key="frame" x="10" y="10" width="12" height="12"/>
+                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                        <state key="normal" backgroundImage="x"/>
+                                        <connections>
+                                            <action selector="exit_button_pressed:" destination="P3G-kS-eta" eventType="touchUpInside" id="v5m-is-0v1"/>
+                                        </connections>
+                                    </button>
+                                </subviews>
+                                <color key="backgroundColor" red="0.83741801979999997" green="0.83743780850000005" blue="0.83742713930000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                            </view>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="0.5" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <viewLayoutGuide key="safeArea" id="jxb-br-hFw"/>
+                    </view>
+                    <connections>
+                        <segue destination="SpR-RM-yZm" kind="presentation" identifier="Change_Username_Segue" id="YBX-yh-ejU"/>
+                        <segue destination="BhO-dr-ukl" kind="presentation" identifier="Change_Password_Segue" id="B8w-ew-hhP"/>
+                        <segue destination="EBN-ol-bPf" kind="presentation" identifier="Change_Security_Questions_Segue" id="M1T-eb-Iqv"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="MJ2-tr-jrv" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="2390" y="-565"/>
+        </scene>
+        <!--View Controller-->
+        <scene sceneID="x5V-Fd-8us">
+            <objects>
+                <viewController id="SpR-RM-yZm" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="hGG-6M-sJf">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="736"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <textField opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="KAI-5B-Qu3">
+                                <rect key="frame" x="159" y="248" width="97" height="30"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <nil key="textColor"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits"/>
+                            </textField>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <viewLayoutGuide key="safeArea" id="ydc-2V-siB"/>
+                    </view>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="Hd2-a7-hyi" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="4656.521739130435" y="-1219.5652173913045"/>
+        </scene>
+        <!--View Controller-->
+        <scene sceneID="Qye-za-JAT">
+            <objects>
+                <viewController id="BhO-dr-ukl" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="k3a-s0-Zvd">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="736"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <viewLayoutGuide key="safeArea" id="PEx-XN-Ucs"/>
+                    </view>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="jCV-SK-QFP" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="3967" y="-566"/>
+        </scene>
+        <!--View Controller-->
+        <scene sceneID="9Va-h6-1Dc">
+            <objects>
+                <viewController id="EBN-ol-bPf" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="NXz-jZ-Nbo">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="736"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <viewLayoutGuide key="safeArea" id="tnk-YQ-dyV"/>
+                    </view>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="eoU-ZE-B5J" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="4657" y="-16"/>
         </scene>
         <!--Login Screen View Controller-->
         <scene sceneID="tne-QT-ifu">
@@ -518,7 +852,67 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="IIU-b2-rVb" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="2391" y="887"/>
+            <point key="canvasLocation" x="2362" y="1555"/>
+        </scene>
+        <!--Group Joining View Controller-->
+        <scene sceneID="hhR-eA-IFU">
+            <objects>
+                <viewController modalTransitionStyle="crossDissolve" modalPresentationStyle="overCurrentContext" id="z49-KH-ZyN" customClass="Group_Joining_View_Controller" customModule="go_too" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="KyW-rK-tvo">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="736"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <view contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="BDY-Xd-89s">
+                                <rect key="frame" x="60" y="140" width="294" height="457"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <subviews>
+                                    <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="Background_join_Group" translatesAutoresizingMaskIntoConstraints="NO" id="4FS-oQ-2ao">
+                                        <rect key="frame" x="0.0" y="0.0" width="294" height="457"/>
+                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                    </imageView>
+                                    <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="Icon_Join_group" translatesAutoresizingMaskIntoConstraints="NO" id="yi8-Pz-P4B">
+                                        <rect key="frame" x="127" y="60" width="40" height="40"/>
+                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                    </imageView>
+                                    <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="Title_Join_Group" translatesAutoresizingMaskIntoConstraints="NO" id="V7g-Sn-ckg">
+                                        <rect key="frame" x="110" y="120" width="75" height="18"/>
+                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                    </imageView>
+                                    <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="Group_Code_Field" translatesAutoresizingMaskIntoConstraints="NO" id="Hrt-hJ-qsa">
+                                        <rect key="frame" x="28" y="168" width="239" height="38"/>
+                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                    </imageView>
+                                    <button opaque="NO" contentMode="scaleAspectFit" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="7ow-rW-8Ih">
+                                        <rect key="frame" x="28" y="226" width="239" height="38"/>
+                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                        <state key="normal" backgroundImage="Join_Group_Button"/>
+                                    </button>
+                                    <textField opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Enter Group Code" textAlignment="center" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="ZO2-0z-l6o">
+                                        <rect key="frame" x="38" y="172" width="219" height="30"/>
+                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                        <nil key="textColor"/>
+                                        <fontDescription key="fontDescription" name="AppleSDGothicNeo-Regular" family="Apple SD Gothic Neo" pointSize="14"/>
+                                        <textInputTraits key="textInputTraits"/>
+                                    </textField>
+                                    <button opaque="NO" contentMode="scaleAspectFit" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="UA6-RU-2QT">
+                                        <rect key="frame" x="10" y="10" width="10" height="10"/>
+                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                        <state key="normal" backgroundImage="Exit_Button_Grouo_Creation"/>
+                                        <connections>
+                                            <action selector="exit_group_joining_button_pressed:" destination="z49-KH-ZyN" eventType="touchUpInside" id="xhl-8Y-b6c"/>
+                                        </connections>
+                                    </button>
+                                </subviews>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                            </view>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="0.5" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <viewLayoutGuide key="safeArea" id="QCJ-6O-lY1"/>
+                    </view>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="GXb-PI-cg2" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="3471.0144927536235" y="1228.5326086956522"/>
         </scene>
         <!--Password Reset Screen View Controller-->
         <scene sceneID="8c7-Xe-4Qs">
@@ -578,25 +972,40 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Rti-PO-2J0" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="2468" y="-704"/>
+            <point key="canvasLocation" x="2390" y="-1405"/>
         </scene>
     </scenes>
     <resources>
         <image name="Add Courses_Group Button" width="20" height="20"/>
         <image name="Answer_Field_Questions" width="334" height="62"/>
         <image name="Answer_Field_Security" width="334" height="62"/>
+        <image name="Background_Create_Grouo" width="294" height="457"/>
+        <image name="Background_Group_Creation" width="294" height="457"/>
+        <image name="Background_join_Group" width="294" height="457"/>
         <image name="Bottom Bar" width="414" height="80"/>
         <image name="Calendar Button" width="48" height="38"/>
+        <image name="Change Password Button" width="239" height="38"/>
+        <image name="Change Security Question Button " width="239" height="38"/>
+        <image name="Change Username Button" width="239" height="38"/>
         <image name="Confirm_Password_Field" width="334" height="62"/>
         <image name="Confirm_Password_Field_Sign_Up" width="334" height="62"/>
         <image name="Contact_Us_Button_Recovered" width="78" height="16"/>
         <image name="Continue_Buttom_Security" width="334" height="62"/>
+        <image name="Courses Tab" width="90" height="40"/>
+        <image name="Create_Group_Button" width="239" height="38"/>
+        <image name="Default Profile Phot" width="100" height="100"/>
         <image name="Edit Button" width="33" height="19"/>
         <image name="Email_Field_Login" width="334" height="62"/>
         <image name="Email_Field_Recovery" width="334" height="62"/>
+        <image name="Exit_Button_Grouo_Creation" width="13" height="13"/>
         <image name="Go_Too_Logo_Login" width="246" height="96"/>
+        <image name="Group_Code_Field" width="239" height="38"/>
+        <image name="Group_Name_Field" width="239" height="38"/>
         <image name="Groups Tab" width="90" height="40"/>
         <image name="Home Button" width="31" height="38"/>
+        <image name="Icon_Create_Group" width="50" height="28"/>
+        <image name="Icon_Join_group" width="40" height="40"/>
+        <image name="Join_Group_Button" width="239" height="38"/>
         <image name="Login_Button_Login" width="334" height="62"/>
         <image name="Login_Button_Recovered" width="37" height="15"/>
         <image name="Macot" width="78" height="83"/>
@@ -609,6 +1018,8 @@
         <image name="Organization_Email_Sign_Up" width="334" height="62"/>
         <image name="Password_Field_Login" width="334" height="62"/>
         <image name="Password_Field_Sign_Up" width="334" height="62"/>
+        <image name="Pop Up Background" width="294" height="457"/>
+        <image name="Pop Up Top Frame" width="294" height="119"/>
         <image name="Profile Button" width="42" height="42"/>
         <image name="Question_Field_Password_Reset" width="334" height="62"/>
         <image name="Question_Field_Questions" width="334" height="62"/>
@@ -617,11 +1028,15 @@
         <image name="Sign_Up_Button" width="334" height="62"/>
         <image name="Sign_Up_Button_Login" width="53" height="16"/>
         <image name="Title_Almost_Security" width="206" height="95"/>
+        <image name="Title_Create_Group" width="92" height="16"/>
+        <image name="Title_Join_Group" width="75" height="16"/>
         <image name="Title_Password_Reset" width="206" height="95"/>
         <image name="Title_Questions" width="318" height="26"/>
         <image name="Title_Recovery" width="224" height="23"/>
         <image name="Title_Security" width="206" height="95"/>
+        <image name="Titlte_Group_Creation" width="115" height="16"/>
         <image name="Top Bar" width="414" height="80"/>
         <image name="Username_Field" width="334" height="62"/>
+        <image name="x" width="13" height="13"/>
     </resources>
 </document>

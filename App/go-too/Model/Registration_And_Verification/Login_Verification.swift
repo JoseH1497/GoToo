@@ -14,6 +14,7 @@ class Login_Verification{
     let PASSWORD     : Expression = Expression<String>("PASSWORD_HASH")
     
     // Login verification attributes
+    var user_id      : Int
     var email        : String
     var password     : String
     
@@ -30,6 +31,7 @@ class Login_Verification{
             return nil
         }
     
+        self.user_id  = -1
         self.email    = ""
         self.password = ""
     }
@@ -45,9 +47,9 @@ class Login_Verification{
     
 
     // Function verifies information provided at log in
-    // Successful verifiaction ---> returns user id
-    // Failed verification     ---> return -1
-    func verify_login_info() -> Int{
+    // Successful verifiaction ---> returns true
+    // Failed verification     ---> return false
+    func verify_login_info() -> Bool{
         var id : Int = -1
         
         if verify_email() && verify_password(){
@@ -58,13 +60,22 @@ class Login_Verification{
                 for match in matches{
                     id = match[USER_ID]
                 }
+                
             }catch{
                 print("Location: User_Verfication (CLASS)")
                 print("Error: Query failure --- verify_login_info()")
             }
         }
         
-        return id
+        // Determining if user id is valid
+        if id > 0 {
+            // Setting user id for future data transfer between view controlles
+            self.user_id = id
+            return true
+            
+        }else{
+            return false
+        }
     }
     
     // Function determines if provided email is associated with an account
@@ -102,6 +113,13 @@ class Login_Verification{
         
         // Password does not correspond to the provided email
         return false 
+    }
+    
+    // Function returns the user id associated with the provided information
+    // NOTE: This function will only be executed when transfering data from LoginScreenViewController to HomeScreenViewController
+    // Thus the system has already verified that the information is valid and determined the user id associated with the account
+    func get_user_id() -> Int{
+        return self.user_id
     }
 }
 
