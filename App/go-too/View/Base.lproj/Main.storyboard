@@ -666,6 +666,15 @@
                                 <fontDescription key="fontDescription" name="Zapfino" family="Zapfino" pointSize="26"/>
                                 <textInputTraits key="textInputTraits"/>
                             </textField>
+                            <button opaque="NO" contentMode="scaleAspectFit" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="sNW-lq-2Of">
+                                <rect key="frame" x="374" y="29" width="20" height="22"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <state key="normal" image="Add Courses_Group Button"/>
+                                <connections>
+                                    <action selector="AddCoursesAction:" destination="1ve-G8-AG0" eventType="touchUpInside" id="m5S-60-vMO"/>
+                                    <action selector="AddQuestionAction:" destination="H4D-2R-2CG" eventType="touchUpInside" id="M0M-X9-FSs"/>
+                                </connections>
+                            </button>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <constraints>
@@ -687,11 +696,60 @@
                         <outlet property="questionsTableView" destination="zhW-hZ-wbe" id="1gQ-i1-Gmq"/>
                         <segue destination="MlP-XT-MxV" kind="show" identifier="QuestionsToCourse" id="uGa-oM-YuT"/>
                         <segue destination="Q7c-sy-nKF" kind="show" identifier="QuestionsToAnswers" id="Tp6-k0-QKx"/>
+                        <segue destination="WZW-tN-n3f" kind="show" identifier="newsToAddQ" id="r6P-8n-wdQ"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="tbV-2K-tLW" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="3109" y="-673"/>
+        </scene>
+        <!--New Questions View Controller-->
+        <scene sceneID="P31-fe-1yq">
+            <objects>
+                <viewController id="WZW-tN-n3f" customClass="newQuestionsViewController" customModule="go_too" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="Sl6-6U-MsU">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="736"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="Top Bar" translatesAutoresizingMaskIntoConstraints="NO" id="hL1-TD-xkl">
+                                <rect key="frame" x="0.0" y="0.0" width="414" height="80"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            </imageView>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="qor-qC-tla">
+                                <rect key="frame" x="313" y="376" width="76" height="50"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <state key="normal" title="Submit Answer" image="icons8-submit-for-approval-filled"/>
+                                <connections>
+                                    <action selector="newQuestionAction:" destination="WZW-tN-n3f" eventType="touchUpInside" id="mEn-Md-lL6"/>
+                                </connections>
+                            </button>
+                            <textField opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="New Question..." textAlignment="natural" adjustsFontForContentSizeCategory="YES" minimumFontSize="24" translatesAutoresizingMaskIntoConstraints="NO" id="UqM-jj-4Oz">
+                                <rect key="frame" x="25" y="122" width="364" height="30"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <nil key="textColor"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits"/>
+                            </textField>
+                            <textField opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" text="Whats On Your Mind?" textAlignment="center" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="TRH-UB-6T2">
+                                <rect key="frame" x="65" y="20" width="284" height="60"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <color key="textColor" red="1" green="0.92247806809999999" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <fontDescription key="fontDescription" name="Zapfino" family="Zapfino" pointSize="26"/>
+                                <textInputTraits key="textInputTraits"/>
+                            </textField>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <viewLayoutGuide key="safeArea" id="DVe-nh-HKr"/>
+                    </view>
+                    <connections>
+                        <outlet property="QuestionSubmitAction" destination="qor-qC-tla" id="PNQ-zY-H9N"/>
+                        <outlet property="questionTextField" destination="UqM-jj-4Oz" id="9aK-Kk-tQg"/>
+                        <segue destination="H4D-2R-2CG" kind="show" identifier="newQtoNews" id="n7U-O1-gmd"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="T13-zH-NGt" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="3647.826086956522" y="-1635.326086956522"/>
         </scene>
         <!--Answers View Controller-->
         <scene sceneID="rUE-sf-Msy">
@@ -1135,7 +1193,7 @@
     </resources>
     <inferredMetricsTieBreakers>
         <segue reference="uGa-oM-YuT"/>
-        <segue reference="V98-ZJ-Ky4"/>
+        <segue reference="n7U-O1-gmd"/>
         <segue reference="xDb-gk-77g"/>
         <segue reference="n03-03-s1Q"/>
     </inferredMetricsTieBreakers>

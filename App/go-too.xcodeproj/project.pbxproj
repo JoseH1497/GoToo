@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		1033FAA5209FE3000059F613 /* NewQuestion.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1033FAA4209FE3000059F613 /* NewQuestion.swift */; };
 		241CA168208541610081FAA3 /* Groups.swift in Sources */ = {isa = PBXBuildFile; fileRef = 241CA167208541610081FAA3 /* Groups.swift */; };
 		241CA16A208543740081FAA3 /* NextScreen.swift in Sources */ = {isa = PBXBuildFile; fileRef = 241CA169208543740081FAA3 /* NextScreen.swift */; };
 		2484AE8C2075B08E00C035AA /* Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2484AE8B2075B08E00C035AA /* Extensions.swift */; };
@@ -33,6 +34,7 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		1033FAA4209FE3000059F613 /* NewQuestion.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NewQuestion.swift; sourceTree = "<group>"; };
 		241CA167208541610081FAA3 /* Groups.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Groups.swift; sourceTree = "<group>"; };
 		241CA169208543740081FAA3 /* NextScreen.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NextScreen.swift; sourceTree = "<group>"; };
 		245B51EA208FD9C200ED204F /* libsqlite3.0.tbd */ = {isa = PBXFileReference; lastKnownFileType = "sourcecode.text-based-dylib-definition"; name = libsqlite3.0.tbd; path = usr/lib/libsqlite3.0.tbd; sourceTree = SDKROOT; };
@@ -155,6 +157,7 @@
 			children = (
 				24E8D1F220938BBA0095AE43 /* QuestionsView.swift */,
 				24E8D1F62093A27A0095AE43 /* AnswersView.swift */,
+				1033FAA4209FE3000059F613 /* NewQuestion.swift */,
 			);
 			path = Questions;
 			sourceTree = "<group>";
@@ -304,6 +307,7 @@
 				24E8D1E8209082020095AE43 /* AddCourseViewController.swift in Sources */,
 				52F4C3892072BF8800F46DF2 /* HomeScreenViewController.swift in Sources */,
 				2484AE8C2075B08E00C035AA /* Extensions.swift in Sources */,
+				1033FAA5209FE3000059F613 /* NewQuestion.swift in Sources */,
 				24E8D1EE2092092F0095AE43 /* GroupMembersView.swift in Sources */,
 				2484AE952075BF0300C035AA /* Constants.swift in Sources */,
 				24E8D1FB209489A20095AE43 /* database.swift in Sources */,

@@ -121,6 +121,7 @@ class Database{
     var groupCount: Int
     var questionSelected: Int
     var onlineSize: Int
+    
     init(){
         onlineSize = 0
         userCount = 2
@@ -206,6 +207,15 @@ class Database{
             }
         }
         return userID
+    }
+    func getUserName(userID: Int) -> String{
+        for i in 0..<Users.count{
+            if(userID == Users[i].UserID){
+                return Users[i].name
+            }
+        }
+        
+        return ""
     }
     func getGroupMembers(groupID: Int)-> Array<String>{
         return Groups[groupID].getGroupMembers()

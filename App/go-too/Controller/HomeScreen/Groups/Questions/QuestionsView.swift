@@ -27,6 +27,7 @@ class QuestionsViewController : UIViewController, UITableViewDelegate, UITableVi
     
    
     
+    
     @IBOutlet weak var questionsTableView: UITableView!
     
 
@@ -121,6 +122,9 @@ class QuestionsViewController : UIViewController, UITableViewDelegate, UITableVi
         self.performSegue(withIdentifier: "QuestionsToCourse", sender: self)
     }
     
+    @IBAction func AddQuestionAction(_ sender: Any) {
+        self.performSegue(withIdentifier: "newsToAddQ", sender: self)
+    }
     //send data back when BackToCourseAction is pressed
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
         
@@ -133,6 +137,11 @@ class QuestionsViewController : UIViewController, UITableViewDelegate, UITableVi
             
         }
         if let destinationViewController = segue.destination as? AnswersViewController {
+            // destinationViewController.currentGroup = self.currentGroup
+            destinationViewController.currentGroup = self.currentGroup
+            
+        }
+        if let destinationViewController = segue.destination as? newQuestionsViewController {
             // destinationViewController.currentGroup = self.currentGroup
             destinationViewController.currentGroup = self.currentGroup
             

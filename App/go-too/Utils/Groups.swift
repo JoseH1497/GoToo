@@ -29,7 +29,7 @@ class Group {
     var onlineMembers = [GroupTable]()
     //Score of user with User ID, so we can display when user wants to see their points
     var userScore : Int
-    
+    var questionID: Int
     //Questions:
     var numOfQuestions: Int
     var QuestionsArray = [Questions]()
@@ -64,6 +64,7 @@ class Group {
         self.onlineSize = 0
         self.numOfQuestions = 0
         self.questionSelected = -1
+        self.questionID = 101
         
         
     }
@@ -77,6 +78,7 @@ class Group {
         self.onlineSize = 0
         self.numOfQuestions = 0
         self.questionSelected = -1
+        self.questionID = 101
        
     }
     
@@ -180,7 +182,15 @@ class Group {
         
         
     }
-    
+    //questionsDB(questionID: 1, groupID: 0, numOfAnswers: 2, Answers: answers, questionString:"Can anyone help me with problem 3 for homework?", date: "04/28/18", name: "Jovon Johnson")
+    func addQuestion(groupID: Int, question:String, name:String){
+        
+        //TODO: generate new Question ID and get date
+        
+        let newQuestion = questionsDB(questionID: questionID, groupID: groupID, numOfAnswers: 0, Answers: [], questionString: question, date: "05/07/2018", name: name)
+        self.questionID =  self.questionID + 1
+        DATA.Questions.append(newQuestion)
+    }
     func setOnlineMembers(){
         //set size of online group
         self.setOnlineSize()
@@ -513,6 +523,9 @@ class Group {
          
          
          **/
+        
+        MemberName = DATA.getUserName(userID: userID)
+        
         
         return MemberName
         
