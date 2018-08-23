@@ -1,8 +1,8 @@
 # GoToo
 
-mergeBranch: iOS application with local database connected to it using SQLite
+**mergeBranch**: iOS application with local database connected to it using SQLite
 
-JoseProjectBranch: iOS application without database connected to enable for users to run the application more easily 
+**JoseProjectBranch**: iOS application without database connected to enable for users to run the application more easily 
 and experience UI and functionality
 
 # 1) App Description: 
