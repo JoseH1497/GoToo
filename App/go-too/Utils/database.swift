@@ -157,7 +157,7 @@ class Database{
                 Users[i].name = "Jose Herrera"
                 Users[i].password = "jose.51013"
                 Users[i].isOnline = true
-                Users[i].setnumOfGroups(num: 6)
+                Users[i].setnumOfGroups(num: 3)
                 Users[i].allocGroups()
                 //set group ids and titles
                 Users[i].groups[0].groupID = 0
@@ -169,14 +169,14 @@ class Database{
                 Users[i].groups[2].groupID = 2
                 Users[i].groups[2].groupName = "CSE 150"
                 
-                Users[i].groups[3].groupID = 3
+                /*Users[i].groups[3].groupID = 3
                 Users[i].groups[3].groupName = "CSE 175"
                 
                 Users[i].groups[4].groupID = 4
                 Users[i].groups[4].groupName = "Engr 45"
                 
                 Users[i].groups[5].groupID = 5
-                Users[i].groups[5].groupName = "CSE 21"
+                Users[i].groups[5].groupName = "CSE 21"*/
                 break
             case 1:
                 Users[i].UserID = i

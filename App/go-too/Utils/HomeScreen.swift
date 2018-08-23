@@ -155,6 +155,15 @@ class HomeScreen {
     func addGroup(groupName: String, userID: Int){
         
         //TODO: enter groupName with generated unique groupID for userID and enter into database. This will update the user's groups when user presses plus button
+        let groupNumber = DATA.Users[userID].getNumOfGroups()
+        if(groupNumber <= 6){
+            var alloc = GroupTable()
+            DATA.Users[userID].groups.append(alloc)
+            DATA.Users[userID].groups[groupNumber].groupID = 0
+            DATA.Users[userID].groups[groupNumber].groupName = groupName
+            DATA.Users[userID].setnumOfGroups(num: groupNumber+1)
+        }
+        
         
     }
     
